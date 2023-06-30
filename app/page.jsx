@@ -1,6 +1,7 @@
 "use client";
-import LocomotiveScroll from "locomotive-scroll";
 import { useRef, useEffect } from "react";
+import LocomotiveScroll from "locomotive-scroll";
+import CustomCursur from "./components/CustomCursur";
 import styles from "./styles/herosection.module.css";
 
 const Home = () => {
@@ -16,10 +17,9 @@ const Home = () => {
     }
   }, []);
 
-  console.log("lets see", ref.current);
-
   return (
     <>
+      <CustomCursur />
       <main data-scroll-container ref={ref}>
         <section className={styles.main_container} data-scroll-section>
           <h1 className={styles.heading} data-scroll>
