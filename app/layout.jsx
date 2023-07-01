@@ -1,3 +1,6 @@
+"use client";
+import { useRef } from "react";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -9,9 +12,23 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const containerRef = useRef(null);
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <LocomotiveScrollProvider
+          options={{
+            smooth: true,
+          }}
+          watch={[]}
+          containerRef={containerRef}
+        >
+          <main data-scroll-container ref={containerRef}>
+            {children}
+          </main>
+        </LocomotiveScrollProvider>
+      </body>
     </html>
   );
 }
