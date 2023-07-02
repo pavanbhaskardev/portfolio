@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.3rem 1.85rem;
+}
+
+.hamburger_container {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 99px;
+}

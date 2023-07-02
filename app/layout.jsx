@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
         <LocomotiveScrollProvider
           options={{
             smooth: true,
+            smartphone: { smooth: true },
           }}
           watch={[]}
           containerRef={containerRef}
