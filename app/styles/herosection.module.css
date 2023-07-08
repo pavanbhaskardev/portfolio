@@ -1,14 +1,62 @@
 .main_container {
-    padding: 2.3rem 1.85rem;
-    height: 100vh;
-    margin-top: 8rem;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
+  padding: 2.3rem 1.85rem;
+  /* height: 100vh; */
+  margin-top: 8rem;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-bottom: 5rem;
 }
 
 .heading {
-    font-size: 4rem;
-    width: 100vw;
-    color: var(--secondary-color);
+  font-size: 4rem;
+  width: 100vw;
+  color: var(--secondary-color);
+}
+
+.cta_container {
+  background-color: var(--popup-color);
+  border-radius: 99px;
+  height: 5.625rem;
+  width: 5.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: text_rotation 10s linear infinite;
+  cursor: pointer;
+  margin-left: 70%;
+}
+
+.cta_container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes text_rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cta_arrow {
+  position: absolute;
+}
+
+.cta_text {
+  padding: 0.5rem;
+}
+
+.projects_banner_container {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  gap: 5px;
+  width: 150%;
+  overflow-x: hidden;
+  padding: 0 0.5rem;
 }

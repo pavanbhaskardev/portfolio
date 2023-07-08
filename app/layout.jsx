@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
           options={{
             smooth: true,
             smartphone: { smooth: true },
+            tablet: { smooth: true },
           }}
           watch={[]}
           containerRef={containerRef}

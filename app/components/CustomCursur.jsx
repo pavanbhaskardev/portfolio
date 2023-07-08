@@ -1,34 +1,47 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import styles from "../styles/customcusrsur.module.css";
 
 const CustomCursur = () => {
+  // added to target cursor div
+  const cursorRef = useRef();
+
   useEffect(() => {
     // targeted the cussor div
-    const customCusrsor = document.getElementsByClassName(
-      styles.custom_cursor
-    )[0];
+    const customCursor = cursorRef.current;
 
     // this function will change the cursor position
     const changeCusrsorPosition = (e) => {
-      if (customCusrsor) {
-        const positionX = e.clientX - customCusrsor.offsetWidth / 2;
-        const positionY = e.clientY - customCusrsor.offsetHeight / 2;
+      if (customCursor) {
+        const positionX = e.clientX - customCursor.offsetWidth / 2;
+        const positionY = e.clientY - customCursor.offsetHeight / 2;
 
         const keyFrames = {
           transform: `translate(${positionX}px, ${positionY}px)`,
         };
 
-        customCusrsor.animate(keyFrames, { duration: 800, fill: "forwards" });
+        customCursor.animate(keyFrames, { duration: 800, fill: "forwards" });
       }
     };
 
     window.addEventListener("mousemove", (e) => {
       changeCusrsorPosition(e);
     });
+
+    //cleanup function
+    return () =>
+      window.removeEventListener("mousemove", (e) => {
+        changeCusrsorPosition(e);
+      });
   }, []);
 
-  return <div className={styles.custom_cursor}></div>;
+  return (
+    <a
+      href="#my_custom_div"
+      className={`${styles.custom_cursor_style} custom_cursor`}
+      ref={cursorRef}
+    ></a>
+  );
 };
 
 export default CustomCursur;

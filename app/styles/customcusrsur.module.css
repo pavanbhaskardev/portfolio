@@ -1,11 +1,12 @@
-.custom_cursor {
-    z-index: 99999;
-    height: 2rem;
-    width: 2rem;
-    background-color: var(--primary-color);
-    border-radius: 99px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    mix-blend-mode: difference;
+.custom_cursor_style {
+  z-index: 99999;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--primary-color);
+  border-radius: 99px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  transition: transform 0.1s;
 }
