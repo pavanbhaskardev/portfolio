@@ -19,4 +19,5 @@ body {
   scroll-behavior: smooth;
   background-color: var(--primary-color);
   color: var(--secondary-color);
+  font-weight: 500;
 }

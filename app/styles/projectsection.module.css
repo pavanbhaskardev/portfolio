@@ -1,0 +1,59 @@
+.project_container {
+  padding: 2.3rem 1.85rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project {
+  height: 12.5rem;
+  background-color: blueviolet;
+  border-radius: 1.125rem;
+  position: relative;
+}
+
+.project_content_container {
+  height: 3.125rem;
+  width: 100%;
+  background: blue;
+  border-radius: 0 0 1.125rem 1.125rem;
+  position: absolute;
+  bottom: 0;
+  padding: 0.62rem;
+}
+
+.project_content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: var(--primary-color);
+}
+
+.project_content span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project:nth-child(odd) {
+  background-color: bisque;
+}
+
+/* spans mr.lawyer & savingspree */
+.project_col_span_2 {
+  grid-column: span 2;
+}
+
+/* this is to place avis-tailors right side */
+.project:last-child {
+  grid-column-start: 2;
+}
+
+/* moving savingspree to top */
+.project:nth-child(2) {
+  grid-row-start: 1;
+}
+
+.project:nth-child(3) {
+  grid-row-start: 3;
+}

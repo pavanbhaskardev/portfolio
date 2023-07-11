@@ -36,11 +36,10 @@ const CustomCursur = () => {
   }, []);
 
   return (
-    <a
-      href="#my_custom_div"
+    <div
       className={`${styles.custom_cursor_style} custom_cursor`}
       ref={cursorRef}
-    ></a>
+    ></div>
   );
 };
 

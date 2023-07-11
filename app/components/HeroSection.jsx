@@ -1,14 +1,29 @@
 "use client";
-import { useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/herosection.module.css";
+import { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
-  useEffect(() => {}, []);
+  const [mouseHover, setMouseHover] = useState(false);
+  const myRef = useRef();
+  useEffect(() => {
+    const myDiv = myRef.current;
+    myDiv.addEventListener("mouseover", () => {
+      setMouseHover(true);
+    });
+
+    myDiv.addEventListener("mouseout", () => {
+      setMouseHover(false);
+    });
+  }, []);
 
   return (
-    <section data-scroll-section>
+    <section data-scroll-section className={styles.hero_section_container}>
       <div className={`${styles.main_container}`}>
+        <div className={styles.heading} data-scroll>
+          <h1>Pavan Bhaskar - Pavan Bhaskar</h1>
+        </div>
+
         <Image
           src={"/down_arrow.png"}
           alt="down_arrow"
@@ -19,13 +34,10 @@ const HeroSection = () => {
         <p data-scroll>
           Creative Designer &<br /> Developer
         </p>
-        <h1 className={`${styles.heading} heading`} data-scroll>
-          Pavan Bhaskar
-        </h1>
 
-        <div className={styles.cta_container} data-scroll>
+        <div className={styles.cta_container} data-scroll ref={myRef}>
           <Image
-            src={"/cta_arrow.png"}
+            src={mouseHover ? "/figma.gif" : "/cta_arrow.png"}
             height={28}
             width={28}
             alt="see-my-work-arrow"
@@ -41,63 +53,60 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {[1, 2].map((e) => {
+      {[1, 2, 3, 4, 5].map((e) => {
+        const myNumber = 2;
         return (
-          <div key={e} data-scroll>
+          <div className={styles.projects_banner_container} key={e}>
             <span
-              className={styles.projects_banner_container}
               data-scroll
               data-scroll-direction="horizontal"
-              data-scroll-speed={10}
+              data-scroll-speed={(myNumber + e) % 2 === 0 ? -20 : 20} // based on sign direction changes
             >
-              <span>Fresh</span>
+              Fresh
               <Image
+                className={styles.star_logo}
                 src={"/star_icon.png"}
                 height={40}
                 width={40}
                 alt="star_icon"
               />
-              <span>New</span>
+              New
               <Image
                 src={"/star_icon.png"}
+                className={styles.star_logo}
                 height={40}
                 width={40}
                 alt="star_icon"
               />
-              <span>Projects</span>
-            </span>
-
-            <span
-              className={styles.projects_banner_container}
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed={-10}
-            >
-              <span>Fresh</span>
+              Projects
               <Image
                 src={"/star_icon.png"}
+                className={styles.star_logo}
                 height={40}
                 width={40}
                 alt="star_icon"
               />
-              <span>New</span>
+              Fresh
               <Image
                 src={"/star_icon.png"}
+                className={styles.star_logo}
                 height={40}
                 width={40}
                 alt="star_icon"
               />
-              <span>Projects</span>
+              New
+              <Image
+                src={"/star_icon.png"}
+                className={styles.star_logo}
+                height={40}
+                width={40}
+                alt="star_icon"
+              />
+              Projects
             </span>
           </div>
         );
       })}
-
-      <div style={{ height: "100vh", background: "blue" }}></div>
-      <div
-        id="my_custom_div"
-        style={{ height: "100vh", background: "red" }}
-      ></div>
     </section>
   );
 };
