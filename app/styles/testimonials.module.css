@@ -1,0 +1,15 @@
+.heading {
+  padding: 3rem 1.85rem 2.3rem 1.85rem;
+  font-size: 1.25rem;
+}
+
+.about_me_container {
+  height: 100vh;
+}
+
+.swiper_slide {
+  width: 18.75rem;
+  height: 21.875rem;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}

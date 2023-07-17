@@ -1,0 +1,52 @@
+.heading {
+  padding: 2.3rem 1.85rem;
+  font-size: 1.25rem;
+}
+
+.about_me_container {
+  display: flex;
+  padding: 1.4rem 1.25rem;
+  height: 5rem;
+  gap: 1.5rem;
+  align-items: center;
+  border-style: solid;
+  border-width: 0.06rem 0;
+  border-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.about_me_container:nth-child(3) {
+  border-top-width: 0;
+}
+
+.about_me_container::before {
+  content: "";
+  position: absolute;
+  background-color: var(--popup-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 500ms ease-in-out;
+  transform: scaleY(0);
+}
+
+.about_me_container:hover::before,
+.about_me_container:focus::before {
+  transform: scaleY(1);
+}
+
+.about_me_container:hover {
+  color: var(--primary-color);
+}
+
+.about_me_container h2 {
+  font-size: 1rem;
+}
+
+.about_me_container p {
+  font-size: 0.625rem;
+  width: 16.1875rem;
+}

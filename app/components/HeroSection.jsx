@@ -1,22 +1,8 @@
 "use client";
 import Image from "next/image";
 import styles from "../styles/herosection.module.css";
-import { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
-  const [mouseHover, setMouseHover] = useState(false);
-  const myRef = useRef();
-  useEffect(() => {
-    const myDiv = myRef.current;
-    myDiv.addEventListener("mouseover", () => {
-      setMouseHover(true);
-    });
-
-    myDiv.addEventListener("mouseout", () => {
-      setMouseHover(false);
-    });
-  }, []);
-
   return (
     <section data-scroll-section className={styles.hero_section_container}>
       <div className={`${styles.main_container}`}>
@@ -35,9 +21,9 @@ const HeroSection = () => {
           Creative Designer &<br /> Developer
         </p>
 
-        <div className={styles.cta_container} data-scroll ref={myRef}>
+        <div className={styles.cta_container} data-scroll>
           <Image
-            src={mouseHover ? "/figma.gif" : "/cta_arrow.png"}
+            src={"/cta_arrow.png"}
             height={28}
             width={28}
             alt="see-my-work-arrow"
