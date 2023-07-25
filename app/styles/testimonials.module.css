@@ -12,4 +12,5 @@
   height: 21.875rem;
   background: var(--secondary-color);
   color: var(--primary-color);
+  border-radius: 1.125rem;
 }

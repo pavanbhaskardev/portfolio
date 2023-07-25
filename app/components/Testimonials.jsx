@@ -19,7 +19,6 @@ const Testimonials = () => {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
-        // loop={true}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -32,9 +31,11 @@ const Testimonials = () => {
         <SwiperSlide className={styles.swiper_slide}>
           Slide 1 lets see
         </SwiperSlide>
+
         <SwiperSlide className={styles.swiper_slide}>
           Slide 2, this is slide 2
         </SwiperSlide>
+
         <SwiperSlide className={styles.swiper_slide}>
           Slide 3, this is slide 3
         </SwiperSlide>
