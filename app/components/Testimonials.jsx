@@ -2,10 +2,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
+import Image from "next/image";
 import styles from "../styles/testimonials.module.css";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import testimonials from "./json/testimonials";
 
 const Testimonials = () => {
   return (
@@ -28,17 +30,34 @@ const Testimonials = () => {
         }}
         modules={[EffectCoverflow, Pagination]}
       >
-        <SwiperSlide className={styles.swiper_slide}>
-          Slide 1 lets see
-        </SwiperSlide>
+        {testimonials.map((testimonial) => {
+          const { name, message, imageSrc, position } = testimonial;
+          return (
+            <SwiperSlide className={styles.swiper_slide}>
+              <Image
+                src="/blockquote.svg"
+                height={40}
+                width={40}
+                alt="blockquote_pic"
+              />
+              <p className={styles.testimonial_message}>{message}</p>
 
-        <SwiperSlide className={styles.swiper_slide}>
-          Slide 2, this is slide 2
-        </SwiperSlide>
+              <section className={styles.testimonial_container}>
+                <Image
+                  src={imageSrc}
+                  height={40}
+                  width={40}
+                  alt="narasimha_narahari_pic"
+                />
 
-        <SwiperSlide className={styles.swiper_slide}>
-          Slide 3, this is slide 3
-        </SwiperSlide>
+                <div>
+                  <p className={styles.testimonial_name}>{name}</p>
+                  <p className={styles.testimonial_position}>{position}</p>
+                </div>
+              </section>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </section>
   );

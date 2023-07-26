@@ -8,9 +8,32 @@
 }
 
 .swiper_slide {
-  width: 18.75rem;
-  height: 21.875rem;
   background: var(--secondary-color);
   color: var(--primary-color);
+  width: 18.75rem;
+  height: 21.875rem;
   border-radius: 1.125rem;
+  padding: 1.8rem 1.5rem;
+}
+
+.testimonial_message {
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.testimonial_container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 1.8rem;
+}
+
+.testimonial_name {
+  font-size: 0.68rem;
+}
+
+.testimonial_position {
+  margin-top: 0.25rem;
+  font-size: 0.5rem;
 }
