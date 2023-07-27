@@ -7,6 +7,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import MyStack from "./components/MyStack";
 import AboutMe from "./components/AboutMe";
 import Testimonials from "./components/Testimonials";
+import Connect from "./components/Connect";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <MyStack />
       <AboutMe />
       <Testimonials />
+      <Connect />
     </>
   );
 };

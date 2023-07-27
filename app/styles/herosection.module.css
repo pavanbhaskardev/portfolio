@@ -83,6 +83,10 @@
   color: var(--primary-color);
 }
 
+.projects_banner_container image {
+  margin: auto 0;
+}
+
 .projects_banner_container:nth-child(2) {
   z-index: 1;
   transform: translate(-1rem, 0) rotate(-6deg);

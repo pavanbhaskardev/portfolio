@@ -1,0 +1,35 @@
+.parent_container {
+  padding: 3rem 1.85rem;
+}
+
+.parent_container .heading {
+  padding-bottom: 2.3rem;
+  font-size: 1.25rem;
+}
+
+.connect_btn_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.connect_btn_container a {
+  padding: 0.6rem 2.6rem;
+  border-radius: 6.1875rem;
+  border: 1px solid var(--secondary-color);
+}
+
+.mail_number_container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.mail_number_container p {
+  font-size: 1rem;
+}
+
+.mail_number_container a {
+  font-size: 0.6rem;
+}

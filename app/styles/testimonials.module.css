@@ -4,7 +4,7 @@
 }
 
 .about_me_container {
-  height: 100vh;
+  padding-bottom: 2rem;
 }
 
 .swiper_slide {

@@ -21,7 +21,7 @@ const HeroSection = () => {
           Creative Designer &<br /> Developer
         </p>
 
-        <div className={styles.cta_container} data-scroll>
+        <div className={styles.cta_container} role="button" data-scroll>
           <Image
             src={"/cta_arrow.png"}
             height={28}

@@ -15,7 +15,7 @@ const testimonials = [
     name: "Ramu, Srinu",
     position: "Founder @Avis Tables",
     imageSrc: "/testimonials/NNsir_profile.png",
-    message: "Pavan is great, he contributed a lot to Avis Tailors",
+    message: "He's a beast, he's skills are insane",
   },
 ];
 
