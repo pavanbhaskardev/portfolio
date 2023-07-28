@@ -1,14 +1,24 @@
 .hero_section_container {
   margin-bottom: 2rem;
+  height: 100vh;
 }
 
 .main_container {
   padding: 2.3rem 1.85rem;
-  margin-top: 15rem;
+  margin-top: 10rem;
   display: flex;
   gap: 10px;
   flex-direction: column;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
+}
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(calc(0% - 24px));
+  }
 }
 
 .heading {
@@ -20,17 +30,18 @@
 
 /* text scroll animation */
 
-@keyframes infiniteScroll {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(calc(0% - 24px));
-  }
-}
-
 .main_container p {
   font-size: 1.25rem;
+}
+
+@keyframes text_rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .cta_container {
@@ -51,16 +62,6 @@
 }
 
 /* cta button action */
-
-@keyframes text_rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 .cta_arrow {
   position: absolute;

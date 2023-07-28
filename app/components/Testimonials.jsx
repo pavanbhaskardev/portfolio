@@ -33,7 +33,7 @@ const Testimonials = () => {
         {testimonials.map((testimonial) => {
           const { name, message, imageSrc, position } = testimonial;
           return (
-            <SwiperSlide className={styles.swiper_slide}>
+            <SwiperSlide className={styles.swiper_slide} key={name}>
               <Image
                 src="/blockquote.svg"
                 height={40}

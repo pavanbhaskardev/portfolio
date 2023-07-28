@@ -11,14 +11,14 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning={true}>
         <LocomotiveScrollProvider
           options={{
             smooth: true,
             smartphone: { smooth: true },
             tablet: { smooth: true },
           }}
-          watch={[]}
+          watch={[containerRef.current]}
           containerRef={containerRef}
         >
           <main data-scroll-container ref={containerRef}>

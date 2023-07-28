@@ -4,8 +4,16 @@ import styles from "../styles/herosection.module.css";
 
 const HeroSection = () => {
   return (
-    <section data-scroll-section className={styles.hero_section_container}>
-      <div className={`${styles.main_container}`}>
+    <section
+      data-scroll-section
+      className={styles.hero_section_container}
+      id="hero-section-container"
+    >
+      <div
+        className={`${styles.main_container}`}
+        data-scroll-section
+        data-scroll
+      >
         <div className={styles.heading} data-scroll>
           <h1>Pavan Bhaskar - Pavan Bhaskar</h1>
         </div>
@@ -39,60 +47,63 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {[1, 2, 3, 4, 5].map((e) => {
-        const myNumber = 2;
-        return (
-          <div className={styles.projects_banner_container} key={e}>
-            <span
-              data-scroll
-              data-scroll-direction="horizontal"
-              data-scroll-speed={(myNumber + e) % 2 === 0 ? -20 : 20} // based on sign direction changes
-            >
-              Fresh
-              <Image
-                className={styles.star_logo}
-                src={"/star_icon.png"}
-                height={40}
-                width={40}
-                alt="star_icon"
-              />
-              New
-              <Image
-                src={"/star_icon.png"}
-                className={styles.star_logo}
-                height={40}
-                width={40}
-                alt="star_icon"
-              />
-              Projects
-              <Image
-                src={"/star_icon.png"}
-                className={styles.star_logo}
-                height={40}
-                width={40}
-                alt="star_icon"
-              />
-              Fresh
-              <Image
-                src={"/star_icon.png"}
-                className={styles.star_logo}
-                height={40}
-                width={40}
-                alt="star_icon"
-              />
-              New
-              <Image
-                src={"/star_icon.png"}
-                className={styles.star_logo}
-                height={40}
-                width={40}
-                alt="star_icon"
-              />
-              Projects
-            </span>
-          </div>
-        );
-      })}
+      <div>
+        {[1, 2, 3, 4].map((e) => {
+          const myNumber = 2;
+          return (
+            <div className={styles.projects_banner_container} key={e}>
+              <span
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed={(myNumber + e) % 2 === 0 ? -20 : 20} // based on sign direction changes
+                data-scroll-target="#hero-section-container"
+              >
+                Fresh
+                <Image
+                  className={styles.star_logo}
+                  src={"/star_icon.png"}
+                  height={40}
+                  width={40}
+                  alt="star_icon"
+                />
+                New
+                <Image
+                  src={"/star_icon.png"}
+                  className={styles.star_logo}
+                  height={40}
+                  width={40}
+                  alt="star_icon"
+                />
+                Projects
+                <Image
+                  src={"/star_icon.png"}
+                  className={styles.star_logo}
+                  height={40}
+                  width={40}
+                  alt="star_icon"
+                />
+                Fresh
+                <Image
+                  src={"/star_icon.png"}
+                  className={styles.star_logo}
+                  height={40}
+                  width={40}
+                  alt="star_icon"
+                />
+                New
+                <Image
+                  src={"/star_icon.png"}
+                  className={styles.star_logo}
+                  height={40}
+                  width={40}
+                  alt="star_icon"
+                />
+                Projects
+              </span>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 };
