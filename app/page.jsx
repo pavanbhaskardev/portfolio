@@ -3,6 +3,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import CustomCursur from "./components/CustomCursur";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import ScrollingText from "./components/ScrollingText";
 import ProjectsSection from "./components/ProjectsSection";
 import MyStack from "./components/MyStack";
 import AboutMe from "./components/AboutMe";
@@ -15,6 +16,7 @@ const Home = () => {
       <Navbar />
       <CustomCursur />
       <HeroSection />
+      <ScrollingText />
       <ProjectsSection />
       <MyStack />
       <AboutMe />
