@@ -11,7 +11,7 @@ import testimonials from "./json/testimonials";
 
 const Testimonials = () => {
   return (
-    <section data-scroll-section className={styles.about_me_container}>
+    <section className={styles.about_me_container}>
       <p className={styles.heading} data-scroll>
         What they said
       </p>

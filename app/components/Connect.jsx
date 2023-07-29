@@ -4,7 +4,7 @@ import styles from "../styles/connect.module.css";
 
 const Connect = () => {
   return (
-    <section data-scroll-section className={styles.parent_container}>
+    <section className={styles.parent_container}>
       <p className={styles.heading} data-scroll>
         Connect
       </p>

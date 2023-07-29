@@ -4,7 +4,7 @@ import styles from "../styles/projectsection.module.css";
 
 const ProjectsSection = () => {
   return (
-    <section className={styles.project_container} data-scroll-section>
+    <section className={styles.project_container}>
       <div className={styles.project} data-scroll>
         <div className={styles.project_content_container}>
           <div className={styles.project_content}>

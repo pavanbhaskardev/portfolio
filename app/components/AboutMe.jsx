@@ -4,7 +4,7 @@ import styles from "../styles/aboutme.module.css";
 
 const AboutMe = () => {
   return (
-    <section data-scroll-section>
+    <section>
       <p className={styles.heading} data-scroll>
         About Me
       </p>
