@@ -6,7 +6,7 @@ import { techStack } from "./json/techStack";
 
 const MyStack = () => {
   return (
-    <section>
+    <section className={styles.my_stack_parent_container}>
       <p className={styles.heading}>My Stack</p>
 
       {/* 1st container */}

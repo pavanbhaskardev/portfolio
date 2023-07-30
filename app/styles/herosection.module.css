@@ -1,11 +1,13 @@
 .hero_section_container {
+  position: relative;
   margin-bottom: 5rem;
-  height: 80vh;
+  height: 90vh;
+  overflow: hidden;
 }
 
 .sliding_text_container {
   position: absolute;
-  top: calc(100vh - 45vh);
+  top: calc(100vh - 55vh);
 }
 
 .sliding_text {
@@ -31,7 +33,7 @@
   gap: 10px;
   flex-direction: column;
   position: absolute;
-  top: calc(100vh - 35vh);
+  top: calc(100vh - 45vh);
   width: 100%;
 }
 
