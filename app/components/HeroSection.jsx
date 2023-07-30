@@ -1,19 +1,62 @@
 "use client";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import styles from "../styles/herosection.module.css";
 
 const HeroSection = () => {
-  return (
-    <section className={styles.hero_section_container} id="scrolling_text">
-      <div
-        className={styles.main_container}
-        id="hero-section-container"
-        data-scroll
-      >
-        <div className={styles.heading} data-scroll>
-          <h1>Pavan Bhaskar - Pavan Bhaskar</h1>
-        </div>
+  const firstText = useRef(null);
+  const secondText = useRef(null);
+  const sliderRef = useRef(null);
 
+  let xPercent = 0;
+  let scrollDirection = -1;
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    // when we scroll change the text direction
+    gsap.to(sliderRef.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.25,
+        start: "top top",
+        end: "bottom top",
+        onUpdate: (e) => {
+          scrollDirection = e.direction === 1 ? -1 : 1;
+        },
+      },
+      x: "-300px",
+    });
+
+    requestAnimationFrame(textScroll);
+  }, []);
+
+  const textScroll = () => {
+    if (xPercent <= -100) {
+      xPercent = 0;
+    }
+
+    if (xPercent > 0) {
+      xPercent = -100;
+    }
+
+    gsap.set(firstText.current, { xPercent: xPercent });
+    gsap.set(secondText.current, { xPercent: xPercent });
+    xPercent += 0.25 * scrollDirection;
+    requestAnimationFrame(textScroll);
+  };
+
+  return (
+    <section className={styles.hero_section_container}>
+      <div className={styles.sliding_text_container}>
+        <div className={styles.sliding_text} ref={sliderRef}>
+          <p ref={firstText}>Pavan Bhaskar -</p>
+          <p ref={secondText}>Pavan Bhaskar -</p>
+        </div>
+      </div>
+
+      <div className={styles.main_container} data-scroll>
         <Image
           src={"/hero_section_arrow.svg"}
           alt="down_arrow"
@@ -25,12 +68,7 @@ const HeroSection = () => {
           Creative Designer &<br /> Developer
         </p>
 
-        <div
-          className={styles.cta_container}
-          role="button"
-          data-scroll
-          id="hero-section-container"
-        >
+        <div className={styles.cta_container} role="button" data-scroll>
           <Image
             src={"/cta_arrow.svg"}
             height={28}
@@ -47,66 +85,6 @@ const HeroSection = () => {
           />
         </div>
       </div>
-
-      {/* <div data-scroll>
-        {[1, 2, 3, 4, 5].map((e) => {
-          const myNumber = 2;
-          const uniqueId = `projects_banner_${e}`;
-
-          return (
-            <div className={styles.projects_banner_container} key={uniqueId}>
-              <span
-                data-scroll
-                data-scroll-direction="horizontal"
-                data-scroll-speed={(myNumber + e) % 2 === 0 ? -20 : 20} // based on sign direction changes
-                // data-scroll-target="#scrolling_text"
-              >
-                Fresh
-                <Image
-                  className={styles.star_logo}
-                  src={"/star_icon.png"}
-                  height={40}
-                  width={40}
-                  alt="star_icon"
-                />
-                New
-                <Image
-                  src={"/star_icon.png"}
-                  className={styles.star_logo}
-                  height={40}
-                  width={40}
-                  alt="star_icon"
-                />
-                Projects
-                <Image
-                  src={"/star_icon.png"}
-                  className={styles.star_logo}
-                  height={40}
-                  width={40}
-                  alt="star_icon"
-                />
-                Fresh
-                <Image
-                  src={"/star_icon.png"}
-                  className={styles.star_logo}
-                  height={40}
-                  width={40}
-                  alt="star_icon"
-                />
-                New
-                <Image
-                  src={"/star_icon.png"}
-                  className={styles.star_logo}
-                  height={40}
-                  width={40}
-                  alt="star_icon"
-                />
-                Projects
-              </span>
-            </div>
-          );
-        })}
-      </div> */}
     </section>
   );
 };
