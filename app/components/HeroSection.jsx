@@ -48,17 +48,13 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div>
+      {/* <div data-scroll>
         {[1, 2, 3, 4, 5].map((e) => {
           const myNumber = 2;
           const uniqueId = `projects_banner_${e}`;
 
           return (
-            <div
-              className={styles.projects_banner_container}
-              key={uniqueId}
-              data-scroll
-            >
+            <div className={styles.projects_banner_container} key={uniqueId}>
               <span
                 data-scroll
                 data-scroll-direction="horizontal"
@@ -110,7 +106,7 @@ const HeroSection = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </section>
   );
 };

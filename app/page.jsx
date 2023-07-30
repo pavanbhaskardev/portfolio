@@ -13,12 +13,20 @@ const Home = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll({
-        el: containerRef,
+    let scroll;
+    import("locomotive-scroll").then((locomotiveModule) => {
+      scroll = new locomotiveModule.default({
+        el: containerRef.current,
+        smooth: true,
+        smartphone: { smooth: true },
+        tablet: { smooth: true },
       });
-    })();
+    });
+
+    // `useEffect`'s cleanup phase
+    return () => {
+      if (scroll) scroll.destroy();
+    };
   });
 
   return (

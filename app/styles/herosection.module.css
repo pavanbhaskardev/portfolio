@@ -1,6 +1,7 @@
-/* .hero_section_container {
+.hero_section_container {
   margin-bottom: 2rem;
-} */
+  height: 100vh;
+}
 
 .main_container {
   padding: 2.3rem 1.85rem;
