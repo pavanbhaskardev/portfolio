@@ -1,7 +1,7 @@
 .hero_section_container {
   position: relative;
+  overflow: hidden;
   display: flex;
-  overflow-x: hidden;
   margin-bottom: 5rem;
   height: 90vh;
 }
