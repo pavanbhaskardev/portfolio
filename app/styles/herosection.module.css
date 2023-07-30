@@ -2,7 +2,7 @@
   position: relative;
   margin-bottom: 5rem;
   height: 90vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .sliding_text_container {

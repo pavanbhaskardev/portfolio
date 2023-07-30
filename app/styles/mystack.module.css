@@ -1,6 +1,6 @@
 .my_stack_parent_container {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .heading {
