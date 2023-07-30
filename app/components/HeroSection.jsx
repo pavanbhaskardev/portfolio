@@ -26,6 +26,7 @@ const HeroSection = () => {
           scrollDirection = e.direction === 1 ? -1 : 1;
         },
       },
+      x: "-300px",
     });
 
     requestAnimationFrame(textScroll);
