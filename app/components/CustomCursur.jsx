@@ -28,11 +28,31 @@ const CustomCursur = () => {
       changeCusrsorPosition(e);
     });
 
+    // custom cursor displays on big screens
+
+    if (window.innerWidth < 1024) {
+      customCursor.style.display = "none";
+    }
+
+    const handleResize = (e) => {
+      const screenWidth = e.target.innerWidth;
+      if (screenWidth < 1024) {
+        customCursor.style.display = "none";
+      } else {
+        customCursor.style.display = "block";
+      }
+    };
+
+    window.addEventListener("resize", (e) => handleResize(e));
+
     //cleanup function
-    return () =>
+    return () => {
       window.removeEventListener("mousemove", (e) => {
         changeCusrsorPosition(e);
       });
+
+      window.removeEventListener("resize", (e) => handleResize(e));
+    };
   }, []);
 
   return (

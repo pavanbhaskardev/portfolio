@@ -8,7 +8,7 @@
 
 .sliding_text_container {
   position: absolute;
-  top: calc(100vh - 60vh);
+  top: calc(100vh - 65vh);
 }
 
 .sliding_text {
@@ -19,7 +19,7 @@
 .sliding_text p {
   position: relative;
   color: var(--secondary-color);
-  font-size: 5rem;
+  font-size: 7rem;
   padding-right: 2rem;
 }
 
@@ -37,6 +37,10 @@
   position: absolute;
   top: calc(100vh - 50vh);
   width: 100%;
+}
+
+.main_container p {
+  font-size: 1.25rem;
 }
 
 /* text scroll animation */

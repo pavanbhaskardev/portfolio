@@ -10,11 +10,19 @@ const Connect = () => {
       </p>
 
       <section data-scroll className={styles.connect_container}>
-        <div className={styles.connect_btn_container}>
-          <a>LinkedIn</a>
-          <a>Instagram</a>
-          <a>Twitter</a>
-          <a>Dribbble</a>
+        <div className={styles.connect_btn_parent_container}>
+          <div className={styles.connect_btn_container}>
+            <a>LinkedIn</a>
+          </div>
+          <div className={styles.connect_btn_container}>
+            <a>Dribbble</a>
+          </div>
+          <div className={styles.connect_btn_container}>
+            <a>Github</a>
+          </div>
+          <div className={styles.connect_btn_container}>
+            <a>Instagram</a>
+          </div>
         </div>
 
         <div className={styles.mail_number_container}>

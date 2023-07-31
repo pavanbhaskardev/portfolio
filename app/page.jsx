@@ -13,7 +13,11 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      const locomotiveScroll = new LocomotiveScroll({
+        smooth: true,
+        smartphone: { smooth: true },
+        tablet: { smooth: true },
+      });
     })();
   });
 
