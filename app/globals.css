@@ -19,3 +19,16 @@ body {
   color: var(--secondary-color);
   font-weight: 400;
 }
+
+/* changing the text selection color */
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--primary-color);
+  background: var(--popup-color);
+}
+
+::selection {
+  color: var(--primary-color);
+  background: var(--popup-color);
+}

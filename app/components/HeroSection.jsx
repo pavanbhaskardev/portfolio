@@ -13,6 +13,21 @@ const HeroSection = () => {
   let xPercent = 0;
   let scrollDirection = -1;
 
+  const textScroll = () => {
+    if (xPercent <= -100) {
+      xPercent = 0;
+    }
+
+    if (xPercent > 0) {
+      xPercent = -100;
+    }
+
+    gsap.set(firstText.current, { xPercent: xPercent });
+    gsap.set(secondText.current, { xPercent: xPercent });
+    xPercent += 0.25 * scrollDirection;
+    requestAnimationFrame(textScroll);
+  };
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     // when we scroll change the text direction
@@ -32,24 +47,9 @@ const HeroSection = () => {
     requestAnimationFrame(textScroll);
   }, []);
 
-  const textScroll = () => {
-    if (xPercent <= -100) {
-      xPercent = 0;
-    }
-
-    if (xPercent > 0) {
-      xPercent = -100;
-    }
-
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
-    xPercent += 0.25 * scrollDirection;
-    requestAnimationFrame(textScroll);
-  };
-
   return (
     <section className={styles.hero_section_container}>
-      <div className={styles.sliding_text_container}>
+      <div className={styles.sliding_text_container} data-scroll>
         <div className={styles.sliding_text} ref={sliderRef}>
           <p ref={firstText}>Pavan Bhaskar -</p>
           <p ref={secondText}>Pavan Bhaskar -</p>

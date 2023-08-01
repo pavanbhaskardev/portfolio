@@ -21,6 +21,7 @@
   color: var(--secondary-color);
   font-size: 7rem;
   padding-right: 2rem;
+  font-weight: 450;
 }
 
 .sliding_text p:nth-of-type(2) {
