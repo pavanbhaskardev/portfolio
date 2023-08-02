@@ -3,9 +3,10 @@ import React, { useEffect, useRef } from "react";
 import CustomCursur from "./components/CustomCursur";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import AboutMe from "./components/AboutMe";
 import ProjectsSection from "./components/ProjectsSection";
 import MyStack from "./components/MyStack";
-import AboutMe from "./components/AboutMe";
+import Experience from "./components/Experience";
 import Testimonials from "./components/Testimonials";
 import Connect from "./components/Connect";
 
@@ -31,9 +32,10 @@ const Home = () => {
       <main data-scroll-container ref={containerRef}>
         <Navbar />
         <HeroSection />
+        <AboutMe />
         <ProjectsSection />
         <MyStack />
-        <AboutMe />
+        <Experience />
         <Testimonials />
         <Connect />
       </main>

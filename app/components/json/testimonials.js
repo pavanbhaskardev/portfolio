@@ -15,7 +15,7 @@ const testimonials = [
     name: "Ramu, Srinu",
     position: "Founder @Avis Tables",
     imageSrc: "/testimonials/NNsir_profile.png",
-    message: "He's a beast, he's skills are insane",
+    message: "He's a beast. He's skills are insane!",
   },
 ];
 

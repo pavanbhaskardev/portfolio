@@ -3,7 +3,7 @@
   font-size: 1.25rem;
 }
 
-.about_me_container {
+.experience_container {
   display: flex;
   padding: 1.4rem 1.25rem;
   height: 5rem;
@@ -16,11 +16,11 @@
   overflow: hidden;
 }
 
-.about_me_container:nth-child(3) {
+.experience_container:nth-child(3) {
   border-top-width: 0;
 }
 
-.about_me_container::before {
+.experience_container::before {
   content: "";
   position: absolute;
   background-color: var(--popup-color);
@@ -33,20 +33,20 @@
   transform: scaleY(0);
 }
 
-.about_me_container:hover::before,
-.about_me_container:focus::before {
+.experience_container:hover::before,
+.experience_container:focus::before {
   transform: scaleY(1);
 }
 
-.about_me_container:hover {
+.experience_container:hover {
   color: var(--primary-color);
 }
 
-.about_me_container h2 {
+.experience_container h2 {
   font-size: 1rem;
 }
 
-.about_me_container p {
+.experience_container p {
   font-size: 0.625rem;
   width: 16.1875rem;
 }

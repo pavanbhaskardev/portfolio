@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  margin-bottom: 5rem;
   height: 90vh;
 }
 
@@ -64,7 +63,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: text_rotation 10s linear infinite;
   cursor: pointer;
   margin-left: 70%;
 }
@@ -78,8 +76,10 @@
 .cta_arrow {
   position: absolute;
   fill: var(--primary-color);
+  transform: rotate(180deg);
 }
 
 .cta_text {
+  animation: text_rotation 10s linear infinite;
   padding: 0.5rem;
 }
