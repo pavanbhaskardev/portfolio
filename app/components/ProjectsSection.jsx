@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import React, { forwardRef } from "react";
 import styles from "../styles/projectsection.module.css";
 
-const ProjectsSection = () => {
+const ProjectsSection = forwardRef((props, ref) => {
   return (
-    <>
+    <section ref={ref}>
       <p className={styles.heading} data-scroll>
         Projects
       </p>
@@ -67,8 +67,8 @@ const ProjectsSection = () => {
           </div>
         </div>
       </section>
-    </>
+    </section>
   );
-};
+});
 
 export default ProjectsSection;

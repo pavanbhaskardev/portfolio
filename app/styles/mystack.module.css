@@ -9,21 +9,13 @@
   font-size: 1.25rem;
 }
 
-/* @keyframes scroll {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-} */
-
 .tech_stack_container {
   display: flex;
   align-items: center;
   gap: 1.5rem;
   position: absolute;
-  top: calc(50vh - 25vh);
+  top: 25vh;
+  left: -20vw;
 }
 
 .tech_stack {
@@ -39,5 +31,9 @@
 }
 
 .tech_stack_container:nth-child(2) {
-  top: calc(50vh - 32.5vh);
+  top: 17.5vh;
+}
+
+.tech_stack_container:last-child {
+  top: 35vh;
 }

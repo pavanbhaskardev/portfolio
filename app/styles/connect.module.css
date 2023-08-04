@@ -18,27 +18,7 @@
   padding: 0.6rem 2.6rem;
   border-radius: 6.1875rem;
   border: 1px solid var(--secondary-color);
-  position: relative;
-  overflow: hidden;
-}
-
-.connect_btn_container::before {
-  content: "";
-  position: absolute;
-  background-color: var(--popup-color);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 300ms ease-in-out;
-  transform: scaleY(0);
-}
-
-.connect_btn_container:hover::before,
-.connect_btn_container:focus::before {
-  transform-origin: top;
-  transform: scaleY(1);
+  margin-bottom: 0.5rem;
 }
 
 .connect_btn_container:hover {

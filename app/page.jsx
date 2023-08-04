@@ -12,6 +12,7 @@ import Connect from "./components/Connect";
 
 const Home = () => {
   const containerRef = useRef(null);
+  const ProjectsSectionRef = useRef(null);
 
   useEffect(() => {
     (async () => {
@@ -31,9 +32,9 @@ const Home = () => {
 
       <main data-scroll-container ref={containerRef}>
         <Navbar />
-        <HeroSection />
+        <HeroSection ref={ProjectsSectionRef} />
         <AboutMe />
-        <ProjectsSection />
+        <ProjectsSection ref={ProjectsSectionRef} />
         <MyStack />
         <Experience />
         <Testimonials />

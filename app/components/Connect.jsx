@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Button from "./commonComponents/Button";
 import styles from "../styles/connect.module.css";
 
 const Connect = () => {
@@ -11,18 +12,20 @@ const Connect = () => {
 
       <section data-scroll className={styles.connect_container}>
         <div className={styles.connect_btn_parent_container}>
-          <div className={styles.connect_btn_container}>
-            <a>LinkedIn</a>
-          </div>
-          <div className={styles.connect_btn_container}>
-            <a>Dribbble</a>
-          </div>
-          <div className={styles.connect_btn_container}>
-            <a>Github</a>
-          </div>
-          <div className={styles.connect_btn_container}>
-            <a>Instagram</a>
-          </div>
+          <Button>
+            <a className={styles.connect_btn_container}>LinkedIn</a>
+          </Button>
+          <Button>
+            <a className={styles.connect_btn_container}>Dribbble</a>
+          </Button>
+        </div>
+        <div className={styles.connect_btn_parent_container}>
+          <Button>
+            <a className={styles.connect_btn_container}>Github</a>
+          </Button>
+          <Button>
+            <a className={styles.connect_btn_container}>Instagram</a>
+          </Button>
         </div>
 
         <div className={styles.mail_number_container}>
