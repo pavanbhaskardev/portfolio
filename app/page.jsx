@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import LocomotiveScroll from "locomotive-scroll";
 import CustomCursur from "./components/CustomCursur";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -14,11 +13,12 @@ import Connect from "./components/Connect";
 const Home = () => {
   const containerRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
+  const locomotiveScrollRef = useRef(null);
 
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll({
+      locomotiveScrollRef.current = new LocomotiveScroll({
         el: containerRef,
         smooth: true,
         smartphone: { smooth: true },
@@ -30,8 +30,7 @@ const Home = () => {
   // scrolls to the project section
   const scrollToProjectSection = () => {
     const projectsSection = ProjectsSectionRef.current;
-    const scroll = new LocomotiveScroll();
-    scroll.scrollTo(projectsSection);
+    locomotiveScrollRef.current.scrollTo(projectsSection);
   };
 
   return (

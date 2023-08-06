@@ -18,7 +18,7 @@ const AboutMe = () => {
 
   const splitWords = () => {
     const wordsArray = [];
-    phrase.split(" ").forEach((word, index) => {
+    phrase.split(" ")?.forEach((word, index) => {
       const letters = splitLetters(word);
       wordsArray.push(<p key={`word_${index}`}>{letters}</p>);
     });
@@ -28,15 +28,13 @@ const AboutMe = () => {
 
   const splitLetters = (word) => {
     const lettersArray = [];
-    if (word !== undefined) {
-      word.split("").forEach((letter, index) => {
-        lettersArray.push(
-          <span ref={(e) => spanRef.current.push(e)} key={`letter_${index}`}>
-            {letter}
-          </span>
-        );
-      });
-    }
+    word.split("")?.forEach((letter, index) => {
+      lettersArray.push(
+        <span ref={(e) => spanRef.current.push(e)} key={`letter_${index}`}>
+          {letter}
+        </span>
+      );
+    });
 
     return lettersArray;
   };
