@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
+import LocomotiveScroll from "locomotive-scroll";
 import CustomCursur from "./components/CustomCursur";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -24,7 +25,14 @@ const Home = () => {
         tablet: { smooth: true },
       });
     })();
-  });
+  }, []);
+
+  // scrolls to the project section
+  const scrollToProjectSection = () => {
+    const projectsSection = ProjectsSectionRef.current;
+    const scroll = new LocomotiveScroll();
+    scroll.scrollTo(projectsSection);
+  };
 
   return (
     <>
@@ -32,7 +40,7 @@ const Home = () => {
 
       <main data-scroll-container ref={containerRef}>
         <Navbar />
-        <HeroSection ref={ProjectsSectionRef} />
+        <HeroSection scrollToProjectSection={scrollToProjectSection} />
         <AboutMe />
         <ProjectsSection ref={ProjectsSectionRef} />
         <MyStack />

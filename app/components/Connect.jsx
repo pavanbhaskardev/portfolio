@@ -19,6 +19,7 @@ const Connect = () => {
             <a className={styles.connect_btn_container}>Dribbble</a>
           </Button>
         </div>
+
         <div className={styles.connect_btn_parent_container}>
           <Button>
             <a className={styles.connect_btn_container}>Github</a>

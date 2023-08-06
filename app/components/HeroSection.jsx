@@ -1,16 +1,14 @@
 "use client";
-import { useEffect, useRef, forwardRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "../styles/herosection.module.css";
 
-const HeroSection = forwardRef((props, ref) => {
+const HeroSection = ({ scrollToProjectSection }) => {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const sliderRef = useRef(null);
-
-  const projectsContainer = ref.current;
 
   let xPercent = 0;
   let scrollDirection = -1;
@@ -74,12 +72,14 @@ const HeroSection = forwardRef((props, ref) => {
           className={styles.cta_container}
           role="button"
           data-scroll
-          onClick={() =>
-            projectsContainer.scrollIntoView({
-              behavior: "smooth",
-              block: "end",
-              inline: "nearest",
-            })
+          onClick={
+            () => scrollToProjectSection()
+
+            // projectsContainer.scrollIntoView({
+            //   behavior: "smooth",
+            //   block: "end",
+            //   inline: "nearest",
+            // })
           }
         >
           <Image
@@ -100,6 +100,6 @@ const HeroSection = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
 export default HeroSection;

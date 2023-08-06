@@ -8,5 +8,15 @@
 }
 
 .about_content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about_content p {
   font-size: 1.65rem;
+  margin-right: 0.5rem;
+}
+
+.about_content span {
+  opacity: 0.5;
 }
