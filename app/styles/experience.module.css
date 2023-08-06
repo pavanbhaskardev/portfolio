@@ -4,11 +4,11 @@
 }
 
 .experience_container {
-  display: flex;
+  display: grid;
+  place-items: start;
+  grid-template-columns: 1fr 1fr;
   padding: 1.4rem 1.25rem;
-  height: 5rem;
-  gap: 1.5rem;
-  align-items: center;
+  gap: 1rem;
   border-style: solid;
   border-width: 0.06rem 0;
   border-color: var(--secondary-color);
@@ -47,6 +47,6 @@
 }
 
 .experience_container p {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   width: 16.1875rem;
 }

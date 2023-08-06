@@ -11,17 +11,19 @@ const Experience = () => {
 
       <div className={styles.experience_container} data-scroll>
         <h2>Now</h2>
-        <p>
-          Fast forward today, i'm working as Frontend-developer at Netenrich
-        </p>
+        <span>
+          <h2>Frontend Developer</h2>
+          <p>Netenrich</p>
+        </span>
       </div>
 
       <div className={styles.experience_container} data-scroll>
         <h2>2022</h2>
-        <p>
-          Back 2022, I decided to create a website for my father. That interest
-          has led me to learn web-development.
-        </p>
+
+        <span>
+          <h2>Started Web Development</h2>
+          <p>self learning</p>
+        </span>
       </div>
     </section>
   );

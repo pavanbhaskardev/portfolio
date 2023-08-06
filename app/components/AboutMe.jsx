@@ -43,7 +43,7 @@ const AboutMe = () => {
     gsap.to(spanRef.current, {
       opacity: 1,
       ease: "none",
-      stagger: 3,
+      stagger: 5,
       scrollTrigger: {
         trigger: containerRef.current,
         start: "-=300",

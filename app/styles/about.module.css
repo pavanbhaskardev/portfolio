@@ -1,5 +1,6 @@
 .about_container {
   padding: 2.3rem 1.85rem;
+  height: 70vh;
 }
 
 .heading {
@@ -13,7 +14,7 @@
 }
 
 .about_content p {
-  font-size: 1.65rem;
+  font-size: 1.8rem;
   margin-right: 0.5rem;
 }
 

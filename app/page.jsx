@@ -1,5 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Loading from "./components/Loading";
 import CustomCursur from "./components/CustomCursur";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
@@ -11,6 +13,7 @@ import Testimonials from "./components/Testimonials";
 import Connect from "./components/Connect";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
   const containerRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
   const locomotiveScrollRef = useRef(null);
@@ -25,6 +28,12 @@ const Home = () => {
         tablet: { smooth: true },
       });
     })();
+
+    setTimeout(() => {
+      setLoading(false);
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 3000);
   }, []);
 
   // scrolls to the project section
@@ -38,6 +47,8 @@ const Home = () => {
       <CustomCursur />
 
       <main data-scroll-container ref={containerRef}>
+        <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
+
         <Navbar />
         <HeroSection scrollToProjectSection={scrollToProjectSection} />
         <AboutMe />
