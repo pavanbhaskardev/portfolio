@@ -16,12 +16,11 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const containerRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
-  const locomotiveScrollRef = useRef(null);
 
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      locomotiveScrollRef.current = new LocomotiveScroll({
+      new LocomotiveScroll({
         el: containerRef,
         smooth: true,
         smartphone: { smooth: true },
@@ -39,7 +38,7 @@ const Home = () => {
   // scrolls to the project section
   const scrollToProjectSection = () => {
     const projectsSection = ProjectsSectionRef.current;
-    locomotiveScrollRef.current.scrollTo(projectsSection);
+    projectsSection.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
