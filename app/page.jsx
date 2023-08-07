@@ -24,8 +24,8 @@ const Home = () => {
       locomotiveScrollRef.current = new LocomotiveScroll({
         el: containerRef,
         smooth: true,
-        // smartphone: { smooth: true },
-        // tablet: { smooth: true },
+        smartphone: { smooth: true },
+        tablet: { smooth: true },
       });
     })();
 
