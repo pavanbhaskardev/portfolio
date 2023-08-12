@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Button from "./commonComponents/Button";
 import styles from "../styles/connect.module.css";
@@ -6,11 +5,9 @@ import styles from "../styles/connect.module.css";
 const Connect = () => {
   return (
     <section className={styles.parent_container}>
-      <p className={styles.heading} data-scroll>
-        Connect
-      </p>
+      <p className={styles.heading}>Connect</p>
 
-      <section data-scroll className={styles.connect_container}>
+      <section className={styles.connect_container}>
         <div className={styles.connect_btn_parent_container}>
           <Button>
             <a className={styles.connect_btn_container}>LinkedIn</a>

@@ -5,12 +5,10 @@ import styles from "../styles/projectsection.module.css";
 const ProjectsSection = forwardRef((props, ref) => {
   return (
     <section ref={ref}>
-      <p className={styles.heading} data-scroll>
-        Projects
-      </p>
+      <p className={styles.heading}>Projects</p>
 
       <section className={styles.project_container}>
-        <div className={styles.project} data-scroll>
+        <div className={styles.project}>
           <div className={styles.project_content_container}>
             <div className={styles.project_content}>
               <p style={{ fontSize: "0.6875rem" }}>Shades Generator</p>
@@ -19,11 +17,8 @@ const ProjectsSection = forwardRef((props, ref) => {
           </div>
         </div>
 
-        <div
-          className={`${styles.project} ${styles.project_col_span_2}`}
-          data-scroll
-        >
-          <div className={styles.project} data-scroll>
+        <div className={`${styles.project} ${styles.project_col_span_2}`}>
+          <div className={styles.project}>
             <div className={styles.project_content_container}>
               <div className={styles.project_content}>
                 <p style={{ fontSize: "0.6875rem" }}>Track, Manage, Analyze</p>
@@ -36,11 +31,8 @@ const ProjectsSection = forwardRef((props, ref) => {
           </div>
         </div>
 
-        <div
-          className={`${styles.project} ${styles.project_col_span_2}`}
-          data-scroll
-        >
-          <div className={styles.project} data-scroll>
+        <div className={`${styles.project} ${styles.project_col_span_2}`}>
+          <div className={styles.project}>
             <div className={styles.project_content_container}>
               <div className={styles.project_content}>
                 <p style={{ fontSize: "0.6875rem" }}>
@@ -55,7 +47,7 @@ const ProjectsSection = forwardRef((props, ref) => {
           </div>
         </div>
 
-        <div className={styles.project} data-scroll>
+        <div className={styles.project}>
           <div className={styles.project_content_container}>
             <div className={styles.project_content}>
               <p style={{ fontSize: "0.6875rem" }}>Clothing</p>

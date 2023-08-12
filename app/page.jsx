@@ -14,18 +14,12 @@ import Connect from "./components/Connect";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
-  const containerRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
 
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      new LocomotiveScroll({
-        el: containerRef.current,
-        smooth: true,
-        smartphone: { smooth: true },
-        tablet: { smooth: true },
-      });
+      const locomotiveScroll = new LocomotiveScroll();
 
       setTimeout(() => {
         setLoading(false);
@@ -44,19 +38,16 @@ const Home = () => {
   return (
     <>
       <CustomCursur />
+      <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
 
-      <main data-scroll-container ref={containerRef}>
-        <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
-
-        <Navbar />
-        <HeroSection scrollToProjectSection={scrollToProjectSection} />
-        <AboutMe />
-        <ProjectsSection ref={ProjectsSectionRef} />
-        <MyStack />
-        <Experience />
-        <Testimonials />
-        <Connect />
-      </main>
+      <Navbar />
+      <HeroSection scrollToProjectSection={scrollToProjectSection} />
+      <AboutMe />
+      <ProjectsSection ref={ProjectsSectionRef} />
+      <MyStack />
+      <Experience />
+      <Testimonials />
+      <Connect />
     </>
   );
 };

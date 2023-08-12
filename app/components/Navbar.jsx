@@ -8,12 +8,11 @@ const Navbar = () => {
 
   return (
     <header className={styles.container}>
-      <Image src={"/logo.svg"} alt="logo" width={32} height={25} data-scroll />
+      <Image src={"/logo.svg"} alt="logo" width={32} height={25} />
       <div
         className={`${styles.hamburger_container} ${
           active && styles.close_hamburger
         }`}
-        data-scroll
         onClick={() => setActive((current) => !current)}
       >
         <span className={styles.cross_icon} />

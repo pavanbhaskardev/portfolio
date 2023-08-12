@@ -49,29 +49,27 @@ const HeroSection = ({ scrollToProjectSection }) => {
 
   return (
     <section className={styles.hero_section_container}>
-      <div className={styles.sliding_text_container} data-scroll>
+      <div className={styles.sliding_text_container}>
         <div className={styles.sliding_text} ref={sliderRef}>
           <p ref={firstText}>Pavan Bhaskar -</p>
           <p ref={secondText}>Pavan Bhaskar -</p>
         </div>
       </div>
 
-      <div className={styles.main_container} data-scroll>
+      <div className={styles.main_container}>
         <Image
           src={"/hero_section_arrow.svg"}
           alt="down_arrow"
           height={25}
           width={25}
-          data-scroll
         />
-        <p data-scroll>
+        <p>
           Creative Designer &<br /> Developer
         </p>
 
         <div
           className={styles.cta_container}
           role="button"
-          data-scroll
           onClick={() => scrollToProjectSection()}
         >
           <Image

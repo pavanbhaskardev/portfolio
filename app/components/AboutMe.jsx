@@ -55,9 +55,7 @@ const AboutMe = () => {
 
   return (
     <section className={styles.about_container} ref={containerRef}>
-      <p className={styles.heading} data-scroll>
-        About Me
-      </p>
+      <p className={styles.heading}>About Me</p>
 
       <main className={styles.about_content}>{splitWords()}</main>
     </section>

@@ -4,11 +4,9 @@ import styles from "../styles/experience.module.css";
 const Experience = () => {
   return (
     <section>
-      <p className={styles.heading} data-scroll>
-        Experience
-      </p>
+      <p className={styles.heading}>Experience</p>
 
-      <div className={styles.experience_container} data-scroll>
+      <div className={styles.experience_container}>
         <h2>Now</h2>
         <span>
           <h2>Frontend Developer</h2>
@@ -16,7 +14,7 @@ const Experience = () => {
         </span>
       </div>
 
-      <div className={styles.experience_container} data-scroll>
+      <div className={styles.experience_container}>
         <h2>2022</h2>
 
         <span>

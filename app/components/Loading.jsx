@@ -53,7 +53,6 @@ const Loading = () => {
       initial="initial"
       exit="exit"
       className={styles.loading_container}
-      data-scroll
     >
       <motion.p variants={opacity} initial="initial" animate="enter">
         <span></span>

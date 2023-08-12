@@ -12,9 +12,7 @@ import testimonials from "./json/testimonials";
 const Testimonials = () => {
   return (
     <section className={styles.about_me_container}>
-      <p className={styles.heading} data-scroll>
-        What they said
-      </p>
+      <p className={styles.heading}>What they said</p>
 
       <Swiper
         effect={"coverflow"}
