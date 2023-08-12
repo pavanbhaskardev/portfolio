@@ -21,18 +21,18 @@ const Home = () => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       new LocomotiveScroll({
-        el: containerRef,
+        el: containerRef.current,
         smooth: true,
         smartphone: { smooth: true },
         tablet: { smooth: true },
       });
-    })();
 
-    setTimeout(() => {
-      setLoading(false);
-      document.body.style.cursor = "default";
-      window.scrollTo(0, 0);
-    }, 3000);
+      setTimeout(() => {
+        setLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 3000);
+    })();
   }, []);
 
   // scrolls to the project section

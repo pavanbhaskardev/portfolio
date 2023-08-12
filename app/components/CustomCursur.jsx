@@ -9,7 +9,6 @@ const CustomCursur = () => {
   useEffect(() => {
     // targeted the cussor div
     const customCursor = cursorRef.current;
-    console.log("my first commit from macbook");
 
     // this function will change the cursor position
     const changeCusrsorPosition = (e) => {

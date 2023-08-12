@@ -13,6 +13,25 @@ const HeroSection = ({ scrollToProjectSection }) => {
   let xPercent = 0;
   let scrollDirection = -1;
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    // when we scroll change the text direction
+    gsap.to(sliderRef.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.25,
+        start: "top",
+        end: window.innerHeight,
+        onUpdate: (e) => {
+          scrollDirection = e.direction * -1;
+        },
+      },
+      x: "-300px",
+    });
+
+    requestAnimationFrame(textScroll);
+  }, []);
+
   const textScroll = () => {
     if (xPercent <= -100) {
       xPercent = 0;
@@ -24,28 +43,9 @@ const HeroSection = ({ scrollToProjectSection }) => {
 
     gsap.set(firstText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
+    requestAnimationFrame(textScroll);
     xPercent += 0.25 * scrollDirection;
-    requestAnimationFrame(textScroll);
   };
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    // when we scroll change the text direction
-    gsap.to(sliderRef.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.25,
-        start: "top top",
-        end: "bottom top",
-        onUpdate: (e) => {
-          scrollDirection = e.direction === 1 ? -1 : 1;
-        },
-      },
-      x: "-300px",
-    });
-
-    requestAnimationFrame(textScroll);
-  }, []);
 
   return (
     <section className={styles.hero_section_container}>
@@ -72,15 +72,7 @@ const HeroSection = ({ scrollToProjectSection }) => {
           className={styles.cta_container}
           role="button"
           data-scroll
-          onClick={
-            () => scrollToProjectSection()
-
-            // projectsContainer.scrollIntoView({
-            //   behavior: "smooth",
-            //   block: "end",
-            //   inline: "nearest",
-            // })
-          }
+          onClick={() => scrollToProjectSection()}
         >
           <Image
             src={"/cta_arrow.svg"}
