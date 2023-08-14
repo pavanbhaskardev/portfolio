@@ -31,7 +31,7 @@ const Home = () => {
         setLoading(false);
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
-      }, 3000);
+      }, 2700);
     })();
   }, []);
 

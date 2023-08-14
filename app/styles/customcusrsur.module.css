@@ -1,5 +1,5 @@
 .custom_cursor_style {
-  z-index: 99999;
+  z-index: 998;
   height: 2rem;
   width: 2rem;
   background-color: var(--primary-color);
