@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "../styles/navbar.module.css";
 import HamBurgerMenu from "./HamBurgerMenu";
 
@@ -10,8 +10,16 @@ const Navbar = () => {
 
   return (
     <header className={styles.container}>
-      <Image src={"/logo.svg"} alt="logo" width={32} height={25} />
-      <div
+      <Image
+        src={"/logo.svg"}
+        alt="logo"
+        width={32}
+        height={25}
+        className={styles.pb_logo}
+      />
+      <motion.div
+        whileHover={{ scale: 1.2 }}
+        whileFocus={{ scale: 1.2 }}
         className={`${styles.hamburger_container} ${
           open ? styles.close_hamburger : null
         }`}
@@ -19,7 +27,7 @@ const Navbar = () => {
       >
         <span className={styles.cross_icon} />
         <span className={styles.cross_icon} />
-      </div>
+      </motion.div>
 
       <AnimatePresence mode="wait">
         {open ? <HamBurgerMenu open={setOpen} /> : null}

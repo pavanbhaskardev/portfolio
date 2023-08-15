@@ -21,3 +21,13 @@
 .about_content span {
   opacity: 0.5;
 }
+
+@media (min-width: 414px) and (max-width: 767px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .about_content p {
+    font-size: 2rem;
+  }
+}

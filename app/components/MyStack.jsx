@@ -38,7 +38,13 @@ const MyStack = () => {
             const { name, src, alt } = data;
             return (
               <span key={index}>
-                <Image src={src} height={30} width={30} alt={alt} />
+                <Image
+                  src={src}
+                  height={30}
+                  width={30}
+                  alt={alt}
+                  className={styles.tech_stack_pic}
+                />
                 {name}
               </span>
             );
@@ -50,7 +56,7 @@ const MyStack = () => {
       <motion.div style={{ x: x2 }} className={styles.tech_stack_container}>
         <div className={styles.tech_stack}>
           {techStack.container2.map((data, index) => {
-            const { name, src, alt } = data;
+            const { name, src, alt, className } = data;
             return (
               <span key={index}>
                 <Image
@@ -58,6 +64,9 @@ const MyStack = () => {
                   height={name === "Tailwindcss" ? 20 : 30}
                   width={30}
                   alt={alt}
+                  className={`${styles.tech_stack_pic} ${
+                    className ? styles.tailwind_pic : null
+                  }`}
                 />
                 {name}
               </span>
@@ -75,6 +84,7 @@ const MyStack = () => {
                   height={name === "Tailwindcss" ? 20 : 30}
                   width={30}
                   alt={alt}
+                  className={styles.tech_stack_pic}
                 />
                 {name}
               </span>

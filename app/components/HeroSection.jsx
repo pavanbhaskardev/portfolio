@@ -49,6 +49,19 @@ const HeroSection = ({ scrollToProjectSection }) => {
 
   return (
     <section className={styles.hero_section_container}>
+      <div className={styles.hero_section_text_container}>
+        <Image
+          src={"/hero_section_arrow.svg"}
+          alt="down_arrow"
+          height={25}
+          width={25}
+        />
+        <p>
+          Creative Designer
+          <br />& Developer
+        </p>
+      </div>
+
       <div className={styles.sliding_text_container}>
         <div className={styles.sliding_text} ref={sliderRef}>
           <p ref={firstText}>Pavan Bhaskar -</p>
@@ -57,16 +70,6 @@ const HeroSection = ({ scrollToProjectSection }) => {
       </div>
 
       <div className={styles.main_container}>
-        <Image
-          src={"/hero_section_arrow.svg"}
-          alt="down_arrow"
-          height={25}
-          width={25}
-        />
-        <p>
-          Creative Designer &<br /> Developer
-        </p>
-
         <div
           className={styles.cta_container}
           role="button"

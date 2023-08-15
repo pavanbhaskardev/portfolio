@@ -5,7 +5,7 @@
 }
 
 .heading {
-  padding: 2.3rem 1.85rem;
+  padding: 2.3rem 1.85rem 0rem 1.85rem;
   font-size: 1.25rem;
 }
 
@@ -36,4 +36,14 @@
 
 .tech_stack_container:last-child {
   top: 35vh;
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .tech_stack span {
+    font-size: 1.15rem;
+  }
 }

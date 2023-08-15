@@ -2,7 +2,7 @@
   padding: 3rem 1.85rem;
 }
 
-.parent_container .heading {
+.heading {
   padding-bottom: 2.3rem;
   font-size: 1.25rem;
 }
@@ -37,4 +37,22 @@
 
 .mail_number_container a {
   font-size: 0.7rem;
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .connect_btn_container {
+    font-size: 1.15rem;
+  }
+
+  .mail_number_container p {
+    font-size: 1.1rem;
+  }
+
+  .mail_number_container a {
+    font-size: 0.8rem;
+  }
 }

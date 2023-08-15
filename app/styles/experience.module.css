@@ -6,9 +6,9 @@
 .experience_container {
   display: grid;
   place-items: start;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 10% 90%;
   padding: 1.4rem 1.25rem;
-  gap: 1rem;
+  gap: 3rem;
   border-style: solid;
   border-width: 0.06rem 0;
   border-color: var(--secondary-color);
@@ -49,4 +49,18 @@
 .experience_container p {
   font-size: 0.75rem;
   width: 16.1875rem;
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .experience_container h2 {
+    font-size: 1.15rem;
+  }
+
+  .experience_container p {
+    font-size: 1rem;
+  }
 }

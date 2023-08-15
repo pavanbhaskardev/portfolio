@@ -22,6 +22,7 @@ export const techStack = {
       name: "Tailwindcss",
       src: "/tech_stack/tailwind.png",
       alt: "tailwindcss_pic",
+      className: true,
     },
     { name: "Git", src: "/tech_stack/git.png", alt: "git_pic" },
     {

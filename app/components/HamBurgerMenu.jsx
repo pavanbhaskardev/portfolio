@@ -69,6 +69,13 @@ const HamBurgerMenu = ({ setOpen }) => {
           );
         })}
       </div>
+
+      <div className={styles.social_links_container}>
+        <a>Dribbble</a>
+        <a>Github</a>
+        <a>LinkedIn</a>
+        <a>Instagram</a>
+      </div>
     </motion.div>
   );
 };

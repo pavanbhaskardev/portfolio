@@ -44,3 +44,15 @@
   position: absolute;
   top: -1;
 }
+
+@media (min-width: 414px) and (max-width: 767px) {
+  .pb_logo {
+    height: 30px;
+    width: 40px;
+  }
+
+  .hamburger_container {
+    height: 3rem;
+    width: 3rem;
+  }
+}

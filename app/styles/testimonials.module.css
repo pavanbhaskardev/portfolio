@@ -30,10 +30,20 @@
 }
 
 .testimonial_name {
-  font-size: 0.68rem;
+  font-size: 0.8rem;
 }
 
 .testimonial_position {
   margin-top: 0.25rem;
-  font-size: 0.5rem;
+  font-size: 0.65rem;
+}
+
+@media (min-width: 414px) and (max-width: 767px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .swiper_slide {
+    height: 24rem;
+  }
 }
