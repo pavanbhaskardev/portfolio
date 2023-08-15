@@ -56,3 +56,20 @@
     width: 3rem;
   }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 3rem 3.125rem;
+  }
+
+  .hamburger_container {
+    height: 3.5rem;
+    width: 3.5rem;
+    right: 3.125rem;
+  }
+
+  .pb_logo {
+    height: 35px;
+    width: 45px;
+  }
+}

@@ -27,6 +27,14 @@
   padding: 0.62rem;
 }
 
+.project_tagline {
+  font-size: 0.6875rem;
+}
+
+.project_meta {
+  font-size: 0.5rem;
+}
+
 .project_content {
   display: flex;
   width: 100%;
@@ -70,5 +78,33 @@
 
   .project {
     height: 13.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .heading {
+    padding: 0 3.125rem;
+    font-size: 2rem;
+  }
+
+  .project_container {
+    padding: 2.3rem 3.125rem;
+    gap: 1.5rem;
+  }
+
+  .project {
+    height: 25vh;
+  }
+
+  .project_content_container {
+    height: 5vh;
+  }
+
+  .project_tagline {
+    font-size: 0.875rem;
+  }
+
+  .project_meta {
+    font-size: 0.65rem;
   }
 }

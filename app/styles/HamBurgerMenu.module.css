@@ -1,7 +1,7 @@
 .container {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 100;
   height: 100vh;
   width: 100vw;
@@ -35,4 +35,11 @@
 
 .social_links_container a {
   font-size: 0.8rem;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 50vw;
+    padding: 20vh 3.125rem 0 3.125rem;
+  }
 }

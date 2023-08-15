@@ -37,6 +37,7 @@ const Testimonials = () => {
                 height={40}
                 width={40}
                 alt="blockquote_pic"
+                className={styles.blockquote_pic}
               />
               <p className={styles.testimonial_message}>{message}</p>
 
@@ -45,7 +46,8 @@ const Testimonials = () => {
                   src={imageSrc}
                   height={40}
                   width={40}
-                  alt="narasimha_narahari_pic"
+                  alt={name}
+                  className={styles.testimonial_pic}
                 />
 
                 <div>

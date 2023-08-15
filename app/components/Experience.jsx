@@ -7,7 +7,7 @@ const Experience = () => {
       <p className={styles.heading}>Experience</p>
 
       <div className={styles.experience_container}>
-        <h2>Now</h2>
+        <h2 className={styles.timeline}>Now</h2>
         <span>
           <h2>Frontend Developer</h2>
           <p>Netenrich</p>
@@ -15,8 +15,7 @@ const Experience = () => {
       </div>
 
       <div className={styles.experience_container}>
-        <h2>2022</h2>
-
+        <h2 className={styles.timeline}>2022</h2>
         <span>
           <h2>Started Web Development</h2>
           <p>self learning</p>

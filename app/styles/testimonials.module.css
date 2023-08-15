@@ -40,10 +40,54 @@
 
 @media (min-width: 414px) and (max-width: 767px) {
   .heading {
+    padding-top: 5rem;
     font-size: 1.5rem;
   }
 
   .swiper_slide {
     height: 24rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .heading {
+    padding: 10rem 3.125rem 2.3rem 3.125rem;
+    font-size: 2rem;
+  }
+
+  .swiper_slide {
+    width: 25rem;
+    height: 31.5rem;
+    padding: 3rem 2.9rem;
+  }
+
+  .testimonial_container {
+    bottom: 3rem;
+  }
+
+  .blockquote_pic {
+    height: 50px;
+    width: 50px;
+  }
+
+  .testimonial_message {
+    font-size: 2rem;
+  }
+
+  .testimonial_pic {
+    height: 50px;
+    width: 50px;
+  }
+
+  .testimonial_container {
+    gap: 1rem;
+  }
+
+  .testimonial_name {
+    font-size: 1rem;
+  }
+
+  .testimonial_position {
+    font-size: 0.8rem;
   }
 }

@@ -18,8 +18,8 @@ const Navbar = () => {
         className={styles.pb_logo}
       />
       <motion.div
-        whileHover={{ scale: 1.2 }}
-        whileFocus={{ scale: 1.2 }}
+        whileHover={{ scale: 1.3 }}
+        whileFocus={{ scale: 1.3 }}
         className={`${styles.hamburger_container} ${
           open ? styles.close_hamburger : null
         }`}

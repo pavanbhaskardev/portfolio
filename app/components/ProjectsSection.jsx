@@ -11,8 +11,8 @@ const ProjectsSection = forwardRef((props, ref) => {
         <div className={styles.project}>
           <div className={styles.project_content_container}>
             <div className={styles.project_content}>
-              <p style={{ fontSize: "0.6875rem" }}>Shades Generator</p>
-              <p style={{ fontSize: "0.5rem" }}>Web app</p>
+              <p className={styles.project_tagline}>Shades Generator</p>
+              <p className={styles.project_meta}>Web app</p>
             </div>
           </div>
         </div>
@@ -21,10 +21,10 @@ const ProjectsSection = forwardRef((props, ref) => {
           <div className={styles.project}>
             <div className={styles.project_content_container}>
               <div className={styles.project_content}>
-                <p style={{ fontSize: "0.6875rem" }}>Track, Manage, Analyze</p>
-                <span>
-                  <p style={{ fontSize: "0.5rem" }}>Web app</p>
-                  <p style={{ fontSize: "0.5rem" }}>Savingspree</p>
+                <p className={styles.project_tagline}>Track, Manage, Analyze</p>
+                <span className={styles.project_meta}>
+                  <p>Web app</p>
+                  <p>Savingspree</p>
                 </span>
               </div>
             </div>
@@ -35,12 +35,12 @@ const ProjectsSection = forwardRef((props, ref) => {
           <div className={styles.project}>
             <div className={styles.project_content_container}>
               <div className={styles.project_content}>
-                <p style={{ fontSize: "0.6875rem" }}>
+                <p className={styles.project_tagline}>
                   Where lawyers & people meet
                 </p>
-                <span>
-                  <p style={{ fontSize: "0.5rem" }}>Website</p>
-                  <p style={{ fontSize: "0.5rem" }}>Mr.Lawyer</p>
+                <span className={styles.project_meta}>
+                  <p>Website</p>
+                  <p>Mr.Lawyer</p>
                 </span>
               </div>
             </div>
@@ -50,10 +50,10 @@ const ProjectsSection = forwardRef((props, ref) => {
         <div className={styles.project}>
           <div className={styles.project_content_container}>
             <div className={styles.project_content}>
-              <p style={{ fontSize: "0.6875rem" }}>Clothing</p>
-              <span>
-                <p style={{ fontSize: "0.5rem" }}>Website</p>
-                <p style={{ fontSize: "0.5rem" }}>Avis Tailors</p>
+              <p className={styles.project_tagline}>Clothing</p>
+              <span className={styles.project_meta}>
+                <p>Website</p>
+                <p>Avis Tailors</p>
               </span>
             </div>
           </div>

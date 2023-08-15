@@ -55,6 +55,7 @@ const HeroSection = ({ scrollToProjectSection }) => {
           alt="down_arrow"
           height={25}
           width={25}
+          className={styles.text_arrow}
         />
         <p>
           Creative Designer
@@ -69,12 +70,11 @@ const HeroSection = ({ scrollToProjectSection }) => {
         </div>
       </div>
 
-      <div className={styles.main_container}>
-        <div
-          className={styles.cta_container}
-          role="button"
-          onClick={() => scrollToProjectSection()}
-        >
+      <div
+        className={styles.main_container}
+        onClick={() => scrollToProjectSection()}
+      >
+        <div className={styles.cta_container} role="button">
           <Image
             src={"/cta_arrow.svg"}
             height={28}
