@@ -108,3 +108,71 @@
     font-size: 0.65rem;
   }
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .heading {
+    padding: 0 4rem;
+    font-size: 2rem;
+  }
+
+  .about_content p {
+    font-size: 4rem;
+    margin-right: 0.8rem;
+  }
+
+  .project_container {
+    padding: 2.3rem 4rem;
+    gap: 1.5rem;
+  }
+
+  .project {
+    height: 50vh;
+  }
+
+  .project_content_container {
+    height: 10vh;
+    padding: 0.7rem 1.25rem;
+  }
+
+  .project_tagline {
+    font-size: 1.25rem;
+  }
+
+  .project_meta {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .heading {
+    padding: 0 10rem;
+    font-size: 2rem;
+  }
+
+  .about_content p {
+    font-size: 4rem;
+    margin-right: 0.8rem;
+  }
+
+  .project_container {
+    padding: 2.3rem 10rem;
+    gap: 1.5rem;
+  }
+
+  .project {
+    height: 60vh;
+  }
+
+  .project_content_container {
+    height: 10vh;
+    padding: 0.7rem 1.25rem;
+  }
+
+  .project_tagline {
+    font-size: 1.25rem;
+  }
+
+  .project_meta {
+    font-size: 0.8rem;
+  }
+}

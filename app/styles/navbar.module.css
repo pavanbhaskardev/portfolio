@@ -45,6 +45,10 @@
   top: -1;
 }
 
+.nav_links_container {
+  display: none;
+}
+
 @media (min-width: 414px) and (max-width: 767px) {
   .pb_logo {
     height: 30px;
@@ -71,5 +75,56 @@
   .pb_logo {
     height: 35px;
     width: 45px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    padding: 3rem 4rem;
+  }
+
+  .pb_logo {
+    height: 50px;
+    width: 40px;
+  }
+
+  .hamburger_container {
+    display: none;
+  }
+
+  .nav_links_container {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .nav_links_container a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .container {
+    padding: 3rem 4rem;
+  }
+
+  .pb_logo {
+    height: 50px;
+    width: 40px;
+  }
+
+  .hamburger_container {
+    display: none;
+  }
+
+  .nav_links_container {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .nav_links_container a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--secondary-color);
   }
 }

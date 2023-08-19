@@ -91,3 +91,89 @@
     font-size: 0.8rem;
   }
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .heading {
+    padding: 10rem 4rem 3rem 4rem;
+    font-size: 2rem;
+  }
+
+  .swiper_slide {
+    width: 25rem;
+    height: 31.5rem;
+    padding: 3rem 2.9rem;
+  }
+
+  .testimonial_container {
+    bottom: 3rem;
+  }
+
+  .blockquote_pic {
+    height: 50px;
+    width: 50px;
+  }
+
+  .testimonial_message {
+    font-size: 2rem;
+  }
+
+  .testimonial_pic {
+    height: 50px;
+    width: 50px;
+  }
+
+  .testimonial_container {
+    gap: 1rem;
+  }
+
+  .testimonial_name {
+    font-size: 1rem;
+  }
+
+  .testimonial_position {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .heading {
+    padding: 10rem 10rem 3rem 10rem;
+    font-size: 2rem;
+  }
+
+  .swiper_slide {
+    width: 25rem;
+    height: 31.5rem;
+    padding: 3rem 2.9rem;
+  }
+
+  .testimonial_container {
+    bottom: 3rem;
+  }
+
+  .blockquote_pic {
+    height: 50px;
+    width: 50px;
+  }
+
+  .testimonial_message {
+    font-size: 2rem;
+  }
+
+  .testimonial_pic {
+    height: 50px;
+    width: 50px;
+  }
+
+  .testimonial_container {
+    gap: 1rem;
+  }
+
+  .testimonial_name {
+    font-size: 1rem;
+  }
+
+  .testimonial_position {
+    font-size: 0.8rem;
+  }
+}

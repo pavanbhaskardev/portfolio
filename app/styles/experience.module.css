@@ -83,3 +83,41 @@
     font-size: 1.25rem;
   }
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .heading {
+    padding: 3rem 4rem;
+    font-size: 2rem;
+  }
+
+  .experience_container {
+    padding: 1.5rem 4rem;
+  }
+
+  .experience_container h2 {
+    font-size: 1.75rem;
+  }
+
+  .experience_container p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .heading {
+    padding: 3rem 10rem;
+    font-size: 2rem;
+  }
+
+  .experience_container {
+    padding: 1.5rem 10rem;
+  }
+
+  .experience_container h2 {
+    font-size: 1.75rem;
+  }
+
+  .experience_container p {
+    font-size: 1.25rem;
+  }
+}
