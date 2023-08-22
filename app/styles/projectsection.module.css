@@ -18,7 +18,6 @@
 }
 
 .project_content_container {
-  height: 3.125rem;
   width: 100%;
   background: blue;
   border-radius: 0 0 1.125rem 1.125rem;
@@ -92,12 +91,12 @@
     gap: 1.5rem;
   }
 
-  .project {
-    height: 25vh;
+  .project_content_container {
+    padding: 0.7rem 1rem;
   }
 
-  .project_content_container {
-    height: 5vh;
+  .project {
+    height: 25vh;
   }
 
   .project_tagline {
@@ -130,7 +129,6 @@
   }
 
   .project_content_container {
-    height: 10vh;
     padding: 0.7rem 1.25rem;
   }
 
@@ -164,8 +162,7 @@
   }
 
   .project_content_container {
-    height: 10vh;
-    padding: 0.7rem 1.25rem;
+    padding: 1rem 1.25rem;
   }
 
   .project_tagline {

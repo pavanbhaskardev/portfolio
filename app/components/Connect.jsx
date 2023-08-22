@@ -41,10 +41,6 @@ const Connect = () => {
           </Button>
         </div>
 
-        {/* <div className={styles.connect_btn_parent_container}>
-          
-        </div> */}
-
         <div className={styles.mail_number_container}>
           <div>
             <p>Email</p>
