@@ -15,7 +15,9 @@ import Connect from "./components/Connect";
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const containerRef = useRef(null);
+  const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
+  const customCursurRef = useRef(null);
 
   useEffect(() => {
     (async () => {
@@ -43,7 +45,7 @@ const Home = () => {
 
   return (
     <>
-      <CustomCursur />
+      <CustomCursur ref={customCursurRef} />
       <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
 
       <main data-scroll-container ref={containerRef}>
@@ -53,7 +55,7 @@ const Home = () => {
         <ProjectsSection ref={ProjectsSectionRef} />
         <MyStack />
         <Experience />
-        <Testimonials />
+        <Testimonials ref={testimonialsRef} />
         <Connect />
       </main>
     </>

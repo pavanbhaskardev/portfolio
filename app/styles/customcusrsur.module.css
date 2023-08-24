@@ -1,15 +1,10 @@
 .custom_cursor_style {
   display: none;
   z-index: 998;
-  height: 1.25rem;
-  width: 1.25rem;
   background-color: var(--primary-color);
   border-radius: 99px;
   position: fixed;
-  top: 0;
-  left: 0;
   mix-blend-mode: difference;
-  transition: transform 0.1s;
   pointer-events: none;
 }
 

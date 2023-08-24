@@ -1,47 +1,26 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { forwardRef } from "react";
+import { motion } from "framer-motion";
 import styles from "../styles/customcusrsur.module.css";
+import cursorPosition from "./utils/cursorPosition";
 
-const CustomCursur = () => {
-  // added to target cursor div
-  const cursorRef = useRef();
-
-  useEffect(() => {
-    // targeted the cussor div
-    const customCursor = cursorRef.current;
-
-    // this function will change the cursor position
-    const changeCusrsorPosition = (e) => {
-      if (customCursor) {
-        const positionX = e.clientX - customCursor.offsetWidth / 2;
-        const positionY = e.clientY - customCursor.offsetHeight / 2;
-
-        const keyFrames = {
-          transform: `translate(${positionX}px, ${positionY}px)`,
-        };
-
-        customCursor.animate(keyFrames, { duration: 800, fill: "forwards" });
-      }
-    };
-
-    window.addEventListener("mousemove", (e) => {
-      changeCusrsorPosition(e);
-    });
-
-    //cleanup function
-    return () => {
-      window.removeEventListener("mousemove", (e) => {
-        changeCusrsorPosition(e);
-      });
-    };
-  }, []);
+const CustomCursur = forwardRef((props, ref) => {
+  const { x, y } = cursorPosition();
+  const size = 20;
 
   return (
-    <div
+    <motion.div
+      animate={{
+        x: x - size / 2,
+        y: y - size / 2,
+        height: size,
+        width: size,
+      }}
+      transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
       className={`${styles.custom_cursor_style} custom_cursor`}
-      ref={cursorRef}
-    ></div>
+      ref={ref}
+    ></motion.div>
   );
-};
+});
 
 export default CustomCursur;

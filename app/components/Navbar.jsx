@@ -26,6 +26,7 @@ const Navbar = () => {
       <motion.div
         whileHover={{ scale: 1.3 }}
         whileFocus={{ scale: 1.3 }}
+        whileTap={{ scale: 0.9 }}
         className={`${styles.hamburger_container} ${
           open ? styles.close_hamburger : null
         }`}

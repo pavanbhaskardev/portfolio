@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { forwardRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import Image from "next/image";
@@ -9,9 +9,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import testimonials from "./json/testimonials";
 
-const Testimonials = () => {
+const Testimonials = forwardRef((props, ref) => {
   return (
-    <section className={styles.about_me_container}>
+    <section className={styles.about_me_container} ref={ref}>
       <p className={styles.heading}>What they said</p>
 
       <Swiper
@@ -29,7 +29,8 @@ const Testimonials = () => {
         modules={[EffectCoverflow, Pagination]}
       >
         {testimonials.map((testimonial) => {
-          const { name, message, imageSrc, position } = testimonial;
+          const { name, message, imageSrc, position, revealMessage } =
+            testimonial;
           return (
             <SwiperSlide className={styles.swiper_slide} key={name}>
               <Image
@@ -39,7 +40,14 @@ const Testimonials = () => {
                 alt="blockquote_pic"
                 className={styles.blockquote_pic}
               />
-              <p className={styles.testimonial_message}>{message}</p>
+
+              <div className={styles.testimonial_message_container}>
+                <div className={styles.mask}>
+                  <p className={styles.testimonial_message}>{revealMessage}</p>
+                </div>
+
+                <p className={styles.testimonial_message}>{message}</p>
+              </div>
 
               <section className={styles.testimonial_container}>
                 <Image
@@ -61,6 +69,6 @@ const Testimonials = () => {
       </Swiper>
     </section>
   );
-};
+});
 
 export default Testimonials;
