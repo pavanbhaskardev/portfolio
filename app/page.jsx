@@ -16,6 +16,7 @@ import Connect from "./components/Connect";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
+  const containerRef = useRef(null);
   const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
   const customCursurRef = useRef(null);
@@ -23,27 +24,21 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      // new LocomotiveScroll({
-      //   el: document.querySelector("[data-scroll-container]"),
-      //   smooth: true,
-      //   tablet: { smooth: true },
-      //   smartphone: { smooth: true },
-      // });
-
       const locomotiveScroll = new LocomotiveScroll({
-        lenisOptions: {
-          wrapper: window,
-          content: document.documentElement,
-          lerp: 0.1,
-          duration: 1.2,
-          orientation: "vertical",
-          gestureOrientation: "vertical",
-          smoothWheel: true,
-          smoothTouch: false,
-          wheelMultiplier: 1,
-          touchMultiplier: 2,
-          normalizeWheel: true,
-          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+        el: containerRef.current,
+        smooth: true,
+      });
+
+      ScrollTrigger.defaults({
+        scroller: containerRef.current,
+      });
+
+      ScrollTrigger.scrollerProxy(containerRef.current, {
+        scrollTop(value) {
+          if (arguments.length) {
+            locomotiveScroll.scrollTop = value;
+          }
+          return locomotiveScroll.scrollTop;
         },
       });
 
@@ -93,7 +88,7 @@ const Home = () => {
   };
 
   return (
-    <main className="main_container">
+    <main className="main_container" ref={containerRef}>
       <CustomCursur ref={customCursurRef} />
       <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
 
