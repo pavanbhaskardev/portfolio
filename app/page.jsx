@@ -23,19 +23,39 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true,
-        tablet: { smooth: true },
-        smartphone: { smooth: true },
+      // new LocomotiveScroll({
+      //   el: document.querySelector("[data-scroll-container]"),
+      //   smooth: true,
+      //   tablet: { smooth: true },
+      //   smartphone: { smooth: true },
+      // });
+
+      const locomotiveScroll = new LocomotiveScroll({
+        lenisOptions: {
+          wrapper: window,
+          content: document.documentElement,
+          lerp: 0.1,
+          duration: 1.2,
+          orientation: "vertical",
+          gestureOrientation: "vertical",
+          smoothWheel: true,
+          smoothTouch: false,
+          wheelMultiplier: 1,
+          touchMultiplier: 2,
+          normalizeWheel: true,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+        },
       });
 
+      // this is for loading animation
       setTimeout(() => {
         setLoading(false);
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
       }, 2500);
     })();
+
+    // this is background change animation
     gsap.registerPlugin(ScrollTrigger);
     const sectionColor = document.querySelectorAll("[data-bgcolor]");
     sectionColor.forEach((colorSection, index) => {
@@ -73,7 +93,7 @@ const Home = () => {
   };
 
   return (
-    <main className="main_container" data-scroll-container>
+    <main className="main_container">
       <CustomCursur ref={customCursurRef} />
       <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
 
