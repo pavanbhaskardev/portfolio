@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./commonComponents/Button";
+import AnimatedButton from "./commonComponents/AnimatedButton";
 import styles from "../styles/connect.module.css";
 
 const Connect = () => {
@@ -30,35 +30,44 @@ const Connect = () => {
         Connect
       </p>
 
-      <section className={styles.connect_container}>
-        <div className={styles.connect_btn_parent_container}>
-          <Button>
-            <a className={styles.connect_btn_container}>LinkedIn</a>
-          </Button>
-          <Button>
-            <a className={styles.connect_btn_container}>Dribbble</a>
-          </Button>
+      <footer>
+        <p className={styles.connect_subheading}>Let's work Together!</p>
 
-          <Button>
-            <a className={styles.connect_btn_container}>Github</a>
-          </Button>
-          <Button>
-            <a className={styles.connect_btn_container}>Instagram</a>
-          </Button>
-        </div>
+        <section className={styles.connect_links_container}>
+          <AnimatedButton>
+            <a className={styles.connect_links}>pavanbhaskardev@gmail.com</a>
+          </AnimatedButton>
+          <AnimatedButton>
+            <a className={styles.connect_links}>+91 9440777253</a>
+          </AnimatedButton>
+        </section>
 
-        <div className={styles.mail_number_container}>
-          <div>
-            <p>Email</p>
-            <a>pavanbhaskardev@gmail.com</a>
+        <section className={styles.footer_details_container}>
+          <div className={styles.footer_moredetails_container}>
+            <div className={styles.footer_meta_container}>
+              <span>Version</span>
+              <p>2023 © Edition</p>
+            </div>
+
+            <div className={styles.footer_meta_container}>
+              <span>Local Time</span>
+              <p>{formattedTime}</p>
+            </div>
           </div>
 
-          <div>
-            <p>Phone</p>
-            <a>+91 9440 777 253</a>
+          <div className={styles.footer_meta_container}>
+            <span>Socials</span>
+
+            <div className={styles.social_links}>
+              <a>LinkedIn</a>
+              <a>Instagram</a>
+              <a>Github</a>
+              <a>Dribbble</a>
+            </div>
+            <hr className={styles.divider} />
           </div>
-        </div>
-      </section>
+        </section>
+      </footer>
     </section>
   );
 };

@@ -50,6 +50,29 @@
   display: none;
 }
 
+.nav_links_container a {
+  position: relative;
+}
+
+.nav_links_container a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in-out;
+}
+
+.nav_links_container a:hover::after,
+.nav_links_container a:focus::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 @media (min-width: 414px) and (max-width: 767px) {
   .pb_logo {
     height: 30px;

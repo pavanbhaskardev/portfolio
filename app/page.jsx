@@ -28,6 +28,7 @@ const Home = () => {
       const locomotiveScroll = new LocomotiveScroll();
 
       // this is for loading animation
+
       setTimeout(() => {
         setLoading(false);
         document.body.style.cursor = "default";
@@ -74,7 +75,9 @@ const Home = () => {
   return (
     <main className="main_container">
       <CustomCursur ref={customCursurRef} />
-      <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {loading ? <Loading /> : null}
+      </AnimatePresence>
 
       <Navbar />
       <HeroSection scrollToProjectSection={scrollToProjectSection} />

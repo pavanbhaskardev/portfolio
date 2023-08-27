@@ -62,7 +62,7 @@ const HamBurgerMenu = ({ setOpen }) => {
               <Link href={path} key={label}>
                 {label}
                 {pathName === path ? (
-                  <span className={styles.link_icon}>✦</span>
+                  <span className={styles.link_icon}>•</span>
                 ) : null}
               </Link>
             </motion.div>

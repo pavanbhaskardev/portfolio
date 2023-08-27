@@ -1,5 +1,4 @@
 const navLinks = [
-  { label: "Home", path: "/" },
   {
     label: "Work",
     path: "/work",

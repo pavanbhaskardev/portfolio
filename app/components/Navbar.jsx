@@ -14,13 +14,15 @@ const Navbar = () => {
 
   return (
     <header className={styles.container}>
-      <Image
-        src={"/logo.svg"}
-        alt="logo"
-        width={32}
-        height={25}
-        className={styles.pb_logo}
-      />
+      <Link href="/">
+        <Image
+          src={"/logo.svg"}
+          alt="logo"
+          width={32}
+          height={25}
+          className={styles.pb_logo}
+        />
+      </Link>
 
       {/* this is hamburger menu */}
       <motion.div
@@ -43,11 +45,11 @@ const Navbar = () => {
       <nav className={styles.nav_links_container}>
         {navLinks.map((data) => {
           const { label, path } = data;
-          return pathName !== path ? (
+          return (
             <Link href={path} key={label}>
-              {label}
+              {pathName === path ? `• ${label}` : label}
             </Link>
-          ) : null;
+          );
         })}
       </nav>
     </header>

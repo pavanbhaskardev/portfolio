@@ -7,57 +7,87 @@
   font-size: 1.25rem;
 }
 
-.connect_btn_parent_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.connect_subheading {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.connect_links_container {
+  display: flex;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  flex-direction: column;
 }
 
-.connect_btn_container {
-  width: 100%;
-  text-align: center;
-  padding: 0.6rem 2.6rem;
+.connect_links {
+  padding: 1rem 2.6rem;
 }
 
-.connect_btn_container:hover {
+.connect_links:hover,
+.connect_links:focus {
   color: var(--primary-color);
 }
 
-.mail_number_container {
-  margin-top: 2rem;
+.divider {
+  margin: 1.5rem 0;
+}
+
+.footer_details_container {
   display: flex;
-  gap: 3rem;
-  align-items: center;
+  flex-direction: column-reverse;
+  margin-top: 2rem;
 }
 
-.mail_number_container p {
-  font-size: 1rem;
+.footer_moredetails_container {
+  display: flex;
+  justify-content: space-between;
 }
 
-.mail_number_container a {
-  font-size: 0.7rem;
+.footer_details_heading {
+  padding-bottom: 2rem;
 }
 
-.mail_number_container span {
-  font-size: 0.7rem;
+.footer_meta_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer_meta_container span {
+  font-size: 0.8rem;
+}
+
+.social_links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social_links a {
+  position: relative;
+}
+
+.social_links a::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in-out;
+}
+
+.social_links a:hover::after,
+.social_links a:focus::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 @media (min-width: 414px) and (max-width: 767px) {
   .heading {
     font-size: 1.5rem;
-  }
-
-  .connect_btn_container {
-    font-size: 1.15rem;
-  }
-
-  .mail_number_container p {
-    font-size: 1.1rem;
-  }
-
-  .mail_number_container a {
-    font-size: 0.8rem;
   }
 }
 
@@ -70,32 +100,31 @@
     font-size: 2rem;
   }
 
-  .connect_container {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+  .connect_subheading {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  .mail_number_container {
-    display: flex;
-    flex-direction: column;
+  .connect_links_container {
+    flex-direction: row;
+  }
+
+  .footer_details_container {
+    flex-direction: row;
+    margin-top: 2rem;
+    justify-content: space-between;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .footer_moredetails_container {
+    gap: 3rem;
+  }
+
+  .social_links {
     gap: 1rem;
-    margin-top: 0;
-    align-items: flex-start;
-  }
-
-  .mail_number_container p {
-    font-size: 1.25rem;
-  }
-
-  .mail_number_container a {
-    font-size: 1rem;
-  }
-
-  .connect_btn_parent_container {
-    margin-right: 1rem;
-    gap: 1rem;
-    font-size: 1.25rem;
   }
 }
 
@@ -108,31 +137,31 @@
     font-size: 2rem;
   }
 
-  .connect_container {
-    display: flex;
-    width: 100%;
+  .connect_subheading {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  .mail_number_container {
-    display: flex;
-    flex-direction: column;
+  .connect_links_container {
+    flex-direction: row;
+  }
+
+  .footer_details_container {
+    flex-direction: row;
+    margin-top: 3rem;
+    justify-content: space-between;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .footer_moredetails_container {
+    gap: 3rem;
+  }
+
+  .social_links {
     gap: 1rem;
-    margin-top: 0;
-    align-items: flex-start;
-  }
-
-  .mail_number_container p {
-    font-size: 1.25rem;
-  }
-
-  .mail_number_container a {
-    font-size: 0.8rem;
-  }
-
-  .connect_btn_parent_container {
-    margin-right: 1rem;
-    gap: 1rem;
-    font-size: 1.25rem;
   }
 }
 
@@ -145,30 +174,30 @@
     font-size: 2rem;
   }
 
-  .connect_container {
-    display: flex;
-    width: 100%;
+  .connect_subheading {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 
-  .mail_number_container {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0;
-    align-items: flex-start;
+  .connect_links_container {
+    flex-direction: row;
   }
 
-  .mail_number_container p {
-    font-size: 1.25rem;
+  .footer_details_container {
+    flex-direction: row;
+    margin-top: 3rem;
+    justify-content: space-between;
   }
 
-  .mail_number_container a {
-    font-size: 0.8rem;
+  .divider {
+    display: none;
   }
 
-  .connect_btn_parent_container {
-    grid-template-columns: repeat(4, 1fr);
-    margin-right: 1rem;
-    gap: 1rem;
-    font-size: 1.25rem;
+  .footer_moredetails_container {
+    gap: 3rem;
+  }
+
+  .social_links {
+    gap: 2rem;
   }
 }
