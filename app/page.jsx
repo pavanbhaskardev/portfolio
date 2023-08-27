@@ -22,12 +22,11 @@ const Home = () => {
   const customCursurRef = useRef(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll({
-        el: containerRef.current,
-        smooth: true,
-      });
+      const locomotiveScroll = new LocomotiveScroll();
 
       ScrollTrigger.defaults({
         scroller: containerRef.current,
@@ -51,7 +50,6 @@ const Home = () => {
     })();
 
     // this is background change animation
-    gsap.registerPlugin(ScrollTrigger);
     const sectionColor = document.querySelectorAll("[data-bgcolor]");
     sectionColor.forEach((colorSection, index) => {
       const previousBgColor =
