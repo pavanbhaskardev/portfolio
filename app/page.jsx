@@ -23,7 +23,12 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+        tablet: { smooth: true },
+        smartphone: { smooth: true },
+      });
 
       setTimeout(() => {
         setLoading(false);
@@ -68,7 +73,7 @@ const Home = () => {
   };
 
   return (
-    <main className="main_container">
+    <main className="main_container" data-scroll-container>
       <CustomCursur ref={customCursurRef} />
       <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
 
