@@ -16,7 +16,6 @@ import Connect from "./components/Connect";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
-  const containerRef = useRef(null);
   const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
   const customCursurRef = useRef(null);
@@ -27,19 +26,6 @@ const Home = () => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       const locomotiveScroll = new LocomotiveScroll();
-
-      ScrollTrigger.defaults({
-        scroller: containerRef.current,
-      });
-
-      ScrollTrigger.scrollerProxy(containerRef.current, {
-        scrollTop(value) {
-          if (arguments.length) {
-            locomotiveScroll.scrollTop = value;
-          }
-          return locomotiveScroll.scrollTop;
-        },
-      });
 
       // this is for loading animation
       setTimeout(() => {
@@ -86,7 +72,7 @@ const Home = () => {
   };
 
   return (
-    <main className="main_container" ref={containerRef}>
+    <main className="main_container">
       <CustomCursur ref={customCursurRef} />
       <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
 
