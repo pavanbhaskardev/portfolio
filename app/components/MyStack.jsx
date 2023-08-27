@@ -6,9 +6,9 @@ import styles from "../styles/mystack.module.css";
 import { techStack } from "./json/techStack";
 
 const MyStack = () => {
-  const parentContainer = useRef(null);
+  const parentContainerRef = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: parentContainer,
+    target: parentContainerRef,
     offset: ["start end", "end start"],
   });
   const x1 = useTransform(scrollYProgress, [0, 1], [0, -150]);
@@ -16,8 +16,15 @@ const MyStack = () => {
   const x3 = useTransform(scrollYProgress, [0, 1], [0, -150]);
 
   return (
-    <section className={styles.my_stack_parent_container} ref={parentContainer}>
-      <p className={styles.heading}>My Stack</p>
+    <section
+      className={styles.my_stack_parent_container}
+      ref={parentContainerRef}
+      data-bgcolor="#eeeeee"
+      data-textcolor="#181818"
+    >
+      <p className={styles.heading} data-scroll data-scroll-speed={0.03}>
+        My Stack
+      </p>
 
       {/* 1st container */}
       <motion.div style={{ x: x1 }} className={styles.tech_stack_container}>

@@ -44,7 +44,7 @@ const Loading = () => {
       () => {
         setIndex((index) => index + 1);
       },
-      index == 0 ? 700 : 300
+      index == 0 ? 500 : 300
     );
   }, [index]);
   return (
@@ -56,7 +56,7 @@ const Loading = () => {
     >
       <motion.p variants={opacity} initial="initial" animate="enter">
         <span></span>
-        {words[index] ? `• ${words[index]}` : null}
+        {words[index] ? `✦ ${words[index]}` : null}
       </motion.p>
     </motion.div>
   );

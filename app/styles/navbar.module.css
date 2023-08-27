@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 2.3rem 1.85rem;
+  width: 100%;
 }
 
 .hamburger_container {

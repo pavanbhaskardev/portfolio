@@ -21,8 +21,14 @@ const Connect = () => {
   }:${istTime.getMinutes() + amOrPm()} IST`;
 
   return (
-    <section className={styles.parent_container}>
-      <p className={styles.heading}>Connect</p>
+    <section
+      className={styles.parent_container}
+      data-bgcolor="#eeeeee"
+      data-textcolor="#181818"
+    >
+      <p className={styles.heading} data-scroll data-scroll-speed={0.03}>
+        Connect
+      </p>
 
       <section className={styles.connect_container}>
         <div className={styles.connect_btn_parent_container}>

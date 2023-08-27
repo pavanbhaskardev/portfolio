@@ -54,10 +54,23 @@ const AboutMe = () => {
   };
 
   return (
-    <section className={styles.about_container} ref={containerRef}>
-      <p className={styles.heading}>About Me</p>
+    <section
+      className={styles.about_container}
+      ref={containerRef}
+      data-bgcolor="#181818"
+      data-textcolor="#eeeeee"
+    >
+      <p className={styles.heading} data-scroll data-scroll-speed={0.08}>
+        About Me
+      </p>
 
-      <main className={styles.about_content}>{splitWords()}</main>
+      <main
+        className={styles.about_content}
+        data-scroll
+        data-scroll-speed={0.1}
+      >
+        {splitWords()}
+      </main>
     </section>
   );
 };

@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loading from "./components/Loading";
 import CustomCursur from "./components/CustomCursur";
 import Navbar from "./components/Navbar";
@@ -14,7 +16,6 @@ import Connect from "./components/Connect";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
-  const containerRef = useRef(null);
   const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
   const customCursurRef = useRef(null);
@@ -22,19 +23,42 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll({
-        el: containerRef,
-        smooth: true,
-        smartPhone: { smooth: true },
-        tablet: { smooth: true },
-      });
+      const locomotiveScroll = new LocomotiveScroll();
 
       setTimeout(() => {
         setLoading(false);
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
-      }, 2700);
+      }, 2500);
     })();
+    gsap.registerPlugin(ScrollTrigger);
+    const sectionColor = document.querySelectorAll("[data-bgcolor]");
+    sectionColor.forEach((colorSection, index) => {
+      const previousBgColor =
+        index === 0 ? "" : sectionColor[index - 1].dataset.bgcolor;
+
+      const previousTextColor =
+        index === 0 ? "" : sectionColor[index - 1].dataset.textcolor;
+
+      ScrollTrigger.create({
+        trigger: colorSection,
+        start: "top 50%",
+        onEnter: () => {
+          gsap.to(".main_container", {
+            backgroundColor: colorSection.dataset.bgcolor,
+            color: colorSection.dataset.textcolor,
+            overwrite: "auto",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".main_container", {
+            backgroundColor: previousBgColor,
+            color: previousTextColor,
+            overwrite: "auto",
+          });
+        },
+      });
+    });
   }, []);
 
   // scrolls to the project section
@@ -44,21 +68,19 @@ const Home = () => {
   };
 
   return (
-    <>
+    <main className="main_container">
       <CustomCursur ref={customCursurRef} />
       <AnimatePresence mode="wait">{loading && <Loading />}</AnimatePresence>
 
-      <main data-scroll-container ref={containerRef}>
-        <Navbar />
-        <HeroSection scrollToProjectSection={scrollToProjectSection} />
-        <AboutMe />
-        <ProjectsSection ref={ProjectsSectionRef} />
-        <MyStack />
-        <Experience />
-        <Testimonials ref={testimonialsRef} />
-        <Connect />
-      </main>
-    </>
+      <Navbar />
+      <HeroSection scrollToProjectSection={scrollToProjectSection} />
+      <AboutMe />
+      <ProjectsSection ref={ProjectsSectionRef} />
+      <MyStack />
+      <Experience />
+      <Testimonials ref={testimonialsRef} />
+      <Connect />
+    </main>
   );
 };
 

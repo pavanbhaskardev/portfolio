@@ -6,6 +6,8 @@
   position: fixed;
   mix-blend-mode: difference;
   pointer-events: none;
+  height: 0;
+  width: 0;
 }
 
 @media (min-width: 1024px) {

@@ -3,8 +3,10 @@ import styles from "../styles/experience.module.css";
 
 const Experience = () => {
   return (
-    <section>
-      <p className={styles.heading}>Experience</p>
+    <section data-bgcolor="#eeeeee" data-textcolor="#181818">
+      <p className={styles.heading} data-scroll data-scroll-speed={0.03}>
+        Experience
+      </p>
 
       <div className={styles.experience_container}>
         <h2 className={styles.timeline}>Now</h2>
