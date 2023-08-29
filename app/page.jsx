@@ -82,8 +82,8 @@ const Home = () => {
       });
     });
 
+    // cleanup functions
     return () => {
-      // Cleanup function to destroy the Lenis instance
       lenis.destroy();
     };
   }, []);
