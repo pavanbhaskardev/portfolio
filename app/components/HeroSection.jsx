@@ -53,11 +53,7 @@ const HeroSection = ({ scrollToProjectSection }) => {
       data-bgcolor="#eeeeee"
       data-textcolor="#181818"
     >
-      <div
-        className={styles.hero_section_text_container}
-        data-scroll
-        data-scroll-speed={0.15}
-      >
+      <div className={styles.hero_section_text_container}>
         <Image
           src={"/hero_section_arrow.svg"}
           alt="down_arrow"
@@ -71,11 +67,7 @@ const HeroSection = ({ scrollToProjectSection }) => {
         </p>
       </div>
 
-      <div
-        className={styles.sliding_text_container}
-        data-scroll
-        data-scroll-speed={0.1}
-      >
+      <div className={styles.sliding_text_container}>
         <div className={styles.sliding_text} ref={sliderRef}>
           <p ref={firstText}>Pavan Bhaskar -</p>
           <p ref={secondText}>Pavan Bhaskar -</p>

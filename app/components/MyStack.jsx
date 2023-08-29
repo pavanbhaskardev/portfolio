@@ -22,9 +22,7 @@ const MyStack = () => {
       data-bgcolor="#eeeeee"
       data-textcolor="#181818"
     >
-      <p className={styles.heading} data-scroll data-scroll-speed={0.03}>
-        My Stack
-      </p>
+      <p className={styles.heading}>My Stack</p>
 
       {/* 1st container */}
       <motion.div style={{ x: x1 }} className={styles.tech_stack_container}>

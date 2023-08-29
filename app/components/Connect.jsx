@@ -26,9 +26,7 @@ const Connect = () => {
       data-bgcolor="#eeeeee"
       data-textcolor="#181818"
     >
-      <p className={styles.heading} data-scroll data-scroll-speed={0.03}>
-        Connect
-      </p>
+      <p className={styles.heading}>Connect</p>
 
       <footer>
         <p className={styles.connect_subheading}>Let's work Together!</p>
