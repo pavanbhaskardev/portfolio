@@ -24,17 +24,12 @@ const Home = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // (async () => {
-    //   const LocomotiveScroll = (await import("locomotive-scroll")).default;
-    //   const locomotiveScroll = new LocomotiveScroll();
-
     // this is for loading animation
     setTimeout(() => {
       setLoading(false);
       document.body.style.cursor = "default";
       window.scrollTo(0, 0);
     }, 2500);
-    // })();
 
     const lenis = new Lenis({
       duration: 1.2,
