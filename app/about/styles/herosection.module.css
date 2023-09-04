@@ -1,0 +1,20 @@
+.main {
+  padding: 2.3rem 1.85rem;
+}
+
+.hero_section_container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  line-height: 38.525px;
+  grid-column: span 2;
+}
+
+.hero_section_container img {
+  grid-column-start: 2;
+}

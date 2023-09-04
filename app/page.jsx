@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import gsap from "gsap";
-import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loading from "./components/Loading";
 import CustomCursur from "./components/CustomCursur";
@@ -30,23 +29,6 @@ const Home = () => {
       document.body.style.cursor = "default";
       window.scrollTo(0, 0);
     }, 2500);
-
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-      direction: "vertical",
-      gestureDirection: "vertical",
-      smooth: true,
-      smoothTouch: false,
-      touchMultiplier: 2,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
 
     // this is background change animation
     const sectionColor = document.querySelectorAll("[data-bgcolor]");
@@ -76,11 +58,6 @@ const Home = () => {
         },
       });
     });
-
-    // cleanup functions
-    return () => {
-      lenis.destroy();
-    };
   }, []);
 
   // scrolls to the project section

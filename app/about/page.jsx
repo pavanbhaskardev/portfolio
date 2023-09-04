@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Connect from "../components/Connect";
+import HeroSection from "./components/HeroSection";
+import Services from "./components/Services";
 import CustomCursur from "../components/CustomCursur";
 import CommonLoader from "../components/commonComponents/CommonLoader";
 
@@ -24,7 +26,8 @@ const About = () => {
 
       <CustomCursur />
       <Navbar />
-      <p>About</p>
+      <HeroSection />
+      <Services />
       <Connect />
     </>
   );
