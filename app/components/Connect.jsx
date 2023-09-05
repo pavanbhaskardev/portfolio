@@ -16,9 +16,27 @@ const Connect = () => {
     return "AM";
   };
 
-  const formattedTime = `${
-    istTime.getHours() > 12 ? istTime.getHours() - 12 : istTime.getHours()
-  }:${istTime.getMinutes() + amOrPm()} IST`;
+  const hours = () => {
+    const hrs = istTime.getHours();
+    if (hrs <= 9) {
+      return `0${hrs}`;
+    } else {
+      return hrs;
+    }
+  };
+
+  const minutes = () => {
+    const min = istTime.getMinutes();
+    if (min <= 9) {
+      return `0${min}`;
+    } else {
+      return min;
+    }
+  };
+
+  const formattedTime = `${istTime.getHours() > 12 ? hours() - 12 : hours()}:${
+    minutes() + amOrPm()
+  } IST`;
 
   return (
     <section

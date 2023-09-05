@@ -18,7 +18,8 @@ const Services = () => {
               className={`${styles.btn} ${isOpen ? styles.btn_rotate : null}`}
               onClick={() => setIsOpen((current) => !current)}
             >
-              +
+              <span className={styles.plus_icon}></span>
+              <span className={styles.plus_icon}></span>
             </div>
           </div>
         </div>

@@ -16,5 +16,7 @@
 }
 
 .hero_section_container img {
+  object-fit: cover;
   grid-column-start: 2;
+  border-radius: 10px;
 }

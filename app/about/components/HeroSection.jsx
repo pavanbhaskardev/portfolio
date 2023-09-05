@@ -13,6 +13,7 @@ const HeroSection = () => {
           </p>
 
           <Image
+            className={styles.hero_section_pic}
             src={"/profile_pic.png"}
             alt="pavan_bhaskar_pic"
             height={300}
@@ -20,10 +21,7 @@ const HeroSection = () => {
           />
         </div>
 
-        <p>
-          My Interest in web-development started by creating a website to my
-          father.
-        </p>
+        <p>It all started with a dream of creating a website to my father.</p>
       </section>
     </>
   );

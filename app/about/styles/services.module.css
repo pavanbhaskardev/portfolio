@@ -23,11 +23,27 @@
 }
 
 .btn {
-  font-size: 1.75rem;
-  transition: 0.3s ease-in-out;
+  height: 1.25rem;
+  width: 1.25rem;
+  display: inline-block;
+  position: relative;
 }
 
-.btn_rotate {
-  font-size: 1.75rem;
-  transform: rotate(315deg);
+.plus_icon {
+  height: 2px;
+  width: 70%;
+  background-color: var(--secondary-color);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.plus_icon:last-child {
+  transform: rotate(-90deg);
+}
+
+.btn_rotate .plus_icon:last-child {
+  transform: rotate(0deg);
 }
