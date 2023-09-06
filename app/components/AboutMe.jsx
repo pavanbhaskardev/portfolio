@@ -40,17 +40,19 @@ const AboutMe = () => {
   };
 
   const scrollAnimation = () => {
-    gsap.to(spanRef.current, {
-      opacity: 1,
-      ease: "none",
-      stagger: 5,
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "-=400",
-        end: "=100",
-        scrub: true,
-      },
-    });
+    if (spanRef.current) {
+      gsap.to(spanRef.current, {
+        opacity: 1,
+        ease: "none",
+        stagger: 5,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "-=400",
+          end: "=100",
+          scrub: true,
+        },
+      });
+    }
   };
 
   return (

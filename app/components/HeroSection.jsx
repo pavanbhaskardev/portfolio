@@ -13,25 +13,6 @@ const HeroSection = ({ scrollToProjectSection }) => {
   let xPercent = 0;
   let scrollDirection = -1;
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    // called when we scroll change the text direction
-    gsap.to(sliderRef.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.25,
-        start: "top",
-        end: window.innerHeight,
-        onUpdate: (e) => {
-          scrollDirection = e.direction * -1;
-        },
-      },
-      x: "-300px",
-    });
-
-    requestAnimationFrame(textScroll);
-  }, []);
-
   const textScroll = () => {
     if (xPercent <= -100) {
       xPercent = 0;
@@ -41,11 +22,38 @@ const HeroSection = ({ scrollToProjectSection }) => {
       xPercent = -100;
     }
 
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
+    if (firstText.current) {
+      gsap.set(firstText.current, { xPercent: xPercent });
+    }
+
+    if (secondText.current) {
+      gsap.set(secondText.current, { xPercent: xPercent });
+    }
     requestAnimationFrame(textScroll);
     xPercent += 0.25 * scrollDirection;
   };
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    // called when we scroll change the text direction
+
+    if (sliderRef.current) {
+      gsap.to(sliderRef.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: 0.25,
+          start: 0,
+          end: window.innerHeight,
+
+          onUpdate: (e) => {
+            scrollDirection = e.direction === 1 ? -1 : 1;
+          },
+        },
+        x: "-300px",
+      });
+    }
+    requestAnimationFrame(textScroll);
+  }, []);
 
   return (
     <section

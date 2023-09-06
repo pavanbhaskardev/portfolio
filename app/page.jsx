@@ -63,7 +63,10 @@ const Home = () => {
   // scrolls to the project section
   const scrollToProjectSection = () => {
     const projectsSection = ProjectsSectionRef.current;
-    projectsSection.scrollIntoView({ behavior: "smooth" });
+
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

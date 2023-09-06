@@ -10,6 +10,7 @@ const Button = ({ children }) => {
 
   useEffect(() => {
     timeline.current = gsap.timeline({ paused: true });
+
     timeline.current
       .to(
         circleRef.current,
