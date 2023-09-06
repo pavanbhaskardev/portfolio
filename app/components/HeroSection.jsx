@@ -15,7 +15,7 @@ const HeroSection = ({ scrollToProjectSection }) => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    // when we scroll change the text direction
+    // called when we scroll change the text direction
     gsap.to(sliderRef.current, {
       scrollTrigger: {
         trigger: document.documentElement,

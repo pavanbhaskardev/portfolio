@@ -18,6 +18,7 @@ const HeroSection = () => {
             alt="pavan_bhaskar_pic"
             height={300}
             width={235}
+            priority={true}
           />
         </div>
 

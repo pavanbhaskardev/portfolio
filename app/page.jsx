@@ -16,6 +16,7 @@ import Connect from "./components/Connect";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
+  const containerRef = useRef(null);
   const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
   const customCursurRef = useRef(null);
@@ -38,19 +39,18 @@ const Home = () => {
 
       const previousTextColor =
         index === 0 ? "" : sectionColor[index - 1].dataset.textcolor;
-
       ScrollTrigger.create({
         trigger: colorSection,
         start: "top 50%",
         onEnter: () => {
-          gsap.to(".main_container", {
+          gsap.to(containerRef.current, {
             backgroundColor: colorSection.dataset.bgcolor,
             color: colorSection.dataset.textcolor,
             overwrite: "auto",
           });
         },
         onLeaveBack: () => {
-          gsap.to(".main_container", {
+          gsap.to(containerRef.current, {
             backgroundColor: previousBgColor,
             color: previousTextColor,
             overwrite: "auto",
@@ -67,21 +67,23 @@ const Home = () => {
   };
 
   return (
-    <main className="main_container">
+    <>
       <CustomCursur ref={customCursurRef} />
       <AnimatePresence mode="wait">
         {loading ? <Loading /> : null}
       </AnimatePresence>
 
-      <Navbar />
-      <HeroSection scrollToProjectSection={scrollToProjectSection} />
-      <AboutMe />
-      <ProjectsSection ref={ProjectsSectionRef} />
-      <MyStack />
-      <Experience />
-      <Testimonials ref={testimonialsRef} />
-      <Connect />
-    </main>
+      <main className="main_container" ref={containerRef}>
+        <Navbar />
+        <HeroSection scrollToProjectSection={scrollToProjectSection} />
+        <AboutMe />
+        <ProjectsSection ref={ProjectsSectionRef} />
+        <MyStack />
+        <Experience />
+        <Testimonials ref={testimonialsRef} />
+        <Connect />
+      </main>
+    </>
   );
 };
 

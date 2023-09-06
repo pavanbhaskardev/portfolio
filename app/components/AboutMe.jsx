@@ -46,7 +46,7 @@ const AboutMe = () => {
       stagger: 5,
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "-=300",
+        start: "-=400",
         end: "=100",
         scrub: true,
       },

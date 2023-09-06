@@ -20,7 +20,12 @@ const CommonLoader = ({ name }) => {
       exit="exit"
       className={styles.loading_container}
     >
-      <p>• {name}</p>
+      <motion.p
+        animate={{ top: "50vh" }}
+        transition={{ ease: [0.33, 1, 0.68, 1], duration: 0.2 }}
+      >
+        • {name}
+      </motion.p>
     </motion.div>
   );
 };

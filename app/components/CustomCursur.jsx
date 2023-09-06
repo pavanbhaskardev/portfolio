@@ -1,13 +1,10 @@
 "use client";
 import { forwardRef, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import styles from "../styles/customcusrsur.module.css";
-import cursorPosition from "./utils/cursorPosition";
 
 const CustomCursur = forwardRef((props, ref) => {
   // added to target cursor div
   const cursorRef = useRef();
-  const { x, y } = cursorPosition();
 
   useEffect(() => {
     // targeted the cussor div
