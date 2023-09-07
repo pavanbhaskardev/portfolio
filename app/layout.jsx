@@ -14,8 +14,8 @@ export default function RootLayout({ children }) {
       direction: "vertical",
       gestureDirection: "vertical",
       smooth: true,
-      smoothTouch: true,
-      touchMultiplier: 5,
+      smoothTouch: false,
+      touchMultiplier: 2,
     });
 
     function raf(time) {
