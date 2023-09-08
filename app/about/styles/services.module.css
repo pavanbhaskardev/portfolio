@@ -8,18 +8,22 @@
 }
 
 .services_container {
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0 0;
   border-style: solid;
   border-color: var(--secondary-color);
   border-width: 1px 0;
+  position: relative;
+}
+
+.services_container:nth-child(3),
+.services_container:nth-child(4) {
+  border-top-width: 0;
 }
 
 .services_header {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  margin: 0 1.85rem;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  padding: 0 1.85rem;
 }
 
 .btn {
@@ -46,4 +50,19 @@
 
 .btn_rotate .plus_icon:last-child {
   transform: rotate(0deg);
+}
+
+.services_content_hide {
+  /* padding: 1.5rem 1.85rem 0 1.85rem; */
+  padding: 1.5rem 1.85rem 0 1.85rem;
+  height: 0px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s all;
+}
+
+.services_content_view {
+  height: auto;
+  padding-bottom: 1.5rem;
+  transition: 0.5s all ease-in-out;
 }

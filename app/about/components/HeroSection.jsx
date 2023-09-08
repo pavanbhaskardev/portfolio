@@ -22,7 +22,12 @@ const HeroSection = () => {
             priority={true}
           /> */}
 
-          <ImageSlide src="/profile_pic.png" />
+          <div>
+            <ImageSlide
+              src="/profile_pic.png"
+              className={styles.hero_section_pic}
+            />
+          </div>
         </div>
 
         <p>It all started with a dream of creating a website to my father.</p>
