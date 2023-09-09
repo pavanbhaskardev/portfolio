@@ -16,6 +16,9 @@ export default function RootLayout({ children }) {
       smooth: true,
       smoothTouch: false,
       touchMultiplier: 2,
+      lerp: 0.1,
+      wheelMultiplier: 0.7,
+      infinite: false,
     });
 
     function raf(time) {
