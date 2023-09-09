@@ -8,6 +8,7 @@ const Connect = () => {
   const istOffset = 5 * 60 + 30;
   const totalOffset = offSetTime + istOffset;
   const istTime = new Date(d.getTime() + totalOffset * 60000);
+
   const amOrPm = () => {
     const hours = istTime.getHours();
     if (hours >= 12) {

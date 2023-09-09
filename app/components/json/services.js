@@ -1,17 +1,16 @@
 const services = [
   {
     title: "Frontend Development",
-    content:
-      "With Frontend Development skills, I can create creative projects.",
+    content: "I plan, design & build websites that are scalable.",
   },
   {
     title: "UI Design",
-    content: "With UI Designing. I can create dope designs",
+    content: "I deliver good & user-friendly design. ",
   },
   {
     title: "Creative Implementation",
     content:
-      "My passion towards Frontend Development & UI design. makes me create performant projects",
+      "My passion towards development & design, enables me to create super projects.",
   },
 ];
 

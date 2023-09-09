@@ -1,12 +1,10 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styles from "../styles/services.module.css";
 import services from "@/app/components/json/services";
 
 const Services = () => {
-  const [isOpen, setIsOpen] = useState([false, false, false]);
-
-  console.log("isOpen", isOpen);
+  const [isOpen, setIsOpen] = useState([true, false, false]);
 
   const handleIsOpen = (id) => {
     const newArray = isOpen.map((state, index) => {
@@ -25,15 +23,16 @@ const Services = () => {
 
         {services.map((data, index) => {
           const { title, content } = data;
+
           return (
-            <div className={styles.services_container} key={index + 1}>
+            <div className={styles.services_container} key={index}>
               <div className={styles.services_header}>
                 <p>{index + 1}</p>
-                <p>{title}</p>
+                <p onClick={() => handleIsOpen(index)}>{title}</p>
 
                 <div
                   className={`${styles.btn} ${
-                    isOpen[index] ? styles.btn_rotate : null
+                    isOpen[index] ? styles.btn_rotate : ""
                   }`}
                   onClick={() => handleIsOpen(index)}
                 >
@@ -42,11 +41,11 @@ const Services = () => {
                 </div>
               </div>
               <div
-                className={`${styles.services_content_hide} ${
-                  isOpen[index] ? styles.services_content_view : null
+                className={`${styles.services_content} ${
+                  isOpen[index] ? styles.is_active : ""
                 }`}
               >
-                {content}
+                <span>{content}</span>
               </div>
             </div>
           );

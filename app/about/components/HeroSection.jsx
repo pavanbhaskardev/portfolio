@@ -13,16 +13,7 @@ const HeroSection = () => {
             Hyderabad.
           </p>
 
-          {/* <Image
-            className={styles.hero_section_pic}
-            src={"/profile_pic.png"}
-            alt="pavan_bhaskar_pic"
-            height={300}
-            width={235}
-            priority={true}
-          /> */}
-
-          <div>
+          <div className={styles.image_container}>
             <ImageSlide
               src="/profile_pic.png"
               className={styles.hero_section_pic}

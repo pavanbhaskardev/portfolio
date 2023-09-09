@@ -14,3 +14,7 @@
   line-height: 38.525px;
   grid-column: span 2;
 }
+
+.image_container {
+  grid-column-start: 2;
+}
