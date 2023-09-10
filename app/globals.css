@@ -39,6 +39,10 @@ body {
   cursor: wait;
 }
 
+body:hover > .custom_cursor {
+  opacity: 1;
+}
+
 /* changing the text selection color */
 
 ::-moz-selection {

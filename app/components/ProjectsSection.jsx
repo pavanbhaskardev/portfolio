@@ -8,7 +8,7 @@ const ProjectsSection = forwardRef((props, ref) => {
       <p className={styles.heading}>Projects</p>
 
       <section className={styles.project_container}>
-        <div className={styles.project}>
+        <div className={`${styles.project} project-section`}>
           <div className={styles.project_content_container}>
             <div className={styles.project_content}>
               <p className={styles.project_tagline}>Shades Generator</p>
@@ -18,7 +18,7 @@ const ProjectsSection = forwardRef((props, ref) => {
         </div>
 
         <div className={`${styles.project} ${styles.project_col_span_2}`}>
-          <div className={styles.project}>
+          <div className={`${styles.project} project-section`}>
             <div className={styles.project_content_container}>
               <div className={styles.project_content}>
                 <p className={styles.project_tagline}>Track, Manage, Analyze</p>
@@ -32,7 +32,7 @@ const ProjectsSection = forwardRef((props, ref) => {
         </div>
 
         <div className={`${styles.project} ${styles.project_col_span_2}`}>
-          <div className={styles.project}>
+          <div className={`${styles.project} project-section`}>
             <div className={styles.project_content_container}>
               <div className={styles.project_content}>
                 <p className={styles.project_tagline}>
@@ -47,7 +47,7 @@ const ProjectsSection = forwardRef((props, ref) => {
           </div>
         </div>
 
-        <div className={styles.project}>
+        <div className={`${styles.project} project-section`}>
           <div className={styles.project_content_container}>
             <div className={styles.project_content}>
               <p className={styles.project_tagline}>Clothing</p>

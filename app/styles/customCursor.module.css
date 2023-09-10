@@ -1,0 +1,36 @@
+.custom_cursor_style {
+  visibility: hidden; /* to hide for mobile devices */
+  background-color: var(--primary-color);
+  border-radius: 99px;
+  height: 1.25rem;
+  width: 1.25rem;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 998;
+
+  mix-blend-mode: difference;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  display: grid;
+  place-items: center;
+}
+
+.custom_cursor_style span {
+  font-size: 0.25rem;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.custom_cursor_style:not([data-type=""]) > span {
+  opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .custom_cursor_style {
+    visibility: visible;
+  }
+}

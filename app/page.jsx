@@ -4,7 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loading from "./components/Loading";
-import CustomCursur from "./components/CustomCursur";
+import CustomCursor from "./components/CustomCursor";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
@@ -19,7 +19,7 @@ const Home = () => {
   const containerRef = useRef(null);
   const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
-  const customCursurRef = useRef(null);
+  const customCursorRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -71,7 +71,7 @@ const Home = () => {
 
   return (
     <>
-      <CustomCursur ref={customCursurRef} />
+      <CustomCursor ref={customCursorRef} />
       <AnimatePresence mode="wait">
         {loading ? <Loading /> : null}
       </AnimatePresence>

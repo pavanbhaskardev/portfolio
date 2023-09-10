@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Connect from "../components/Connect";
-import CustomCursur from "../components/CustomCursur";
+import CustomCursor from "../components/CustomCursor";
 import CommonLoader from "../components/commonComponents/CommonLoader";
 
 const Contact = () => {
@@ -22,7 +22,7 @@ const Contact = () => {
         {loading ? <CommonLoader name="Contact" /> : null}
       </AnimatePresence>
 
-      <CustomCursur />
+      <CustomCursor />
       <Navbar />
       <p>Contact</p>
       <Connect />

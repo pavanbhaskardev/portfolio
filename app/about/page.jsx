@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Connect from "../components/Connect";
 import HeroSection from "./components/HeroSection";
 import Services from "./components/Services";
-import CustomCursur from "../components/CustomCursur";
+import CustomCursor from "../components/CustomCursor";
 import CommonLoader from "../components/commonComponents/CommonLoader";
 
 const About = () => {
@@ -24,7 +24,7 @@ const About = () => {
         {loading ? <CommonLoader name="About" /> : null}
       </AnimatePresence>
 
-      <CustomCursur />
+      <CustomCursor />
       <Navbar />
       <HeroSection />
       <Services />
