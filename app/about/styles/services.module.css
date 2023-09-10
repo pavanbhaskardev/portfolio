@@ -1,5 +1,6 @@
 .main {
   overflow-x: hidden;
+  margin-bottom: 2rem;
 }
 
 .heading {
@@ -22,8 +23,13 @@
 
 .services_header {
   display: grid;
-  grid-template-columns: 10% 80% 10%;
+  grid-template-columns: 90% 10%;
   padding: 0 1.85rem;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.1rem;
 }
 
 .btn {
@@ -31,6 +37,11 @@
   width: 1.25rem;
   display: inline-block;
   position: relative;
+}
+
+.btn,
+.title {
+  cursor: pointer;
 }
 
 .plus_icon {
@@ -65,4 +76,79 @@
 
 .services_content span {
   overflow: hidden;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .heading {
+    font-size: 2rem;
+    margin: 2.3rem 3.125rem;
+  }
+
+  .services_header {
+    padding: 0 3.125rem;
+  }
+
+  .services_content {
+    padding: 1.5rem 3.125rem;
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .heading {
+    font-size: 2rem;
+    margin: 3rem 4rem;
+  }
+
+  .services_header {
+    padding: 0 4rem;
+  }
+
+  .services_content {
+    padding: 1.5rem 4rem;
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .heading {
+    font-size: 2rem;
+    margin: 3rem 10rem;
+  }
+
+  .services_header {
+    padding: 0 10rem;
+  }
+
+  .services_content {
+    padding: 1.5rem 10rem;
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
 }

@@ -27,8 +27,9 @@ const Services = () => {
           return (
             <div className={styles.services_container} key={index}>
               <div className={styles.services_header}>
-                <p>{index + 1}</p>
-                <p onClick={() => handleIsOpen(index)}>{title}</p>
+                <p onClick={() => handleIsOpen(index)} className={styles.title}>
+                  {title}
+                </p>
 
                 <div
                   className={`${styles.btn} ${

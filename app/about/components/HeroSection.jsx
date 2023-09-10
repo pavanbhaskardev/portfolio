@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import styles from "../styles/herosection.module.css";
 import ImageSlide from "./ImageSlide";
 
@@ -21,7 +20,15 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <p>It all started with a dream of creating a website to my father.</p>
+        <p className={styles.content}>
+          It all started with a dream of creating a website to my father, there
+          on i started exploring the web.
+        </p>
+        <br />
+        <p className={styles.content}>
+          With each project, I push my work to new horizons & learn new things.
+          Always putting quality first.
+        </p>
       </section>
     </>
   );

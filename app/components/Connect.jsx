@@ -48,8 +48,6 @@ const Connect = () => {
       <p className={styles.heading}>Connect</p>
 
       <footer>
-        <p className={styles.connect_subheading}>Let's work Together!</p>
-
         <section className={styles.connect_links_container}>
           <AnimatedButton>
             <a className={styles.connect_links}>pavanbhaskardev@gmail.com</a>
