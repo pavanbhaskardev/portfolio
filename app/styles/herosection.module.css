@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  height: 90vh;
+  height: 100vh;
 }
 
 .hero_section_text_container {
@@ -168,7 +168,7 @@
   }
 
   .main_container {
-    top: calc(100vh - 37vh);
+    top: calc(100vh - 32.5vh);
   }
 
   .cta_container {
@@ -198,7 +198,7 @@
   }
 
   .main_container {
-    top: calc(100vh - 38vh);
+    top: calc(100vh - 32.5vh);
   }
 
   .cta_container {

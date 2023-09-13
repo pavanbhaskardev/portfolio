@@ -31,6 +31,7 @@
   align-items: center;
   gap: 0.2rem;
   white-space: nowrap;
+  text-wrap: none;
   -webkit-text-wrap: none; /* Safari/Chrome */
   -ms-text-wrap: none; /* Internet Explorer */
 }
@@ -101,15 +102,15 @@
   }
 
   .tech_stack_container {
-    top: 35vh;
+    top: 40vh;
   }
 
   .tech_stack_container:nth-child(2) {
-    top: 19.5vh;
+    top: 23vh;
   }
 
   .tech_stack_container:last-child {
-    top: 50vh;
+    top: 59vh;
   }
 }
 

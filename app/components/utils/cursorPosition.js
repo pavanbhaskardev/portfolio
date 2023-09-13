@@ -3,21 +3,21 @@ import { useEffect, useState } from "react";
 
 // gives the x & y positions
 const cursorPosition = () => {
-  const [cursurPosition, setCusrsurPosition] = useState({ x: null, y: null });
+  const [cursorPosition, setCursorPosition] = useState({ x: null, y: null });
 
-  const updateCursurPosition = (e) => {
-    setCusrsurPosition({ x: e.clientX, y: e.clientY });
+  const updateCursorPosition = (e) => {
+    setCursorPosition({ x: e.clientX, y: e.clientY });
   };
 
   useEffect(() => {
-    window.addEventListener("mousemove", (e) => updateCursurPosition(e));
+    window.addEventListener("mousemove", (e) => updateCursorPosition(e));
 
     return () => {
-      window.removeEventListener("mousemove", (e) => updateCursurPosition(e));
+      window.removeEventListener("mousemove", (e) => updateCursorPosition(e));
     };
   }, []);
 
-  return cursurPosition;
+  return cursorPosition;
 };
 
 export default cursorPosition;
