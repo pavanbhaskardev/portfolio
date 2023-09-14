@@ -4,7 +4,7 @@ import styles from "../styles/services.module.css";
 import services from "@/app/components/json/services";
 
 const Services = () => {
-  const [isOpen, setIsOpen] = useState([true, false, false]);
+  const [isOpen, setIsOpen] = useState([false, false, false]);
 
   const handleIsOpen = (id) => {
     const newArray = isOpen.map((state, index) => {

@@ -13,10 +13,18 @@
   font-size: 1.5rem;
   line-height: 38.525px;
   grid-column: span 2;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .image_container {
   grid-column-start: 2;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

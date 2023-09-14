@@ -14,7 +14,7 @@ const testimonials = [
     revealMessage: "After countless changes you finally got it right.",
   },
   {
-    name: "Ramu, Srinu",
+    name: "Ramu Challa",
     position: "Founder @Avis Tables",
     imageSrc: "/testimonials/NNsir_profile.png",
     message: "He's a beast. He's skills are insane!",

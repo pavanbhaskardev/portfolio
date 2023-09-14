@@ -1,23 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useInView } from "framer-motion";
 import styles from "../styles/slideimage.module.css";
 
 const ImageSlide = ({ src }) => {
   const [isInView, setIsInView] = useState(false);
   const containerRef = useRef(null);
-  //   const isInView = useInView(containerRef, {
-  //     once: true,
-  //     margin: "-50%",
-  //   });
 
   useEffect(() => {
     setTimeout(() => {
       setIsInView(true);
     }, 1200);
   }, []);
-
-  //   console.log("isInView", isInView);
 
   return (
     <section ref={containerRef} className={styles.container}>

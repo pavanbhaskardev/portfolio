@@ -27,12 +27,12 @@ const linkSlide = {
   enter: (index) => ({
     x: 0,
     transition: "transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)",
-    delay: 0.2 * index,
+    delay: 0.5 * index,
   }),
   exit: (index) => ({
     x: 80,
     transition: "transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)",
-    delay: 0.2 * index,
+    delay: 0.5 * index,
   }),
 };
 

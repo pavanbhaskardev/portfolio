@@ -13,6 +13,7 @@ import MyStack from "./components/MyStack";
 import Experience from "./components/Experience";
 import Testimonials from "./components/Testimonials";
 import Connect from "./components/Connect";
+import CommonLoader from "./components/commonComponents/CommonLoader";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -24,12 +25,21 @@ const Home = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    const initialLoading = sessionStorage.getItem("initialLoading");
+
     // this is for loading animation
-    setTimeout(() => {
-      setLoading(false);
-      document.body.style.cursor = "default";
-      window.scrollTo(0, 0);
-    }, 2500);
+    if (initialLoading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 800);
+    } else {
+      setTimeout(() => {
+        setLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+        sessionStorage.setItem("initialLoading", true);
+      }, 2500);
+    }
 
     // this is background change animation
     const sectionColor = document.querySelectorAll("[data-bgcolor]");
@@ -69,11 +79,20 @@ const Home = () => {
     }
   };
 
+  const CustomLoader = () => {
+    const initialLoading = sessionStorage.getItem("initialLoading");
+    if (initialLoading) {
+      return <CommonLoader name="home" />;
+    }
+
+    return <Loading />;
+  };
+
   return (
     <>
       <CustomCursor ref={customCursorRef} />
       <AnimatePresence mode="wait">
-        {loading ? <Loading /> : null}
+        {loading ? <CustomLoader /> : null}
       </AnimatePresence>
 
       <main className="main_container" ref={containerRef}>
