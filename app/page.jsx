@@ -17,6 +17,7 @@ import CommonLoader from "./components/commonComponents/CommonLoader";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState();
   const containerRef = useRef(null);
   const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
@@ -25,10 +26,11 @@ const Home = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const initialLoading = sessionStorage.getItem("initialLoading");
+    const alreadyLoaded = sessionStorage.getItem("initialLoading");
+    setInitialLoading(alreadyLoaded);
 
     // this is for loading animation
-    if (initialLoading) {
+    if (alreadyLoaded) {
       setTimeout(() => {
         setLoading(false);
       }, 800);
@@ -70,6 +72,8 @@ const Home = () => {
     });
   }, []);
 
+  console.log("initialized", initialLoading);
+
   // scrolls to the project section
   const scrollToProjectSection = () => {
     const projectsSection = ProjectsSectionRef.current;
@@ -80,7 +84,6 @@ const Home = () => {
   };
 
   const CustomLoader = () => {
-    const initialLoading = sessionStorage.getItem("initialLoading");
     if (initialLoading) {
       return <CommonLoader name="home" />;
     }
