@@ -33,6 +33,7 @@ const Home = () => {
     if (alreadyLoaded) {
       setTimeout(() => {
         setLoading(false);
+        document.body.style.cursor = "default";
       }, 800);
     } else {
       setTimeout(() => {
@@ -85,7 +86,7 @@ const Home = () => {
 
   const CustomLoader = () => {
     if (initialLoading) {
-      return <CommonLoader name="home" />;
+      return <CommonLoader name="Home" />;
     }
 
     return <Loading />;
