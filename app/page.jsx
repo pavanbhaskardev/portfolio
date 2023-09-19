@@ -14,6 +14,7 @@ import Experience from "./components/Experience";
 import Testimonials from "./components/Testimonials";
 import Connect from "./components/Connect";
 import CommonLoader from "./components/commonComponents/CommonLoader";
+import LenisScroll from "./components/commonComponents/LenisScroll";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -73,8 +74,6 @@ const Home = () => {
     });
   }, []);
 
-  console.log("initialized", initialLoading);
-
   // scrolls to the project section
   const scrollToProjectSection = () => {
     const projectsSection = ProjectsSectionRef.current;
@@ -94,6 +93,7 @@ const Home = () => {
 
   return (
     <>
+      <LenisScroll />
       <CustomCursor ref={customCursorRef} />
       <AnimatePresence mode="wait">
         {loading ? <CustomLoader /> : null}

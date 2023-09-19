@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Connect from "../components/Connect";
 import CustomCursor from "../components/CustomCursor";
 import CommonLoader from "../components/commonComponents/CommonLoader";
+import LenisScroll from "../components/commonComponents/LenisScroll";
 
 const Work = () => {
   const [loading, setLoading] = useState(true);
@@ -18,6 +19,7 @@ const Work = () => {
 
   return (
     <>
+      <LenisScroll />
       <AnimatePresence mode="wait">
         {loading ? <CommonLoader name="Work" /> : null}
       </AnimatePresence>

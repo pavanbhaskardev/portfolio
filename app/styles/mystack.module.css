@@ -114,7 +114,7 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1919px) {
+@media (min-width: 1200px) {
   .my_stack_parent_container {
     height: 70vh;
   }

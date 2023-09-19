@@ -182,7 +182,7 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1919px) {
+@media (min-width: 1200px) {
   .hero_section_text_container {
     padding: 0 4rem;
     font-size: 1.5rem;

@@ -149,7 +149,7 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1919px) {
+@media (min-width: 1200px) {
   .parent_container {
     padding: 3rem 10rem;
   }

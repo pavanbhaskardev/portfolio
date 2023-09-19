@@ -7,7 +7,6 @@ const navLinks = [
     label: "About",
     path: "/about",
   },
-  { label: "Contact", path: "/contact" },
 ];
 
 export default navLinks;
