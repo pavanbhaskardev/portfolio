@@ -152,3 +152,25 @@
     width: 1.75rem;
   }
 }
+
+@media (min-width: 1920px) {
+  .services_header,
+  .services_content,
+  .heading_container {
+    width: 1700px;
+    margin: auto;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .services_content {
+    font-size: 1.75rem;
+  }
+}

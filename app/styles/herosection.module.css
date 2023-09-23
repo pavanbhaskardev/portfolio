@@ -212,3 +212,25 @@
     width: 115px;
   }
 }
+
+@media (min-width: 1920px) {
+  .hero_section_text_container {
+    padding: 0 7rem;
+    font-size: 2rem;
+  }
+
+  .cta_container {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .cta_arrow {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .cta_text {
+    height: 9rem;
+    width: 9rem;
+  }
+}

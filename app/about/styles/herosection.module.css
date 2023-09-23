@@ -98,3 +98,19 @@
     margin: 2rem 0 0 0;
   }
 }
+
+@media (min-width: 1920px) {
+  .main {
+    width: 1700px;
+    margin: auto;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .content {
+    width: 40vw;
+    font-size: 1.75rem;
+  }
+}

@@ -22,7 +22,9 @@ const MyStack = () => {
       data-bgcolor="#eeeeee"
       data-textcolor="#181818"
     >
-      <p className={styles.heading}>My Stack</p>
+      <div className={styles.heading_container}>
+        <p className={styles.heading}>My Stack</p>
+      </div>
 
       {/* 1st container */}
       <motion.div style={{ x: x1 }} className={styles.tech_stack_container}>

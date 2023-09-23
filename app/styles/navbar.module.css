@@ -153,3 +153,18 @@
     color: var(--secondary-color);
   }
 }
+
+@media (min-width: 1919px) {
+  .container {
+    padding: 3rem 7rem;
+  }
+
+  .pb_logo {
+    height: 60px;
+    width: 50px;
+  }
+
+  .nav_links_container a {
+    font-size: 1.5rem;
+  }
+}

@@ -19,7 +19,9 @@ const Services = () => {
   return (
     <>
       <section className={styles.main}>
-        <p className={styles.heading}>Services</p>
+        <div className={styles.heading_container}>
+          <p className={styles.heading}>Services</p>
+        </div>
 
         {services.map((data, index) => {
           const { title, content } = data;

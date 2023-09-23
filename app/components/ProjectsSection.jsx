@@ -4,7 +4,12 @@ import styles from "../styles/projectsection.module.css";
 
 const ProjectsSection = forwardRef((props, ref) => {
   return (
-    <section ref={ref} data-bgcolor="#eeeeee" data-textcolor="#181818">
+    <section
+      ref={ref}
+      data-bgcolor="#eeeeee"
+      data-textcolor="#181818"
+      className={styles.parent_container}
+    >
       <p className={styles.heading}>Projects</p>
 
       <section className={styles.project_container}>
