@@ -1,10 +1,11 @@
 "use client";
-import { forwardRef, useEffect, useRef } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import styles from "../styles/customCursor.module.css";
 
 const CustomCursor = forwardRef((props, ref) => {
   // added to target cursor div
   const cursorRef = useRef();
+  const [insideProjectSection, setInsideProjectSection] = useState(false);
 
   useEffect(() => {
     // targeted the cursor div
@@ -21,6 +22,12 @@ const CustomCursor = forwardRef((props, ref) => {
             inside ? 6 : 1
           })`,
         };
+
+        if (inside) {
+          setInsideProjectSection(true);
+        } else {
+          setInsideProjectSection(false);
+        }
 
         customCursor.animate(keyFrames, { duration: 800, fill: "forwards" });
       }
@@ -45,7 +52,9 @@ const CustomCursor = forwardRef((props, ref) => {
 
   return (
     <div
-      className={`${styles.custom_cursor_style} custom_cursor`}
+      className={`${styles.custom_cursor_style} custom_cursor ${
+        insideProjectSection ? styles.no_mix_blend : ""
+      }`}
       ref={cursorRef}
     >
       <span>open</span>

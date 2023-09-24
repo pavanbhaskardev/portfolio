@@ -11,16 +11,17 @@
 }
 
 .project {
-  height: 12.5rem;
+  height: 20rem;
   background-color: blueviolet;
-  border-radius: 1.125rem;
+  border-radius: 10px;
   position: relative;
+  grid-column: span 2;
 }
 
 .project_content_container {
   width: 100%;
   background: blue;
-  border-radius: 0 0 1.125rem 1.125rem;
+  border-radius: 0 0 10px 10px;
   position: absolute;
   bottom: 0;
   padding: 0.62rem;
@@ -51,32 +52,13 @@
   background-color: bisque;
 }
 
-/* spans mr.lawyer & savingspree */
-.project_col_span_2 {
-  grid-column: span 2;
-}
-
-/* this is to place avis-tailors right side */
-.project:last-child {
-  grid-column-start: 2;
-}
-
-/* moving savingspree to top */
-.project:nth-child(2) {
-  grid-row-start: 1;
-}
-
-.project:nth-child(3) {
-  grid-row-start: 3;
-}
-
 @media (min-width: 414px) and (max-width: 767px) {
   .heading {
     font-size: 1.5rem;
   }
 
   .project {
-    height: 13.5rem;
+    height: 20rem;
   }
 }
 
@@ -96,7 +78,7 @@
   }
 
   .project {
-    height: 25vh;
+    height: 30vh;
   }
 
   .project_tagline {

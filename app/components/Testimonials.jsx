@@ -34,8 +34,7 @@ const Testimonials = forwardRef((props, ref) => {
         modules={[EffectCoverflow, Pagination]}
       >
         {testimonials.map((testimonial) => {
-          const { name, message, imageSrc, position, revealMessage } =
-            testimonial;
+          const { name, message, imageSrc, position } = testimonial;
           return (
             <SwiperSlide className={styles.swiper_slide} key={name}>
               <Image
@@ -46,13 +45,7 @@ const Testimonials = forwardRef((props, ref) => {
                 className={styles.blockquote_pic}
               />
 
-              <div className={styles.testimonial_message_container}>
-                <div className={styles.mask}>
-                  <p className={styles.testimonial_message}>{revealMessage}</p>
-                </div>
-
-                <p className={styles.testimonial_message}>{message}</p>
-              </div>
+              <p className={styles.testimonial_message}>{message}</p>
 
               <section className={styles.testimonial_container}>
                 <Image

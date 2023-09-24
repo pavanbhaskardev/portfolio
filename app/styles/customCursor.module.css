@@ -29,6 +29,12 @@
   opacity: 1;
 }
 
+.no_mix_blend {
+  mix-blend-mode: normal;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
 @media (min-width: 1024px) {
   .custom_cursor_style {
     visibility: visible;

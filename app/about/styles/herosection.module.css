@@ -12,6 +12,7 @@
 .heading {
   font-size: 1.5rem;
   line-height: 38.525px;
+  font-weight: 450;
   grid-column: span 2;
   display: flex;
   flex-wrap: wrap;

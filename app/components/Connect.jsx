@@ -50,7 +50,7 @@ const Connect = () => {
       <footer>
         <section className={styles.connect_links_container}>
           <AnimatedButton>
-            <a className={styles.connect_links}>pavanbhaskardev@gmail.com</a>
+            <a className={styles.connect_links}>hello@pavanbhaskar.com</a>
           </AnimatedButton>
           <AnimatedButton>
             <a className={styles.connect_links}>+91 9440777253</a>
