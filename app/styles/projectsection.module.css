@@ -78,7 +78,7 @@
   }
 
   .project {
-    height: 30vh;
+    height: 550px;
   }
 
   .project_tagline {
@@ -140,7 +140,7 @@
   }
 
   .project {
-    height: 550px;
+    height: 700px;
   }
 
   .project_content_container {
@@ -165,10 +165,6 @@
   .parent_container {
     width: 1700px;
     margin: auto;
-  }
-
-  .project {
-    height: 700px;
   }
 
   .project_content_container {
