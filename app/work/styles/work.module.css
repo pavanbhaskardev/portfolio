@@ -9,7 +9,7 @@
 }
 
 .project_container {
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 5rem 0;
 }
 
 .project_image {
@@ -26,7 +26,7 @@
 }
 
 .project_content p {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -39,6 +39,10 @@
     line-height: 60px;
   }
 
+  .project_container {
+    margin-bottom: 7rem;
+  }
+
   .project_image {
     height: 550px;
   }
@@ -48,6 +52,38 @@
   }
 
   .project_content span {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .parent_container {
+    padding: 3rem 4rem;
+  }
+
+  .project_content {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 1200px) {
+  .parent_container {
+    padding: 3rem 10rem;
+  }
+
+  .hero_text {
+    width: 60%;
+  }
+
+  .project_image {
+    height: 750px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .parent_container {
+    width: 1700px;
+    margin: auto;
   }
 }
