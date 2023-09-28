@@ -5,6 +5,7 @@ const projects = [
     summary: "A web-app to track & manage your expenses.",
     imgSrc: "",
     siteUrl: "https://savingspree.vercel.com",
+    featured: true,
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const projects = [
     title: "Avis Tailors",
     summary: "Custom web design & development for a tailoring brand.",
     imgSrc: "",
-    siteUrl: "https://savingspree.vercel.com",
+    siteUrl: "https://avistailors.netlify.com",
   },
   {
     id: 4,
@@ -26,6 +27,7 @@ const projects = [
     summary: "A place where people & lawyers meet each other",
     imgSrc: "",
     siteUrl: "https://mrlawyerfirm.web.app/",
+    featured: true,
   },
 ];
 

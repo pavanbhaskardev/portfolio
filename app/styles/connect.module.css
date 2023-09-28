@@ -58,6 +58,8 @@
 
 .social_links a {
   position: relative;
+  text-decoration: none;
+  color: var(--secondary-color);
 }
 
 .social_links a::after {

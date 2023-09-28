@@ -37,7 +37,10 @@ const Work = () => {
           const { title, summary, id } = details;
 
           return (
-            <section className={styles.project_container} key={id}>
+            <section
+              className={`${styles.project_container} project-section`}
+              key={id}
+            >
               <div className={styles.project_image}></div>
               <div className={styles.project_content}>
                 <p>{title}</p>

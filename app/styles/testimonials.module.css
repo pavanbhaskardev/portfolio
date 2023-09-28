@@ -11,7 +11,7 @@
   background: var(--secondary-color);
   color: var(--primary-color);
   width: 18.75rem;
-  height: 21.875rem;
+  height: 25rem;
   border-radius: 1.125rem;
   padding: 1.8rem 1.5rem;
 }
@@ -43,10 +43,6 @@
   .heading {
     padding-top: 5rem;
     font-size: 1.5rem;
-  }
-
-  .swiper_slide {
-    height: 24rem;
   }
 }
 

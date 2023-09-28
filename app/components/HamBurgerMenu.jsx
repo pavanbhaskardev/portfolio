@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import styles from "../styles/HamBurgerMenu.module.css";
 import navLinks from "./json/navLinks";
+import socialLinks from "./json/socialLinks";
 
 const menuSlide = {
   initial: {
@@ -71,10 +72,14 @@ const HamBurgerMenu = ({ setOpen }) => {
       </div>
 
       <div className={styles.social_links_container}>
-        <a>Dribbble</a>
-        <a>Github</a>
-        <a>LinkedIn</a>
-        <a>Instagram</a>
+        {socialLinks.map((details, index) => {
+          const { name, url } = details;
+          return (
+            <a href={url} rel="noopener noreferrer" target="_blank" key={index}>
+              {name}
+            </a>
+          );
+        })}
       </div>
     </motion.div>
   );

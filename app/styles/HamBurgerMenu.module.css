@@ -27,7 +27,6 @@
 .social_links_container {
   position: absolute;
   top: 85vh;
-  color: var(--primary-color);
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -35,6 +34,8 @@
 
 .social_links_container a {
   font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

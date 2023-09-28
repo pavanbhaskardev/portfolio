@@ -1,6 +1,7 @@
 import React from "react";
 import AnimatedButton from "./commonComponents/AnimatedButton";
 import styles from "../styles/connect.module.css";
+import socialLinks from "./json/socialLinks";
 
 const Connect = () => {
   const d = new Date();
@@ -74,10 +75,19 @@ const Connect = () => {
             <span>Socials</span>
 
             <div className={styles.social_links}>
-              <a>LinkedIn</a>
-              <a>Instagram</a>
-              <a>Github</a>
-              <a>Dribbble</a>
+              {socialLinks.map((details, index) => {
+                const { name, url } = details;
+                return (
+                  <a
+                    href={url}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    key={index}
+                  >
+                    {name}
+                  </a>
+                );
+              })}
             </div>
             <hr className={styles.divider} />
           </div>
