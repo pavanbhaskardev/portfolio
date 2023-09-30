@@ -6,6 +6,8 @@
   font-size: 1.5rem;
   line-height: 38.525px;
   font-weight: 450;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .project_container {

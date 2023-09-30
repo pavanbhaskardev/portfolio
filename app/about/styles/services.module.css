@@ -47,6 +47,7 @@
 .plus_icon {
   height: 2px;
   width: 70%;
+  border-radius: 99px;
   background-color: var(--secondary-color);
   display: block;
   position: absolute;
