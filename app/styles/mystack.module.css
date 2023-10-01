@@ -14,7 +14,7 @@
   align-items: center;
   position: absolute;
   left: -20vw;
-  top: 27vh;
+  top: 17.5vh;
 }
 
 .tech_stack {
@@ -37,11 +37,24 @@
 }
 
 .tech_stack_container:nth-child(2) {
-  top: 17.5vh;
+  top: 37vh;
 }
 
-.tech_stack_container:last-child {
-  top: 37vh;
+.tech_stack_container:nth-child(3) {
+  top: 27vh;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    #eee 0%,
+    rgba(238, 238, 238, 0) 10.38%,
+    rgba(238, 238, 238, 0) 88.55%,
+    #eee 95.83%
+  );
 }
 
 @media (min-width: 414px) and (max-width: 767px) {
@@ -144,15 +157,15 @@
   }
 
   .tech_stack_container {
-    top: 35vh;
-  }
-
-  .tech_stack_container:nth-child(2) {
     top: 20vh;
   }
 
-  .tech_stack_container:last-child {
+  .tech_stack_container:nth-child(2) {
     top: 50vh;
+  }
+
+  .tech_stack_container:nth-child(3) {
+    top: 35vh;
   }
 }
 

@@ -35,6 +35,7 @@ const Home = () => {
       setTimeout(() => {
         setLoading(false);
         document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
       }, 800);
     } else {
       setTimeout(() => {

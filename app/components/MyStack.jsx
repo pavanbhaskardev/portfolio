@@ -146,6 +146,8 @@ const MyStack = () => {
           })}
         </div>
       </motion.div>
+
+      <div className={styles.overlay}></div>
     </section>
   );
 };
