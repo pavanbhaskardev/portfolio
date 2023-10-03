@@ -1,13 +1,14 @@
 "use client";
 import React, { forwardRef, useRef } from "react";
 import { useInView } from "framer-motion";
+import Link from "next/link";
 import styles from "../styles/projectsection.module.css";
 import projects from "./json/projects";
 
 const ProjectsSection = forwardRef((props, ref) => {
   const featuredProjects = projects.filter((details) => details.featured);
 
-  const Project = ({ title, summary }) => {
+  const Project = ({ title, summary, id }) => {
     const containerRef = useRef(null);
     const inView = useInView(containerRef, { once: true, threshold: 0.5 });
 
@@ -18,11 +19,13 @@ const ProjectsSection = forwardRef((props, ref) => {
         style={{
           transform: inView ? "none" : "translateY(70px)",
           opacity: inView ? 1 : 0,
-          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
           overflow: "hidden",
         }}
       >
-        <div className={styles.project_image}></div>
+        <Link href={`work/${id}`}>
+          <div className={styles.project_image}></div>
+        </Link>
         <div className={styles.project_content}>
           <p>{title}</p>
           <span>{summary}</span>
@@ -43,7 +46,7 @@ const ProjectsSection = forwardRef((props, ref) => {
       {featuredProjects.map((details) => {
         const { title, summary, id } = details;
 
-        return <Project title={title} summary={summary} key={id} />;
+        return <Project title={title} summary={summary} key={id} id={id} />;
       })}
     </section>
   );

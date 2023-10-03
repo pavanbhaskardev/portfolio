@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Connect from "../components/Connect";
 import CustomCursor from "../components/CustomCursor";
@@ -55,7 +56,7 @@ const Work = () => {
     },
   };
 
-  const ProjectSection = ({ title, summary }) => {
+  const ProjectSection = ({ title, summary, id }) => {
     const containerRef = useRef(null);
     const inView = useInView(containerRef, { once: true, threshold: 0.5 });
 
@@ -65,12 +66,14 @@ const Work = () => {
         style={{
           transform: inView ? "none" : "translateY(70px)",
           opacity: inView ? 1 : 0,
-          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
           overflow: "hidden",
         }}
         className={`${styles.project_container} project-section`}
       >
-        <div className={styles.project_image}></div>
+        <Link href={`work/${id}`}>
+          <div className={styles.project_image}></div>
+        </Link>
         <div className={styles.project_content}>
           <p>{title}</p>
           <span>{summary}</span>
@@ -109,7 +112,9 @@ const Work = () => {
         {projects.map((details) => {
           const { title, summary, id } = details;
 
-          return <ProjectSection title={title} summary={summary} key={id} />;
+          return (
+            <ProjectSection title={title} summary={summary} key={id} id={id} />
+          );
         })}
       </main>
 

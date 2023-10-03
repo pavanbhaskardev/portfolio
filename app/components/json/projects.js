@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: 1,
+    id: "savingspree",
     title: "Savingspree",
     summary: "A web-app to track & manage your expenses.",
     imgSrc: "",
@@ -8,21 +8,21 @@ const projects = [
     featured: true,
   },
   {
-    id: 2,
+    id: "shadesGenerator",
     title: "Shades Generator",
     summary: "Generate different color shades.",
     imgSrc: "",
     siteUrl: "https://shades-generator.vercel.app",
   },
   {
-    id: 3,
+    id: "avisTailors",
     title: "Avis Tailors",
     summary: "Custom web design & development for a tailoring brand.",
     imgSrc: "",
     siteUrl: "https://avistailors.netlify.com",
   },
   {
-    id: 4,
+    id: "Mr Lawyer",
     title: "Mr.Lawyer",
     summary: "A place where people & lawyers meet each other",
     imgSrc: "",
