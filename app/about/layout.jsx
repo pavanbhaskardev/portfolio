@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Pavan Bhaskar - About",
+  title: "About - Pavan Bhaskar",
 };
 
 export default function AboutLayout({ children }) {

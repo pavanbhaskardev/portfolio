@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import LenisScroll from "@/app/components/commonComponents/LenisScroll";
 import Navbar from "@/app/components/Navbar";
 import CommonLoader from "@/app/components/commonComponents/CommonLoader";
+import projects from "@/app/components/json/projects";
 
 const ProjectPage = ({ params }) => {
   const [loading, setLoading] = useState(true);
@@ -15,16 +16,18 @@ const ProjectPage = ({ params }) => {
     }, 800);
   });
 
-  const projectName = params.projectName;
+  const projectDetails = projects.filter(
+    (details) => details.id === params.projectName
+  );
 
-  const capitalizedProjectName =
-    projectName.charAt(0).toUpperCase() + projectName.slice(1);
+  // destructured all the properties
+  const { id, title, summary, imgSrc, siteUrl, featured } = projectDetails[0];
 
   return (
     <>
       <LenisScroll />
       <AnimatePresence mode="wait">
-        {loading ? <CommonLoader name={capitalizedProjectName} /> : null}
+        {loading ? <CommonLoader name={title} /> : null}
       </AnimatePresence>
 
       <Navbar />
