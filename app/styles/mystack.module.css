@@ -57,17 +57,22 @@
   );
 }
 
-@media (min-width: 414px) and (max-width: 767px) {
+@media (min-width: 414px) {
   .heading {
     font-size: 1.5rem;
   }
 
   .tech_stack span {
     font-size: 1.15rem;
+    margin-right: 2.5rem;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
+  .my_stack_parent_container {
+    height: 70vh;
+  }
+
   .heading {
     padding: 2.3rem 3.125rem 0rem 3.125rem;
     font-size: 2rem;
@@ -83,17 +88,25 @@
   }
 
   .tech_stack span {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     gap: 0.5rem;
-    margin-right: 3rem;
+    margin-right: 5rem;
+  }
+
+  .tech_stack_container {
+    top: 20vh;
+  }
+
+  .tech_stack_container:nth-child(2) {
+    top: 50vh;
+  }
+
+  .tech_stack_container:nth-child(3) {
+    top: 35vh;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .my_stack_parent_container {
-    height: 70vh;
-  }
-
+@media (min-width: 992px) {
   .heading {
     padding: 3rem 4rem 0rem 4rem;
     font-size: 2rem;
@@ -112,18 +125,6 @@
     font-size: 1.5rem;
     gap: 0.5rem;
     margin-right: 7rem;
-  }
-
-  .tech_stack_container {
-    top: 40vh;
-  }
-
-  .tech_stack_container:nth-child(2) {
-    top: 23vh;
-  }
-
-  .tech_stack_container:last-child {
-    top: 59vh;
   }
 }
 
