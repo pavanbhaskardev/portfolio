@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 import styles from "../styles/project.module.css";
 import AnimatedButton from "../../components/commonComponents/AnimatedButton";
 import NextProject from "./NextProject";
@@ -7,6 +8,9 @@ import ImageGallery from "./ImageGallery";
 import RedirectArrow from "./RedirectArrow";
 
 const Project = ({ details }) => {
+  const containerRef = useRef(null);
+  const inView = useInView(containerRef, { once: true, threshold: 0.5 });
+
   const {
     index,
     id,
@@ -18,6 +22,34 @@ const Project = ({ details }) => {
     services,
     imageGallery,
   } = details;
+
+  const sentencesTextAnimation = {
+    initial: {
+      opacity: 1,
+    },
+    animate: {
+      transition: {
+        delay: 1,
+        staggerChildren: 0.015,
+      },
+    },
+  };
+
+  const spanAnimation = {
+    initial: {
+      opacity: 0,
+      y: 50,
+    },
+
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0.33, 1, 0.68, 1],
+      },
+    },
+  };
 
   return (
     <section className={styles.container}>
@@ -42,7 +74,21 @@ const Project = ({ details }) => {
           <Image src={imgSrc} alt={`${title} pic`} fill />
         </div>
 
-        <p className={styles.description}>{description}</p>
+        <motion.p
+          ref={containerRef}
+          className={styles.description}
+          variants={sentencesTextAnimation}
+          animate={inView ? "animate" : ""}
+          initial="initial"
+        >
+          {description.split(" ").map((word, index) => {
+            return (
+              <motion.span key={index} variants={spanAnimation}>
+                {word}&nbsp;
+              </motion.span>
+            );
+          })}
+        </motion.p>
       </main>
 
       <div>

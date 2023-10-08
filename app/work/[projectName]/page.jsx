@@ -23,8 +23,6 @@ const ProjectPage = ({ params }) => {
     (details) => details.id === params.projectName
   );
 
-  console.log(projectDetails);
-
   return (
     <>
       <LenisScroll />

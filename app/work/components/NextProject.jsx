@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import projects from "@/app/components/json/projects";
 import styles from "../styles/nextProject.module.css";
 
 const NextProject = ({ details }) => {
+  const containerRef = useRef(null);
+  const inView = useInView(containerRef, { once: true, threshold: 0.5 });
+
   const nextProject = projects.filter(
     (data) => details.index + 1 === data.index
   );
-
-  console.log(nextProject);
 
   // if next project is there shows it
   if (nextProject.length) {
@@ -17,7 +19,16 @@ const NextProject = ({ details }) => {
 
     return (
       <>
-        <section className={`${styles.project_container} project-section`}>
+        <motion.section
+          ref={containerRef}
+          style={{
+            transform: inView ? "none" : "translateY(70px)",
+            opacity: inView ? 1 : 0,
+            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            overflow: "hidden",
+          }}
+          className={`${styles.project_container} project-section`}
+        >
           <Link href={`${id}`}>
             <div className={styles.project_image}>
               <Image src={imgSrc} alt={`${title} pic`} fill />
@@ -27,7 +38,7 @@ const NextProject = ({ details }) => {
             <p>{title}</p>
             <span>{summary}</span>
           </div>
-        </section>
+        </motion.section>
       </>
     );
   }
@@ -37,7 +48,16 @@ const NextProject = ({ details }) => {
 
   return (
     <>
-      <section className={`${styles.project_container} project-section`}>
+      <motion.section
+        style={{
+          transform: inView ? "none" : "translateY(70px)",
+          opacity: inView ? 1 : 0,
+          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          overflow: "hidden",
+        }}
+        className={`${styles.project_container} project-section`}
+        ref={containerRef}
+      >
         <Link href={`${id}`}>
           <div className={styles.project_image}>
             <Image src={imgSrc} alt={`${title} pic`} fill />
@@ -47,7 +67,7 @@ const NextProject = ({ details }) => {
           <p>{title}</p>
           <span>{summary}</span>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
