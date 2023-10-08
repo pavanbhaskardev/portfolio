@@ -4,7 +4,10 @@ import { AnimatePresence } from "framer-motion";
 import LenisScroll from "@/app/components/commonComponents/LenisScroll";
 import Navbar from "@/app/components/Navbar";
 import CommonLoader from "@/app/components/commonComponents/CommonLoader";
+import CustomCursor from "@/app/components/CustomCursor";
+import Connect from "@/app/components/Connect";
 import projects from "@/app/components/json/projects";
+import Project from "../components/Project";
 
 const ProjectPage = ({ params }) => {
   const [loading, setLoading] = useState(true);
@@ -20,18 +23,28 @@ const ProjectPage = ({ params }) => {
     (details) => details.id === params.projectName
   );
 
-  // destructured all the properties
-  const { id, title, summary, imgSrc, siteUrl, featured } = projectDetails[0];
+  console.log(projectDetails);
 
   return (
     <>
       <LenisScroll />
+      <CustomCursor />
       <AnimatePresence mode="wait">
-        {loading ? <CommonLoader name={title} /> : null}
+        {loading ? (
+          <CommonLoader
+            name={projectDetails.length ? projectDetails[0].title : "Error"}
+          />
+        ) : null}
       </AnimatePresence>
 
       <Navbar />
-      <div>ProjectPage</div>
+      {(() => {
+        if (projectDetails.length) {
+          return <Project details={projectDetails[0]} />;
+        }
+        return null;
+      })()}
+      <Connect />
     </>
   );
 };

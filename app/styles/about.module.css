@@ -22,7 +22,7 @@
   opacity: 0.5;
 }
 
-@media (min-width: 414px) and (max-width: 767px) {
+@media (min-width: 414px) {
   .heading {
     font-size: 1.5rem;
   }
@@ -32,7 +32,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
   .about_container {
     padding: 2.3rem 3.125rem;
   }
@@ -47,13 +47,9 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) {
   .about_container {
     padding: 3rem 4rem;
-  }
-
-  .heading {
-    font-size: 2rem;
   }
 
   .about_content p {
@@ -66,10 +62,6 @@
   .about_container {
     padding: 3rem 10rem;
     min-height: 80vh;
-  }
-
-  .heading {
-    font-size: 2rem;
   }
 
   .about_content p {

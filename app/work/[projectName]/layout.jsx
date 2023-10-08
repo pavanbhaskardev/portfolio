@@ -5,10 +5,15 @@ export function generateMetadata({ params }) {
   const projectDetails = projects.filter(
     (details) => details.id === params.projectName
   );
-  const { id, title, summary, imgSrc, siteUrl, featured } = projectDetails[0];
-  return {
-    title: `${title} - Pavan Bhaskar`,
-  };
+
+  if (projectDetails.length) {
+    const { id, title, summary, imgSrc, siteUrl, featured } = projectDetails[0];
+    return {
+      title: `${title} - Pavan Bhaskar`,
+    };
+  }
+
+  return null;
 }
 
 export default function ProjectLayout({ children }) {
