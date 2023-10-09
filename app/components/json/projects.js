@@ -17,10 +17,11 @@ const projects = [
     index: 2,
     id: "shades-generator",
     title: "Shades Generator",
-    summary: "Generate different color shades.",
+    summary: "Generate beautiful color shades.",
     services: ["Development"],
     builtOn: ["Nextjs", "ChakraUI"],
-    description: "",
+    description:
+      "Shades Generator is a webapp which generates beautiful color shades for your designs.",
     imgSrc: "/test.png",
     imageGallery: ["/test.png", "/test.png", "/test.png"],
     siteUrl: "https://shades-generator.vercel.app",
@@ -30,7 +31,8 @@ const projects = [
     id: "avis-tailors",
     title: "Avis Tailors",
     summary: "Custom web design & development for a tailoring brand.",
-    description: "",
+    description:
+      "Avis Tailors is a tailoring brand. They focus on providing well tailored clothes, the website and design is reflection of those attributes.",
     services: ["Design", "Development"],
     builtOn: ["TailwindCSS", "HTML"],
     imgSrc: "/test.png",
@@ -42,7 +44,8 @@ const projects = [
     id: "mr-lawyer",
     title: "Mr.Lawyer",
     summary: "A place where people & lawyers meet each other",
-    description: "",
+    description:
+      "Mr.Lawyer is a consultancy, where people meet experienced lawyer near them & lawyers can connect to their clients.",
     services: ["Design", "Development"],
     builtOn: ["HTML", "CSS", "Javascript"],
     imgSrc: "/test.png",

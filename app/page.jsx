@@ -54,24 +54,27 @@ const Home = () => {
 
       const previousTextColor =
         index === 0 ? "" : sectionColor[index - 1].dataset.textcolor;
-      ScrollTrigger.create({
-        trigger: colorSection,
-        start: "top 50%",
-        onEnter: () => {
-          gsap.to(containerRef.current, {
-            backgroundColor: colorSection.dataset.bgcolor,
-            color: colorSection.dataset.textcolor,
-            overwrite: "auto",
-          });
-        },
-        onLeaveBack: () => {
-          gsap.to(containerRef.current, {
-            backgroundColor: previousBgColor,
-            color: previousTextColor,
-            overwrite: "auto",
-          });
-        },
-      });
+
+      if (containerRef.current) {
+        ScrollTrigger.create({
+          trigger: colorSection,
+          start: "top 50%",
+          onEnter: () => {
+            gsap.to(containerRef.current, {
+              backgroundColor: colorSection.dataset.bgcolor,
+              color: colorSection.dataset.textcolor,
+              overwrite: "auto",
+            });
+          },
+          onLeaveBack: () => {
+            gsap.to(containerRef.current, {
+              backgroundColor: previousBgColor,
+              color: previousTextColor,
+              overwrite: "auto",
+            });
+          },
+        });
+      }
     });
   }, []);
 
