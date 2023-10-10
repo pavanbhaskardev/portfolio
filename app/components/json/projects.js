@@ -22,7 +22,7 @@ const projects = [
     builtOn: ["Nextjs", "ChakraUI"],
     description:
       "Shades Generator is a webapp which generates beautiful color shades for your designs.",
-    imgSrc: "/test.png",
+    imgSrc: "/shadesgenerator_mockup.jpg",
     imageGallery: ["/test.png", "/test.png", "/test.png"],
     siteUrl: "https://shades-generator.vercel.app",
   },
@@ -48,7 +48,7 @@ const projects = [
       "Mr.Lawyer is a consultancy, where people meet experienced lawyer near them & lawyers can connect to their clients.",
     services: ["Design", "Development"],
     builtOn: ["HTML", "CSS", "Javascript"],
-    imgSrc: "/test.png",
+    imgSrc: "/mrlawyer_mockup.jpg",
     imageGallery: ["/test.png", "/test.png", "/test.png"],
     siteUrl: "https://mrlawyerfirm.web.app/",
     featured: true,
