@@ -170,6 +170,19 @@
   }
 }
 
+@media screen and (min-width: 1200px) and (max-height: 700px) {
+  .tech_stack_container {
+    top: 23vh;
+  }
+  .tech_stack_container:nth-child(2) {
+    top: 60vh;
+  }
+
+  .tech_stack_container:nth-child(3) {
+    top: 42vh;
+  }
+}
+
 @media (min-width: 1920px) {
   .heading_container {
     width: 1700px;

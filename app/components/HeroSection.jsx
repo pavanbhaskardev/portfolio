@@ -65,13 +65,13 @@ const HeroSection = ({ scrollToProjectSection }) => {
         <Image
           src={"/hero_section_arrow.svg"}
           alt="down_arrow"
-          height={25}
-          width={25}
+          height={30}
+          width={30}
           className={styles.text_arrow}
         />
         <p>
-          Creative Designer
-          <br />& Developer
+          Creative Developer
+          <br />& Designer
         </p>
       </div>
 
@@ -89,8 +89,8 @@ const HeroSection = ({ scrollToProjectSection }) => {
         <div className={styles.cta_container} role="button">
           <Image
             src={"/cta_arrow.svg"}
-            height={28}
-            width={28}
+            height={25}
+            width={25}
             alt="see-my-work-arrow"
             className={styles.cta_arrow}
           />

@@ -43,7 +43,7 @@ const Home = () => {
         document.body.style.cursor = "default";
         window.scrollTo(0, 0);
         sessionStorage.setItem("initialLoading", true);
-      }, 2500);
+      }, 2000);
     }
 
     // this is background change animation

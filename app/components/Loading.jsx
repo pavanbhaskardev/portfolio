@@ -46,7 +46,7 @@ const Loading = () => {
       () => {
         setIndex((index) => index + 1);
       },
-      index == 0 ? 800 : 250
+      index == 0 ? 750 : 180
     );
   }, [index]);
   return (
