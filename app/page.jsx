@@ -22,7 +22,6 @@ const Home = () => {
   const containerRef = useRef(null);
   const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
-  const customCursorRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -98,7 +97,7 @@ const Home = () => {
   return (
     <>
       <LenisScroll />
-      <CustomCursor ref={customCursorRef} />
+      <CustomCursor />
       <AnimatePresence mode="wait">
         {loading ? <CustomLoader /> : null}
       </AnimatePresence>
