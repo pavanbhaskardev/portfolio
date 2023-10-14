@@ -44,7 +44,7 @@ const ProjectsSection = forwardRef((props, ref) => {
       data-textcolor="#181818"
       className={styles.parent_container}
     >
-      <p className={styles.heading}>Recent Work</p>
+      <p className={styles.heading}>Featured Work</p>
 
       {featuredProjects.map((details) => {
         const { title, summary, id, imgSrc } = details;

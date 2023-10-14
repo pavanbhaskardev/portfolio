@@ -8,7 +8,7 @@ const projects = [
       "Savingspree is a webapp where you can track, analyze & manage all your expenses at one place.",
     services: ["Design", "Development"],
     builtOn: ["Nextjs", "Firebase", "ChakraUI"],
-    imgSrc: "/test.png",
+    imgSrc: "/mockups/savingspree_mockup.png",
     imageGallery: ["/test.png", "/test.png", "/test.png"],
     siteUrl: "https://savingspree.vercel.app",
     featured: true,
