@@ -67,7 +67,7 @@ const Work = () => {
         style={{
           transform: inView ? "none" : "translateY(70px)",
           opacity: inView ? 1 : 0,
-          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+          transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s",
           overflow: "hidden",
         }}
         className={`${styles.project_container} project-section`}

@@ -28,7 +28,7 @@
 
 .project_image img {
   object-fit: cover;
-  transition: scale 0.3s cubic-bezier(0.33, 1, 0.68, 1) 0.7s;
+  transition: scale 0.3s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .project_image img:hover {
