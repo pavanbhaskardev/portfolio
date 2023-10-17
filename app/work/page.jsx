@@ -74,7 +74,12 @@ const Work = () => {
       >
         <Link href={`work/${id}`}>
           <div className={styles.project_image}>
-            <Image src={src} fill alt={`${title} pic`} />
+            <Image
+              src={src}
+              fill
+              alt={`${title} pic`}
+              priority={title === "Savingspree"}
+            />
           </div>
         </Link>
         <div className={styles.project_content}>

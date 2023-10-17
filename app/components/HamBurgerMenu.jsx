@@ -50,7 +50,7 @@ const HamBurgerMenu = ({ setOpen }) => {
     >
       <div className={styles.links_container}>
         {navLinks.map((data, index) => {
-          const { label, path } = data;
+          const { label, path, target } = data;
           return (
             <motion.div
               custom={index}
@@ -60,7 +60,7 @@ const HamBurgerMenu = ({ setOpen }) => {
               exit="exit"
               key={index}
             >
-              <Link href={path} key={label}>
+              <Link href={path} key={label} target={target}>
                 {label}
                 {pathName === path ? (
                   <span className={styles.link_icon}>•</span>

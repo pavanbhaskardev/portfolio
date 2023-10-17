@@ -44,9 +44,9 @@ const Navbar = () => {
 
       <nav className={styles.nav_links_container}>
         {navLinks.map((data) => {
-          const { label, path } = data;
+          const { label, path, target } = data;
           return (
-            <Link href={path} key={label}>
+            <Link href={path} key={label} target={target}>
               {pathName === path ? `• ${label}` : label}
             </Link>
           );

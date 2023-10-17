@@ -9,7 +9,9 @@ import RedirectArrow from "./RedirectArrow";
 
 const Project = ({ details }) => {
   const containerRef = useRef(null);
+  const imageRef = useRef(null);
   const inView = useInView(containerRef, { once: true, threshold: 0.5 });
+  const isImageInView = useInView(imageRef, { once: true, threshold: 0.5 });
 
   const {
     index,
@@ -51,6 +53,8 @@ const Project = ({ details }) => {
     },
   };
 
+  console.log({ isImageInView });
+
   return (
     <section className={styles.container}>
       <header className={styles.title_container}>
@@ -70,9 +74,23 @@ const Project = ({ details }) => {
       </header>
 
       <main className={styles.main}>
-        <div className={styles.project_image}>
-          <Image src={imgSrc} alt={`${title} pic`} fill />
-        </div>
+        <motion.div
+          ref={imageRef}
+          style={{
+            transform: isImageInView ? "none" : "translateY(70px)",
+            opacity: isImageInView ? 1 : 0,
+            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s",
+          }}
+        >
+          <div className={styles.project_image}>
+            <Image
+              src={imgSrc}
+              alt={`${title} pic`}
+              fill
+              priority={details.title === "Savingspree"}
+            />
+          </div>
+        </motion.div>
 
         <motion.p
           ref={containerRef}
