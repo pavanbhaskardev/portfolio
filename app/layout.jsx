@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
 const customFont = localFont({
   src: [
     {
@@ -16,8 +14,34 @@ const customFont = localFont({
   ],
 });
 
+const title = "Pavan Bhaskar - Developer & Designer";
+const description =
+  "Portfolio website of developer & designer Pavan Bhaskar. With passion towards development & design enables me to create create super projects.";
+
 export const metadata = {
-  title: "Pavan Bhaskar",
+  title,
+  description,
+  keywords: [
+    "pavan",
+    "bhaskar",
+    "creative developer",
+    "designer",
+    "pavanbhaskar",
+  ],
+  openGraph: {
+    title: title,
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 800,
+        height: 600,
+      },
+    ],
+    description,
+    locale: "en_US",
+    type: "website",
+  },
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }) {

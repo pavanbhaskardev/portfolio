@@ -10,7 +10,7 @@ const services = [
   {
     title: "Creative Implementation",
     content:
-      "My passion towards development & design, enables me to create super projects.",
+      "With passion towards development & design, enables me to create super projects.",
   },
 ];
 
