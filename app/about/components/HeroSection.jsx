@@ -83,7 +83,7 @@ const HeroSection = () => {
 
           <div className={styles.image_container}>
             <ImageSlide
-              src="/profile_pic.png"
+              src="/profile_pic.jpeg"
               className={styles.hero_section_pic}
             />
           </div>

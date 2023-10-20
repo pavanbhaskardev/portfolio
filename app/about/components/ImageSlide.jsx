@@ -24,7 +24,7 @@ const ImageSlide = ({ src }) => {
       />
       <div
         style={{
-          backgroundColor: "#A7D451",
+          backgroundColor: "rgb(109, 118, 117)",
           width: "100%",
           height: "100%",
           position: "relative",
