@@ -53,8 +53,6 @@ const Project = ({ details }) => {
     },
   };
 
-  console.log({ isImageInView });
-
   return (
     <section className={styles.container}>
       <header className={styles.title_container}>

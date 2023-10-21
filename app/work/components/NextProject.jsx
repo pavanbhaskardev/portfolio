@@ -7,7 +7,7 @@ import styles from "../styles/nextProject.module.css";
 
 const NextProject = ({ details }) => {
   const containerRef = useRef(null);
-  const inView = useInView(containerRef, { once: true, threshold: 0.5 });
+  const inView = useInView(containerRef, { once: false, threshold: 0.5 });
 
   const nextProject = projects.filter(
     (data) => details.index + 1 === data.index

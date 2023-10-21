@@ -43,8 +43,8 @@ const Lost = () => {
 
         <Image
           src="/404.png"
-          height={400}
-          width={300}
+          height={350}
+          width={250}
           alt="not_found"
           className={styles.not_found_image}
           ref={imageRef}
