@@ -49,6 +49,7 @@ const Loading = () => {
       index == 0 ? 750 : 180
     );
   }, [index]);
+
   return (
     <motion.div
       variants={slideAnimation}

@@ -1,0 +1,61 @@
+"use client";
+import React, { useEffect, useState, useRef } from "react";
+import { AnimatePresence, useInView } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import LenisScroll from "../components/commonComponents/LenisScroll";
+import Navbar from "../components/Navbar";
+import CustomCursor from "../components/CustomCursor";
+import CommonLoader from "../components/commonComponents/CommonLoader";
+import AnimatedButton from "../components/commonComponents/AnimatedButton";
+import styles from "./styles/lost.module.css";
+
+const Lost = () => {
+  const [loading, setLoading] = useState(true);
+  const imageRef = useRef(null);
+  const isInView = useInView(imageRef, { once: true, threshold: 0.5 });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 800);
+  }, []);
+
+  return (
+    <>
+      <LenisScroll />
+      <AnimatePresence mode="wait">
+        {loading ? <CommonLoader name="Error" /> : null}
+      </AnimatePresence>
+
+      <CustomCursor />
+      <Navbar />
+
+      <main className={styles.container}>
+        <p className={styles.heading}>Looks like you're lost</p>
+        <AnimatedButton>
+          <Link href="/" className={styles.home_btn}>
+            Back to home
+          </Link>
+        </AnimatedButton>
+
+        <Image
+          src="/404.png"
+          height={400}
+          width={300}
+          alt="not_found"
+          className={styles.not_found_image}
+          ref={imageRef}
+          style={{
+            bottom: isInView ? "0px" : "-200px",
+            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 1.2s",
+          }}
+        />
+      </main>
+    </>
+  );
+};
+
+export default Lost;

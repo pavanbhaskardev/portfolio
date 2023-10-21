@@ -17,7 +17,7 @@ const About = () => {
       document.body.style.cursor = "default";
       window.scrollTo(0, 0);
     }, 800);
-  });
+  }, []);
 
   return (
     <>
