@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "../styles/herosection.module.css";
+import profliePic from "../../../public/profile_pic.jpeg";
 import ImageSlide from "./ImageSlide";
 
 const HeroSection = () => {
@@ -82,10 +83,7 @@ const HeroSection = () => {
           </motion.p>
 
           <div className={styles.image_container}>
-            <ImageSlide
-              src="/profile_pic.jpeg"
-              className={styles.hero_section_pic}
-            />
+            <ImageSlide src={profliePic} className={styles.hero_section_pic} />
           </div>
         </div>
 

@@ -60,7 +60,6 @@ const Work = () => {
   const ProjectSection = ({ title, summary, id, src }) => {
     const containerRef = useRef(null);
     const inView = useInView(containerRef, { once: true, threshold: 0.5 });
-
     return (
       <section
         ref={containerRef}

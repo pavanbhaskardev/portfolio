@@ -21,6 +21,7 @@ const description =
 export const metadata = {
   title,
   description,
+  metadataBase: new URL("https://pavanbhaskar.vercel.app"),
   keywords: [
     "pavan",
     "bhaskar",

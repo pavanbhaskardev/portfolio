@@ -1,10 +1,19 @@
-"use client";
 import React, { forwardRef, useRef } from "react";
 import { useInView } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/projectsection.module.css";
 import projects from "./json/projects";
+import savingspreeMockup from "../../public/mockups/savingspree/savingspree_mockup.jpeg";
+import mrLawyerMockup from "../../public/mockups/mr-lawyer/mrlawyer_mockup.jpeg";
+
+const imageSrc = (title) => {
+  if (title === "Savingspree") {
+    return savingspreeMockup;
+  }
+
+  return mrLawyerMockup;
+};
 
 const ProjectsSection = forwardRef((props, ref) => {
   const featuredProjects = projects.filter((details) => details.featured);
@@ -26,7 +35,12 @@ const ProjectsSection = forwardRef((props, ref) => {
       >
         <Link href={`work/${id}`}>
           <div className={styles.project_image}>
-            <Image src={src} alt={`${title} pic`} fill />
+            <Image
+              src={imageSrc(title)}
+              alt={`${title} pic`}
+              fill
+              placeholder="blur"
+            />
           </div>
         </Link>
         <div className={styles.project_content}>
