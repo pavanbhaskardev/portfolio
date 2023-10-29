@@ -10,6 +10,10 @@ import LenisScroll from "../components/commonComponents/LenisScroll";
 import styles from "./styles/work.module.css";
 import projects from "../components/json/projects";
 import Image from "next/image";
+import savingspreeMockup from "../../public/mockups/savingspree/savingspree_mockup.jpeg";
+import shadesGeneratorMockup from "../../public/mockups/shades-generator/shades-generator_mockup.jpeg";
+import avisTailorsMockup from "../../public/mockups/avis-tailors/avistailors_mockup.jpeg";
+import mrLawyerMockup from "../../public/mockups/mr-lawyer/mrlawyer_mockup.jpeg";
 
 const Work = () => {
   const [loading, setLoading] = useState(true);
@@ -57,9 +61,23 @@ const Work = () => {
     },
   };
 
+  const imgSrc = (title) => {
+    switch (title) {
+      case "Savingspree":
+        return savingspreeMockup;
+      case "Shades Generator":
+        return shadesGeneratorMockup;
+      case "Avis Tailors":
+        return avisTailorsMockup;
+      case "Mr.Lawyer":
+        return mrLawyerMockup;
+    }
+  };
+
   const ProjectSection = ({ title, summary, id, src }) => {
     const containerRef = useRef(null);
     const inView = useInView(containerRef, { once: true, threshold: 0.5 });
+
     return (
       <section
         ref={containerRef}
@@ -74,10 +92,10 @@ const Work = () => {
         <Link href={`work/${id}`}>
           <div className={styles.project_image}>
             <Image
-              src={src}
+              src={imgSrc(title)}
               fill
               alt={`${title} pic`}
-              priority={title === "Savingspree"}
+              placeholder="blur"
             />
           </div>
         </Link>

@@ -81,12 +81,7 @@ const Project = ({ details }) => {
           }}
         >
           <div className={styles.project_image}>
-            <Image
-              src={imgSrc}
-              alt={`${title} pic`}
-              fill
-              priority={details.title === "Savingspree"}
-            />
+            <Image src={imgSrc} alt={`${title} pic`} fill />
           </div>
         </motion.div>
 
