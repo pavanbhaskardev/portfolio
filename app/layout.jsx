@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { GeistSans } from "geist/font";
 import "./globals.css";
 
 const customFont = localFont({
@@ -47,7 +48,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={customFont.className}>
+    <html lang="en" className={GeistSans.className}>
       <body suppressHydrationWarning={true}>{children}</body>
     </html>
   );
