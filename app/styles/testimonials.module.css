@@ -39,6 +39,10 @@
   font-size: 0.65rem;
 }
 
+.testimonial_pic {
+  border-radius: 99px;
+}
+
 @media (min-width: 414px) and (max-width: 767px) {
   .heading {
     padding-top: 5rem;

@@ -62,7 +62,7 @@ const HamBurgerMenu = ({ setOpen }) => {
             >
               <Link href={path} key={label} target={target}>
                 {label}
-                {pathName === path ? (
+                {pathName.includes(path) ? (
                   <span className={styles.link_icon}>•</span>
                 ) : null}
               </Link>

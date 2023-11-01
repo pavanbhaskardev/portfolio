@@ -3,7 +3,7 @@ const testimonials = [
     name: "Narasimhaiah Narahari",
     position: "Vice President Engineering @Netenrich",
     imageSrc: "/testimonials/NNsir_profile.png",
-    message: "Pavan is great, he contributed a lot to netenrich",
+    message: "",
   },
   {
     name: "Sujith Addanki",

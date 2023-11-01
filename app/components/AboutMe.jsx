@@ -62,7 +62,7 @@ const AboutMe = () => {
       data-bgcolor="#181818"
       data-textcolor="#eeeeee"
     >
-      <p className={styles.heading}>About Me</p>
+      <p className={styles.heading}>About me</p>
 
       <main className={styles.about_content}>{splitWords()}</main>
     </section>

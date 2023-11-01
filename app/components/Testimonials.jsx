@@ -8,6 +8,21 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import testimonials from "./json/testimonials";
+import nnSirPic from "../../public/testimonials/NNsir_profile.png";
+import sujithPic from "../../public/testimonials/sujith_profile.png";
+import ramuPic from "../../public/testimonials/ramu_profilePic.png";
+
+const imageSrc = (name) => {
+  if (name === "Narasimhaiah Narahari") {
+    return nnSirPic;
+  }
+  if (name === "Sujith Addanki") {
+    return sujithPic;
+  }
+  if (name === "Ramu Challa") {
+    return ramuPic;
+  }
+};
 
 const Testimonials = forwardRef((props, ref) => {
   return (
@@ -34,7 +49,7 @@ const Testimonials = forwardRef((props, ref) => {
         modules={[EffectCoverflow, Pagination]}
       >
         {testimonials.map((testimonial) => {
-          const { name, message, imageSrc, position } = testimonial;
+          const { name, message, position } = testimonial;
           return (
             <SwiperSlide className={styles.swiper_slide} key={name}>
               <Image
@@ -49,11 +64,12 @@ const Testimonials = forwardRef((props, ref) => {
 
               <section className={styles.testimonial_container}>
                 <Image
-                  src={imageSrc}
+                  src={imageSrc(name)}
                   height={40}
                   width={40}
                   alt={name}
                   className={styles.testimonial_pic}
+                  placeholder="blur"
                 />
 
                 <div>
