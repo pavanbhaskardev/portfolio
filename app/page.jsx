@@ -15,6 +15,7 @@ import Testimonials from "./components/Testimonials";
 import Connect from "./components/Connect";
 import CommonLoader from "./components/commonComponents/CommonLoader";
 import LenisScroll from "./components/commonComponents/LenisScroll";
+import useSmoothScroll from "./components/commonComponents/useSmoothScroll";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -22,6 +23,7 @@ const Home = () => {
   const containerRef = useRef(null);
   const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
+  const { scrollTo } = useSmoothScroll();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -82,7 +84,7 @@ const Home = () => {
     const projectsSection = ProjectsSectionRef.current;
 
     if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
+      scrollTo(projectsSection);
     }
   };
 

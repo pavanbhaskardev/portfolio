@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 
-const LenisScroll = () => {
+const useSmoothScroll = () => {
+  const lenisRef = useRef(null);
+
   useEffect(() => {
     const lenisInstance = new Lenis({
       duration: 1.2,
@@ -22,11 +24,20 @@ const LenisScroll = () => {
     }
 
     requestAnimationFrame(raf);
+    lenisRef.current = lenisInstance;
 
     return () => {
       lenisInstance.destroy();
     };
   }, []);
+
+  const scrollTo = (element) => {
+    if (element && lenisRef.current) {
+      lenisRef.current.scrollTo(element);
+    }
+  };
+
+  return { scrollTo };
 };
 
-export default LenisScroll;
+export default useSmoothScroll;
