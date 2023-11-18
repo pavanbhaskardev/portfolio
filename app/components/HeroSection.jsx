@@ -82,11 +82,12 @@ const HeroSection = ({ scrollToProjectSection }) => {
         </div>
       </div>
 
-      <div
-        className={styles.main_container}
-        onClick={() => scrollToProjectSection()}
-      >
-        <div className={styles.cta_container} role="button">
+      <div className={styles.main_container}>
+        <div
+          className={styles.cta_container}
+          role="button"
+          onClick={scrollToProjectSection}
+        >
           <Image
             src={"/cta_arrow.svg"}
             height={25}

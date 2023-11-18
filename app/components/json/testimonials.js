@@ -1,10 +1,10 @@
 const testimonials = [
-  {
-    name: "Narasimhaiah Narahari",
-    position: "Vice President Engineering @Netenrich",
-    imageSrc: "/testimonials/NNsir_profile.png",
-    message: "",
-  },
+  // {
+  //   name: "Narasimhaiah Narahari",
+  //   position: "Vice President Engineering @Netenrich",
+  //   imageSrc: "/testimonials/NNsir_profile.png",
+  //   message: "",
+  // },
   {
     name: "Sujith Addanki",
     position: "Founder @Mr.Lawyer",

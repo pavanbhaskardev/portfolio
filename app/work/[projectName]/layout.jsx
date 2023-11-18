@@ -7,8 +7,7 @@ export function generateMetadata({ params }) {
   );
 
   if (projectDetails.length) {
-    const { id, title, summary, imgSrc, siteUrl, featured, description } =
-      projectDetails[0];
+    const { title, description } = projectDetails[0];
     return {
       title: `${title} - Pavan Bhaskar`,
       description: description,
