@@ -89,7 +89,7 @@ const Work = () => {
         }}
         className={`${styles.project_container} project-section`}
       >
-        <Link href={`work/${id}`}>
+        <Link href={`work/${id}`} scroll={false}>
           <div className={styles.project_image}>
             <Image
               src={imgSrc(title)}

@@ -38,6 +38,14 @@ const Services = () => {
                     isOpen[index] ? styles.btn_rotate : ""
                   }`}
                   onClick={() => handleIsOpen(index)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleIsOpen(index);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  aria-label="service button"
                 >
                   <span className={styles.plus_icon}></span>
                   <span className={styles.plus_icon}></span>

@@ -30,7 +30,7 @@ const HeroSection = ({ scrollToProjectSection }) => {
       gsap.set(secondText.current, { xPercent: xPercent });
     }
     requestAnimationFrame(textScroll);
-    xPercent += 0.25 * scrollDirection;
+    xPercent += 0.15 * scrollDirection;
   };
 
   useEffect(() => {
@@ -86,7 +86,13 @@ const HeroSection = ({ scrollToProjectSection }) => {
         <div
           className={styles.cta_container}
           role="button"
+          tabIndex={0}
           onClick={scrollToProjectSection}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              scrollToProjectSection();
+            }
+          }}
         >
           <Image
             src={"/cta_arrow.svg"}

@@ -42,7 +42,11 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+};
+
+export const viewport = {
   colorScheme: "light",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }) {

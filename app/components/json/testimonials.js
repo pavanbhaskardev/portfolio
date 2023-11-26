@@ -15,7 +15,7 @@ const testimonials = [
     name: "Ramu Challa",
     position: "Founder @Avis Tailors",
     imageSrc: "/testimonials/ramu_profilePic.png",
-    message: "He's a beast. He's skills are insane!",
+    message: "He's a beast. His skills are insane!",
   },
 ];
 

@@ -59,7 +59,7 @@ const HamBurgerMenu = ({ setOpen }) => {
               exit="exit"
               key={index}
             >
-              <Link href={path} key={label} target={target}>
+              <Link href={path} key={label} target={target} scroll={false}>
                 {label}
                 {pathName.includes(path) ? (
                   <span className={styles.link_icon}>•</span>

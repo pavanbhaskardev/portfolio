@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <header className={styles.container}>
-      <Link href="/">
+      <Link href="/" scroll={false}>
         <Image
           src={"/logo.svg"}
           alt="logo"
@@ -46,7 +46,7 @@ const Navbar = () => {
         {navLinks.map((data) => {
           const { label, path, target } = data;
           return (
-            <Link href={path} key={label} target={target}>
+            <Link href={path} key={label} target={target} scroll={false}>
               {pathName.includes(path) ? `• ${label}` : label}
             </Link>
           );

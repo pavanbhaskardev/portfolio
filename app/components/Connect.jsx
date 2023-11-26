@@ -52,7 +52,7 @@ const Connect = () => {
         <section className={styles.connect_links_container}>
           <AnimatedButton>
             <a
-              href="mailto:pavanbhaskardev@gmail.com"
+              href="mailto:hello@pavanbhaskar.com"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.connect_links}

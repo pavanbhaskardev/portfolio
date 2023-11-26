@@ -33,7 +33,7 @@ const ProjectsSection = forwardRef((props, ref) => {
           overflow: "hidden",
         }}
       >
-        <Link href={`work/${id}`}>
+        <Link href={`work/${id}`} scroll={false}>
           <div className={styles.project_image}>
             <Image
               src={imageSrc(title)}

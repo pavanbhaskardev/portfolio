@@ -30,7 +30,7 @@ const NextProject = ({ details }) => {
           }}
           className={`${styles.project_container} project-section`}
         >
-          <Link href={`${id}`}>
+          <Link href={`${id}`} scroll={false}>
             <div className={styles.project_image}>
               <Image src={imgSrc} alt={`${title} pic`} fill />
             </div>
