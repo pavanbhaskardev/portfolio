@@ -30,7 +30,7 @@ const HeroSection = ({ scrollToProjectSection }) => {
       gsap.set(secondText.current, { xPercent: xPercent });
     }
     requestAnimationFrame(textScroll);
-    xPercent += 0.15 * scrollDirection;
+    xPercent += 0.35 * scrollDirection;
   };
 
   useEffect(() => {
@@ -77,8 +77,8 @@ const HeroSection = ({ scrollToProjectSection }) => {
 
       <div className={styles.sliding_text_container}>
         <div className={styles.sliding_text} ref={sliderRef}>
-          <p ref={firstText}>Pavan Bhaskar -</p>
-          <p ref={secondText}>Pavan Bhaskar -</p>
+          <p ref={firstText}>Pavan Bhaskar —</p>
+          <p ref={secondText}>Pavan Bhaskar —</p>
         </div>
       </div>
 
