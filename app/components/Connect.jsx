@@ -37,7 +37,7 @@ const Connect = () => {
   };
 
   const formattedTime = `${istTime.getHours() > 12 ? hours() - 12 : hours()}:${
-    minutes() + amOrPm()
+    minutes() + ` ${amOrPm()}`
   } IST`;
 
   return (

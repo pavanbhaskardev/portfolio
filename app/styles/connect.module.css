@@ -19,11 +19,6 @@
   color: var(--secondary-color);
 }
 
-.connect_links:hover,
-.connect_links:focus {
-  color: var(--primary-color);
-}
-
 .divider {
   margin: 1.5rem 0;
 }

@@ -41,11 +41,9 @@ const Button = ({ children }) => {
       style={{ overflow: "hidden" }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      role="button"
-      tabIndex={0}
     >
       {children}
-      <div className={styles.circle} ref={circleRef}></div>
+      <div className={styles.circle} ref={circleRef} />
     </div>
   );
 };

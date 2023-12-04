@@ -50,7 +50,7 @@ const Lost = () => {
           ref={imageRef}
           style={{
             bottom: isInView ? "0px" : "-200px",
-            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 1.2s",
+            transition: "bottom 0.6s cubic-bezier(0.17, 0.55, 0.55, 1) 1.2s",
           }}
         />
       </main>
