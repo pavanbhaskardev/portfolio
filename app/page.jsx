@@ -4,24 +4,18 @@ import { AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loading from "./components/Loading";
-import CustomCursor from "./components/CustomCursor";
-import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
 import ProjectsSection from "./components/ProjectsSection";
 import MyStack from "./components/MyStack";
 import Experience from "./components/Experience";
 import Testimonials from "./components/Testimonials";
-import Connect from "./components/Connect";
 import CommonLoader from "./components/commonComponents/CommonLoader";
-import LenisScroll from "./components/commonComponents/LenisScroll";
 import useSmoothScroll from "./components/commonComponents/useSmoothScroll";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [initialLoading, setInitialLoading] = useState();
-  const containerRef = useRef(null);
-  const testimonialsRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
   const { scrollTo } = useSmoothScroll();
 
@@ -46,37 +40,6 @@ const Home = () => {
         sessionStorage.setItem("initialLoading", true);
       }, 2000);
     }
-
-    // this is background change animation
-    const sectionColor = document.querySelectorAll("[data-bgcolor]");
-    sectionColor.forEach((colorSection, index) => {
-      const previousBgColor =
-        index === 0 ? "" : sectionColor[index - 1].dataset.bgcolor;
-
-      const previousTextColor =
-        index === 0 ? "" : sectionColor[index - 1].dataset.textcolor;
-
-      if (containerRef.current) {
-        ScrollTrigger.create({
-          trigger: colorSection,
-          start: "top 50%",
-          onEnter: () => {
-            gsap.to(containerRef.current, {
-              backgroundColor: colorSection.dataset.bgcolor,
-              color: colorSection.dataset.textcolor,
-              overwrite: "auto",
-            });
-          },
-          onLeaveBack: () => {
-            gsap.to(containerRef.current, {
-              backgroundColor: previousBgColor,
-              color: previousTextColor,
-              overwrite: "auto",
-            });
-          },
-        });
-      }
-    });
   }, []);
 
   // scrolls to the project section
@@ -98,21 +61,17 @@ const Home = () => {
 
   return (
     <>
-      <LenisScroll />
-      <CustomCursor />
       <AnimatePresence mode="wait">
         {loading ? <CustomLoader /> : null}
       </AnimatePresence>
 
-      <main className="main_container" ref={containerRef}>
-        <Navbar />
+      <main className="main_container">
         <HeroSection scrollToProjectSection={scrollToProjectSection} />
         <AboutMe />
         <ProjectsSection ref={ProjectsSectionRef} />
         <MyStack />
         <Experience />
-        <Testimonials ref={testimonialsRef} />
-        <Connect />
+        <Testimonials />
       </main>
     </>
   );

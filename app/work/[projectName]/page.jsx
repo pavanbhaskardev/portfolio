@@ -2,11 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { redirect } from "next/navigation";
-import LenisScroll from "@/app/components/commonComponents/LenisScroll";
-import Navbar from "@/app/components/Navbar";
 import CommonLoader from "@/app/components/commonComponents/CommonLoader";
-import CustomCursor from "@/app/components/CustomCursor";
-import Connect from "@/app/components/Connect";
 import projects from "@/app/components/json/projects";
 import Project from "../components/Project";
 
@@ -30,8 +26,6 @@ const ProjectPage = ({ params }) => {
 
   return (
     <>
-      <LenisScroll />
-      <CustomCursor />
       <AnimatePresence mode="wait">
         {loading ? (
           <CommonLoader
@@ -40,14 +34,12 @@ const ProjectPage = ({ params }) => {
         ) : null}
       </AnimatePresence>
 
-      <Navbar />
       {(() => {
         if (projectDetails.length) {
           return <Project details={projectDetails[0]} />;
         }
         return null;
       })()}
-      <Connect />
     </>
   );
 };

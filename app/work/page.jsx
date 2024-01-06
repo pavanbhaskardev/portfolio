@@ -109,12 +109,9 @@ const Work = () => {
 
   return (
     <>
-      <LenisScroll />
       <AnimatePresence mode="wait">
         {loading ? <CommonLoader name="Work" /> : null}
       </AnimatePresence>
-      <CustomCursor />
-      <Navbar />
 
       <main className={styles.parent_container}>
         {/* <p className={styles.hero_text}></p> */}
@@ -148,8 +145,6 @@ const Work = () => {
           );
         })}
       </main>
-
-      <Connect />
     </>
   );
 };

@@ -3,7 +3,7 @@ import styles from "../styles/experience.module.css";
 
 const Experience = () => {
   return (
-    <section data-bgcolor="#eeeeee" data-textcolor="#181818">
+    <section>
       <div className={styles.heading_container}>
         <p className={styles.heading}>Experience</p>
       </div>

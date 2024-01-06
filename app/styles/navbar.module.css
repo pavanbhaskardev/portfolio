@@ -21,6 +21,10 @@
   transition: 0.2s background-color linear, 0.2s transform linear;
 }
 
+.hamburger_container:hover {
+  cursor: pointer;
+}
+
 .cross_icon {
   display: block;
   height: 1px;
@@ -31,7 +35,7 @@
 
 .close_hamburger {
   gap: 0;
-  transition: 0.2s background-color linear;
+  transition: 0.2s all linear;
   background-color: var(--popup-color);
 }
 

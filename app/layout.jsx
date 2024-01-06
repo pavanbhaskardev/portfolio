@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "../app/globals.css";
+import CustomLayoutProvider from "./components/CustomLayoutProvider";
 
 const customFont = localFont({
   src: [
@@ -52,7 +53,9 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={customFont.className}>
-      <body suppressHydrationWarning={true}>{children}</body>
+      <body suppressHydrationWarning={true}>
+        <CustomLayoutProvider>{children}</CustomLayoutProvider>
+      </body>
     </html>
   );
 }

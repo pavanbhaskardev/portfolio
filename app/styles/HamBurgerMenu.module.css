@@ -24,10 +24,14 @@
   align-items: center;
 }
 
-.social_links_container {
+.social_links_parent_container {
   position: absolute;
   top: 85vh;
   width: 80%;
+}
+
+.social_links_container {
+  margin-top: 0.5rem;
   display: flex;
   justify-content: space-between;
 }

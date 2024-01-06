@@ -3,9 +3,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { AnimatePresence, useInView } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import LenisScroll from "../components/commonComponents/LenisScroll";
-import Navbar from "../components/Navbar";
-import CustomCursor from "../components/CustomCursor";
 import CommonLoader from "../components/commonComponents/CommonLoader";
 import AnimatedButton from "../components/commonComponents/AnimatedButton";
 import styles from "./styles/lost.module.css";
@@ -25,13 +22,9 @@ const Lost = () => {
 
   return (
     <>
-      <LenisScroll />
       <AnimatePresence mode="wait">
         {loading ? <CommonLoader name="Error" /> : null}
       </AnimatePresence>
-
-      <CustomCursor />
-      <Navbar />
 
       <main className={styles.container}>
         <p className={styles.heading}>Looks like you're lost</p>

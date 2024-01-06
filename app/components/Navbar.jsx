@@ -10,7 +10,7 @@ import navLinks from "./json/navLinks";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const pathName = usePathname();
+  const pathname = usePathname();
 
   return (
     <header className={styles.container}>
@@ -39,15 +39,20 @@ const Navbar = () => {
       </motion.div>
 
       <AnimatePresence mode="wait">
-        {open ? <HamBurgerMenu open={setOpen} /> : null}
+        {open ? <HamBurgerMenu setOpen={setOpen} /> : null}
       </AnimatePresence>
 
       <nav className={styles.nav_links_container}>
         {navLinks.map((data) => {
           const { label, path, target } = data;
+
+          if (label === "Home") {
+            return null;
+          }
+
           return (
             <Link href={path} key={label} target={target} scroll={false}>
-              {pathName.includes(path) ? `• ${label}` : label}
+              {pathname === path ? `• ${label}` : label}
             </Link>
           );
         })}

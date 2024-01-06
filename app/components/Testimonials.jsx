@@ -1,5 +1,4 @@
-"use client";
-import React, { forwardRef } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import Image from "next/image";
@@ -24,14 +23,9 @@ const imageSrc = (name) => {
   }
 };
 
-const Testimonials = forwardRef((props, ref) => {
+const Testimonials = () => {
   return (
-    <section
-      className={styles.about_me_container}
-      ref={ref}
-      data-bgcolor="#eeeeee"
-      data-textcolor="#181818"
-    >
+    <section className={styles.about_me_container}>
       <p className={styles.heading}>What they said</p>
 
       <Swiper
@@ -83,6 +77,6 @@ const Testimonials = forwardRef((props, ref) => {
       </Swiper>
     </section>
   );
-});
+};
 
 export default Testimonials;

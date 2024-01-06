@@ -56,11 +56,7 @@ const HeroSection = ({ scrollToProjectSection }) => {
   }, []);
 
   return (
-    <section
-      className={styles.hero_section_container}
-      data-bgcolor="#eeeeee"
-      data-textcolor="#181818"
-    >
+    <section className={styles.hero_section_container}>
       <div className={styles.hero_section_text_container}>
         <Image
           src={"/hero_section_arrow.svg"}

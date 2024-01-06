@@ -52,12 +52,7 @@ const ProjectsSection = forwardRef((props, ref) => {
   };
 
   return (
-    <section
-      ref={ref}
-      data-bgcolor="#eeeeee"
-      data-textcolor="#181818"
-      className={styles.parent_container}
-    >
+    <section ref={ref} className={styles.parent_container}>
       <p className={styles.heading}>Featured Work</p>
 
       {featuredProjects.map((details) => {

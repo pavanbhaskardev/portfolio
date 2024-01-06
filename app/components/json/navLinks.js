@@ -1,5 +1,10 @@
 const navLinks = [
   {
+    label: "Home",
+    path: "/",
+    target: "",
+  },
+  {
     label: "Work",
     path: "/work",
     target: "",

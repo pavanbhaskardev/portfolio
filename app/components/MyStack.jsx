@@ -19,8 +19,6 @@ const MyStack = () => {
     <section
       className={styles.my_stack_parent_container}
       ref={parentContainerRef}
-      data-bgcolor="#eeeeee"
-      data-textcolor="#181818"
     >
       <div className={styles.heading_container}>
         <p className={styles.heading}>My Stack</p>

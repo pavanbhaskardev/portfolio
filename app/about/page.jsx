@@ -1,13 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import Navbar from "../components/Navbar";
-import Connect from "../components/Connect";
 import HeroSection from "./components/HeroSection";
 import Services from "./components/Services";
-import CustomCursor from "../components/CustomCursor";
 import CommonLoader from "../components/commonComponents/CommonLoader";
-import LenisScroll from "../components/commonComponents/LenisScroll";
 
 const About = () => {
   const [loading, setLoading] = useState(true);
@@ -21,16 +17,11 @@ const About = () => {
 
   return (
     <>
-      <LenisScroll />
       <AnimatePresence mode="wait">
         {loading ? <CommonLoader name="About" /> : null}
       </AnimatePresence>
-
-      <CustomCursor />
-      <Navbar />
       <HeroSection />
       <Services />
-      <Connect />
     </>
   );
 };
