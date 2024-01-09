@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../app/globals.css";
 import CustomLayoutProvider from "./components/CustomLayoutProvider";
 
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={customFont.className}>
       <body suppressHydrationWarning={true}>
         <CustomLayoutProvider>{children}</CustomLayoutProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
