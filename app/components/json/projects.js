@@ -20,6 +20,24 @@ const projects = [
   },
   {
     index: 2,
+    id: "marriage-template",
+    title: "Marriage Template",
+    summary: "A website to showcase all the wedding celebrations.",
+    description:
+      "Marriage template is a fully customizable website where you can showcase your wedding information",
+    services: ["Design", "Development"],
+    builtOn: ["Nextjs", "Framer Motion"],
+    imgSrc: "/mockups/marriage-template/marriage-template-mockup.png",
+    imageGallery: [
+      "/mockups/marriage-template/marriage-template1.png",
+      "/mockups/marriage-template/marriage-template2.png",
+      "/mockups/marriage-template/marriage-template3.png",
+    ],
+    siteUrl: "https://marriage-template.netlify.app",
+    featured: true,
+  },
+  {
+    index: 3,
     id: "shades-generator",
     title: "Shades Generator",
     summary: "Generate beautiful color shades.",
@@ -36,7 +54,7 @@ const projects = [
     siteUrl: "https://shades-generator.vercel.app",
   },
   {
-    index: 3,
+    index: 4,
     id: "avis-tailors",
     title: "Avis Tailors",
     summary: "Custom web design & development for a tailoring brand.",
@@ -53,7 +71,7 @@ const projects = [
     siteUrl: "https://avistailors.netlify.com",
   },
   {
-    index: 4,
+    index: 5,
     id: "mr-lawyer",
     title: "Mr.Lawyer",
     summary: "A place where people & lawyers meet each other",

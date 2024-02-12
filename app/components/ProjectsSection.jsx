@@ -6,13 +6,17 @@ import styles from "../styles/projectsection.module.css";
 import projects from "./json/projects";
 import savingspreeMockup from "../../public/mockups/savingspree/savingspree_mockup.jpeg";
 import mrLawyerMockup from "../../public/mockups/mr-lawyer/mrlawyer_mockup.jpeg";
+import marriageTemplateMockup from "../../public/mockups/marriage-template/marriage-template-mockup.png";
 
 const imageSrc = (title) => {
-  if (title === "Savingspree") {
-    return savingspreeMockup;
+  switch (title) {
+    case "Savingspree":
+      return savingspreeMockup;
+    case "Mr.Lawyer":
+      return mrLawyerMockup;
+    case "Marriage Template":
+      return marriageTemplateMockup;
   }
-
-  return mrLawyerMockup;
 };
 
 const ProjectsSection = forwardRef((props, ref) => {

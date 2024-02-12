@@ -2,11 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import Link from "next/link";
-import Navbar from "../components/Navbar";
-import Connect from "../components/Connect";
-import CustomCursor from "../components/CustomCursor";
 import CommonLoader from "../components/commonComponents/CommonLoader";
-import LenisScroll from "../components/commonComponents/LenisScroll";
 import styles from "./styles/work.module.css";
 import projects from "../components/json/projects";
 import Image from "next/image";
@@ -14,6 +10,7 @@ import savingspreeMockup from "../../public/mockups/savingspree/savingspree_mock
 import shadesGeneratorMockup from "../../public/mockups/shades-generator/shades-generator_mockup.jpeg";
 import avisTailorsMockup from "../../public/mockups/avis-tailors/avistailors_mockup.jpeg";
 import mrLawyerMockup from "../../public/mockups/mr-lawyer/mrlawyer_mockup.jpeg";
+import marriageTemplateMockup from "../../public/mockups/marriage-template/marriage-template-mockup.png";
 
 const Work = () => {
   const [loading, setLoading] = useState(true);
@@ -71,6 +68,8 @@ const Work = () => {
         return avisTailorsMockup;
       case "Mr.Lawyer":
         return mrLawyerMockup;
+      case "Marriage Template":
+        return marriageTemplateMockup;
     }
   };
 
