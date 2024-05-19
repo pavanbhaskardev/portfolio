@@ -160,7 +160,8 @@
 
 @media (min-width: 1919px) {
   .container {
-    padding: 3rem 7rem;
+    width: 1700px;
+    margin: auto;
   }
 
   .pb_logo {

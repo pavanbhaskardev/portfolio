@@ -10,6 +10,7 @@ import testimonials from "./json/testimonials";
 import nnSirPic from "../../public/testimonials/NNsir_profile.png";
 import sujithPic from "../../public/testimonials/sujith_profile.png";
 import ramuPic from "../../public/testimonials/ramu_profilePic.png";
+import AvinashPic from "@/public/testimonials/avinash_profile.png";
 
 const imageSrc = (name) => {
   if (name === "Narasimhaiah Narahari") {
@@ -20,6 +21,9 @@ const imageSrc = (name) => {
   }
   if (name === "Ramu Challa") {
     return ramuPic;
+  }
+  if (name === "Avinash Reddy") {
+    return AvinashPic;
   }
 };
 

@@ -26,9 +26,9 @@ export const techStack = {
     },
     { name: "Git", src: "/techStack/git.svg", alt: "git_pic" },
     {
-      name: "Chakra UI",
-      src: "/techStack/chakraUI.svg",
-      alt: "chakra_ui_pic",
+      name: "Mongo DB",
+      src: "/techStack/mongodb.svg",
+      alt: "mongo_db_pic",
     },
   ],
 

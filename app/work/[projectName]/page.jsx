@@ -34,12 +34,7 @@ const ProjectPage = ({ params }) => {
         ) : null}
       </AnimatePresence>
 
-      {(() => {
-        if (projectDetails.length) {
-          return <Project details={projectDetails[0]} />;
-        }
-        return null;
-      })()}
+      {projectDetails.length ? <Project details={projectDetails[0]} /> : null}
     </>
   );
 };

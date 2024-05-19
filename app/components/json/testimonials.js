@@ -6,6 +6,12 @@ const testimonials = [
   //   message: "",
   // },
   {
+    name: "Avinash Reddy",
+    position: "Founder @RagSof Agency",
+    imageSrc: "/testimonials/avinash_profile.png",
+    message: "Designer mind, developer hands",
+  },
+  {
     name: "Sujith Addanki",
     position: "Founder @Mr.Lawyer",
     imageSrc: "/testimonials/sujith_profile.png",
