@@ -76,7 +76,7 @@ const Connect = () => {
           <div className={styles.footer_moredetails_container}>
             <div className={styles.footer_meta_container}>
               <span>Version</span>
-              <p>2023 © Edition</p>
+              <p>{new Date().getFullYear()} © Edition</p>
             </div>
 
             <div className={styles.footer_meta_container}>
