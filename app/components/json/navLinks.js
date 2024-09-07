@@ -16,7 +16,7 @@ const navLinks = [
   },
   {
     label: "Blog",
-    path: "https://blog-pavanbhaskar.framer.website/",
+    path: "https://blog.pavanbhaskar.com",
     target: "_blank",
   },
 ];
