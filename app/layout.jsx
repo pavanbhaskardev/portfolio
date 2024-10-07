@@ -57,6 +57,12 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <CustomLayoutProvider>{children}</CustomLayoutProvider>
         <SpeedInsights />
+
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1480604898961464"
+          crossOrigin="anonymous"
+        ></script>
       </body>
     </html>
   );
