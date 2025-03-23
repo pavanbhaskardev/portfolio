@@ -54,6 +54,9 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={customFont.className}>
+      <head>
+        <meta name="fast2sms" content="r9ySi9UslM70CFXugPveOlxDvp4ZbwHf"></meta>
+      </head>
       <body suppressHydrationWarning={true}>
         <CustomLayoutProvider>{children}</CustomLayoutProvider>
         <SpeedInsights />
